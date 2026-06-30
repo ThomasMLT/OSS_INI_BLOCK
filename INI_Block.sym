@@ -29,11 +29,11 @@ L 4 -450 300 -450 320 {}
 L 4 -470 300 -470 320 {}
 L 7 130 80 150 80 {}
 L 7 130 100 150 100 {}
-B 5 147.5 77.5 152.5 82.5 {name=vdda dir=inout}
+B 5 147.5 77.5 152.5 82.5 {name=VDD dir=inout}
 B 5 147.5 -52.5 152.5 -47.5 {name=SPI_CS_N dir=inout}
 B 5 147.5 -32.5 152.5 -27.5 {name=SPI_MISO dir=inout}
 B 5 147.5 -12.5 152.5 -7.5 {name=SPI_SCK dir=inout}
-B 5 147.5 97.5 152.5 102.5 {name=vssa dir=inout}
+B 5 147.5 97.5 152.5 102.5 {name=VSS dir=inout}
 B 5 147.5 7.5 152.5 12.5 {name=SPI_MOSI dir=inout}
 B 5 147.5 27.5 152.5 32.5 {name=SPI_RST_N dir=inout}
 B 5 147.5 147.5 152.5 152.5 {name=C2F_SPK dir=inout}
@@ -56,11 +56,11 @@ B 5 -472.5 317.5 -467.5 322.5 {name=V2I_INP dir=inout}
 P 4 5 130 -100 -500 -100 -500 300 130 300 130 -100 {}
 T {@symname} -265 94 0 0 0.3 0.3 {}
 T {@name} 135 -102 0 0 0.2 0.2 {}
-T {vdda} 125 76 0 1 0.2 0.2 {}
+T {VDD} 125 76 0 1 0.2 0.2 {}
 T {SPI_CS_N} 125 -54 0 1 0.2 0.2 {}
 T {SPI_MISO} 125 -34 0 1 0.2 0.2 {}
 T {SPI_SCK} 125 -14 0 1 0.2 0.2 {}
-T {vssa} 125 96 0 1 0.2 0.2 {}
+T {VSS} 125 96 0 1 0.2 0.2 {}
 T {SPI_MOSI} 125 6 0 1 0.2 0.2 {}
 T {SPI_RST_N} 125 26 0 1 0.2 0.2 {}
 T {C2F_SPK} 125 146 0 1 0.2 0.2 {}
