@@ -27,32 +27,34 @@ L 4 -390 300 -390 320 {}
 L 4 -410 300 -410 320 {}
 L 4 -450 300 -450 320 {}
 L 4 -470 300 -470 320 {}
+L 4 130 130 150 130 {}
 L 7 130 80 150 80 {}
 L 7 130 100 150 100 {}
 B 5 147.5 77.5 152.5 82.5 {name=VDD dir=inout}
-B 5 147.5 -52.5 152.5 -47.5 {name=SPI_CS_N dir=inout}
-B 5 147.5 -32.5 152.5 -27.5 {name=SPI_MISO dir=inout}
-B 5 147.5 -12.5 152.5 -7.5 {name=SPI_SCK dir=inout}
+B 5 147.5 -52.5 152.5 -47.5 {name=SPI_CS_N dir=in}
+B 5 147.5 -32.5 152.5 -27.5 {name=SPI_MISO dir=out}
+B 5 147.5 -12.5 152.5 -7.5 {name=SPI_SCK dir=in}
 B 5 147.5 97.5 152.5 102.5 {name=VSS dir=inout}
-B 5 147.5 7.5 152.5 12.5 {name=SPI_MOSI dir=inout}
-B 5 147.5 27.5 152.5 32.5 {name=SPI_RST_N dir=inout}
-B 5 147.5 147.5 152.5 152.5 {name=C2F_SPK dir=inout}
-B 5 147.5 167.5 152.5 172.5 {name=C2F_COMP dir=inout}
-B 5 147.5 207.5 152.5 212.5 {name=NN1_REQ dir=inout}
-B 5 147.5 227.5 152.5 232.5 {name=NN1_ACK dir=inout}
-B 5 147.5 247.5 152.5 252.5 {name=NN2_REQ dir=inout}
-B 5 147.5 267.5 152.5 272.5 {name=NN2_ACK dir=inout}
-B 5 -32.5 317.5 -27.5 322.5 {name=NN3_REQ dir=inout}
-B 5 -52.5 317.5 -47.5 322.5 {name=NN3_ACK dir=inout}
+B 5 147.5 7.5 152.5 12.5 {name=SPI_MOSI dir=in}
+B 5 147.5 27.5 152.5 32.5 {name=SPI_RST_N dir=in}
+B 5 147.5 147.5 152.5 152.5 {name=C2F_ACK dir=in}
+B 5 147.5 167.5 152.5 172.5 {name=C2F_COMP dir=out}
+B 5 147.5 207.5 152.5 212.5 {name=NN1_REQ dir=out}
+B 5 147.5 227.5 152.5 232.5 {name=NN1_ACK dir=in}
+B 5 147.5 247.5 152.5 252.5 {name=NN2_REQ dir=out}
+B 5 147.5 267.5 152.5 272.5 {name=NN2_ACK dir=in}
+B 5 -32.5 317.5 -27.5 322.5 {name=NN3_REQ dir=out}
+B 5 -52.5 317.5 -47.5 322.5 {name=NN3_ACK dir=in}
 B 5 -192.5 317.5 -187.5 322.5 {name=BG_PROB dir=inout}
 B 5 -212.5 317.5 -207.5 322.5 {name=BG_100k dir=inout}
-B 5 -232.5 317.5 -227.5 322.5 {name=BG_BIAS dir=inout}
-B 5 -252.5 317.5 -247.5 322.5 {name=BG_100mV dir=inout}
-B 5 -372.5 317.5 -367.5 322.5 {name=NN1_MEM_PROB dir=inout}
-B 5 -392.5 317.5 -387.5 322.5 {name=NN2_MEM_PROB dir=inout}
-B 5 -412.5 317.5 -407.5 322.5 {name=NN3_MEM_PROB dir=inout}
-B 5 -452.5 317.5 -447.5 322.5 {name=V2I_INN dir=inout}
-B 5 -472.5 317.5 -467.5 322.5 {name=V2I_INP dir=inout}
+B 5 -232.5 317.5 -227.5 322.5 {name=BG_BIAS dir=in}
+B 5 -252.5 317.5 -247.5 322.5 {name=BG_100mV dir=in}
+B 5 -372.5 317.5 -367.5 322.5 {name=NN1_MEM_PROB dir=out}
+B 5 -392.5 317.5 -387.5 322.5 {name=NN2_MEM_PROB dir=out}
+B 5 -412.5 317.5 -407.5 322.5 {name=NN3_MEM_PROB dir=out}
+B 5 -452.5 317.5 -447.5 322.5 {name=V2I_INN dir=in}
+B 5 -472.5 317.5 -467.5 322.5 {name=V2I_INP dir=in}
+B 5 147.5 127.5 152.5 132.5 {name=C2F_REQ dir=out}
 P 4 5 130 -100 -500 -100 -500 300 130 300 130 -100 {}
 T {@symname} -265 94 0 0 0.3 0.3 {}
 T {@name} 135 -102 0 0 0.2 0.2 {}
@@ -63,7 +65,7 @@ T {SPI_SCK} 125 -14 0 1 0.2 0.2 {}
 T {VSS} 125 96 0 1 0.2 0.2 {}
 T {SPI_MOSI} 125 6 0 1 0.2 0.2 {}
 T {SPI_RST_N} 125 26 0 1 0.2 0.2 {}
-T {C2F_SPK} 125 146 0 1 0.2 0.2 {}
+T {C2F_ACK} 125 146 0 1 0.2 0.2 {}
 T {C2F_COMP} 125 166 0 1 0.2 0.2 {}
 T {NN1_REQ} 125 206 0 1 0.2 0.2 {}
 T {NN1_ACK} 125 226 0 1 0.2 0.2 {}
@@ -80,3 +82,4 @@ T {NN2_MEM_PROB} -386 295 1 1 0.2 0.2 {}
 T {NN3_MEM_PROB} -406 295 1 1 0.2 0.2 {}
 T {V2I_INN} -446 295 1 1 0.2 0.2 {}
 T {V2I_INP} -466 295 1 1 0.2 0.2 {}
+T {C2F_REQ} 125 126 0 1 0.2 0.2 {}
