@@ -3419,7 +3419,7 @@
    <references>
     <ref>
      <parent>INI_Block</parent>
-     <trans>r0 *1 22.085,-62</trans>
+     <trans>r0 *1 38.15,-62</trans>
     </ref>
    </references>
   </cell>
@@ -3430,7 +3430,7 @@
    <references>
     <ref>
      <parent>INI_Block</parent>
-     <trans>r270 *1 23.63,-62.27</trans>
+     <trans>r270 *1 39.695,-62.27</trans>
     </ref>
    </references>
   </cell>
@@ -3441,7 +3441,7 @@
    <references>
     <ref>
      <parent>INI_Block</parent>
-     <trans>r270 *1 161.535,-62.27</trans>
+     <trans>r270 *1 177.6,-62.27</trans>
     </ref>
    </references>
   </cell>

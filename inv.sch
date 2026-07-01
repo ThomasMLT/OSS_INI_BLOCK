@@ -19,7 +19,7 @@ N 190 -120 250 -120 {lab=vssa}
 N 190 -290 250 -290 {lab=vdda}
 C {sg13g2_pr/sg13_hv_pmos.sym} 170 -290 0 0 {name=M1
 l=0.5u
-w=1u
+w=4u
 ng=1
 m=1
 model=sg13_hv_pmos
@@ -27,7 +27,7 @@ spiceprefix=X
 }
 C {sg13g2_pr/sg13_hv_nmos.sym} 170 -120 0 0 {name=M2
 l=0.5u
-w=1u
+w=4u
 ng=1
 m=1
 model=sg13_hv_nmos

@@ -175,4 +175,4 @@ C {DecadeDivider_2.sym} 1080 -240 0 0 {name=x5}
 C {DecadeDivider_2.sym} 1320 -240 0 0 {name=x6}
 C {DecadeDivider_2.sym} 1560 -240 0 0 {name=x7}
 C {DecadeDividerAux.sym} -2360 -260 0 0 {name=x8}
-C {inv.sym} -2500 -330 0 0 {name=xinv}
+C {inv_BG.sym} -2500 -330 0 0 {name=xinv}

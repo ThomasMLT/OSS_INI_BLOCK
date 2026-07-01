@@ -181,7 +181,7 @@ C {lab_wire.sym} 780 -1040 0 1 {name=p19 sig_type=std_logic lab=vdda
 }
 C {lab_wire.sym} 780 -940 0 1 {name=p20 sig_type=std_logic lab=vssa
 }
-C {inv.sym} 870 -990 0 0 {name=xinv[10:0]}
+C {inv_BG.sym} 870 -990 0 0 {name=xinv[10:0]}
 C {lab_wire.sym} 850 -990 0 1 {name=p75 sig_type=std_logic lab=en_VSB[10:0]
 }
 C {SelMUX.sym} 370 0 0 0 {name=x1}
