@@ -1,0 +1,18 @@
+01-Jul-2026 16:43:53 | INFO    | Your Klayout version is: KLayout 0.30.8
+01-Jul-2026 16:43:53 | INFO    | Running SG13CMOS5L LVS checks on design /foss/designs/ihp_INI_project/INI_Block/neuron_sg13cmos5l.klay.gds on cell neuron
+01-Jul-2026 16:43:56 | INFO    | ==============================================================================
+01-Jul-2026 16:43:56 | INFO    | Important Summary
+01-Jul-2026 16:43:56 | INFO    | +------------------+----------------------------------------------------------------------------+
+01-Jul-2026 16:43:56 | INFO    | | Status           | FAIL                                                                       |
+01-Jul-2026 16:43:56 | INFO    | | Mode             | COMPARE                                                                    |
+01-Jul-2026 16:43:56 | INFO    | | Outcome          | Comparison mode: FAIL (netlists do not match).                             |
+01-Jul-2026 16:43:56 | INFO    | | Layout           | neuron_sg13cmos5l.klay.gds                                                 |
+01-Jul-2026 16:43:56 | INFO    | | Top Cell         | neuron                                                                     |
+01-Jul-2026 16:43:56 | INFO    | | Results Dir      | /foss/designs/ihp_INI_project/INI_Block/lvs_run_neuron_2026_07_01_16_43_52 |
+01-Jul-2026 16:43:56 | INFO    | | Warnings         | 0                                                                          |
+01-Jul-2026 16:43:56 | INFO    | | Errors           | 1                                                                          |
+01-Jul-2026 16:43:56 | INFO    | | Run Time (s)     | 3.548                                                                      |
+01-Jul-2026 16:43:56 | INFO    | +------------------+----------------------------------------------------------------------------+
+01-Jul-2026 16:43:56 | ERROR   | Key errors:
+01-Jul-2026 16:43:56 | ERROR   |   - 2026-07-01 16:43:56 +0200: Memory Usage (481096K) : ERROR : Netlists don't match
+01-Jul-2026 16:43:56 | INFO    | ==============================================================================

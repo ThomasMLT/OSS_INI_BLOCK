@@ -1,0 +1,18 @@
+* Extracted by KLayout with SG13CMOS5L LVS runset on : 01/07/2026 16:44
+
+.SUBCKT V2I VSSA out_UPO Vm vdda Vb inputcm_VNI inputcm_VPI imax_VPI
+M$3 VSSA Vm out_UPO VSSA sg13_hv_nmos L=1u W=16u AS=3.04p AD=3.04p PS=19.04u
++ PD=19.04u rfmode=0
+M$5 VSSA Vm Vm VSSA sg13_hv_nmos L=1u W=16u AS=3.04p AD=3.04p PS=19.04u
++ PD=19.04u rfmode=0
+M$25 Vb Vb Vb vdda sg13_hv_pmos L=1u W=16u AS=3.64p AD=3.64p PS=23.64u
++ PD=23.64u rfmode=0
+M$27 Vb inputcm_VNI out_UPO vdda sg13_hv_pmos L=1u W=16u AS=3.04p AD=3.04p
++ PS=19.04u PD=19.04u rfmode=0
+M$29 Vb inputcm_VPI Vm vdda sg13_hv_pmos L=1u W=16u AS=3.04p AD=3.04p PS=19.04u
++ PD=19.04u rfmode=0
+M$51 vdda imax_VPI out_UPO vdda sg13_hv_pmos L=1u W=12u AS=2.505p AD=2.505p
++ PS=16.84u PD=16.84u rfmode=0
+M$55 vdda imax_VPI Vb vdda sg13_hv_pmos L=1u W=16u AS=3.34p AD=3.34p PS=21.34u
++ PD=21.34u rfmode=0
+.ENDS V2I

@@ -1,0 +1,119 @@
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/INI_Block.sch
+**.subckt INI_Block NN1_REQ NN2_REQ NN3_REQ NN1_ACK NN2_ACK NN3_ACK BG_100mV BG_BIAS BG_100k BG_PROB NN2_MEM_PROB NN1_MEM_PROB
+*+ NN3_MEM_PROB V2I_INN V2I_INP SPI_CS_N SPI_MISO SPI_SCK SPI_MOSI SPI_RST_N C2F_COMP C2F_REQ C2F_ACK
+*.opin NN1_REQ
+*.opin NN2_REQ
+*.opin NN3_REQ
+*.ipin NN1_ACK
+*.ipin NN2_ACK
+*.ipin NN3_ACK
+*.iopin BG_100mV
+*.ipin BG_BIAS
+*.iopin BG_100k
+*.iopin BG_PROB
+*.opin NN2_MEM_PROB
+*.opin NN1_MEM_PROB
+*.opin NN3_MEM_PROB
+*.ipin V2I_INN
+*.ipin V2I_INP
+*.ipin SPI_CS_N
+*.opin SPI_MISO
+*.ipin SPI_SCK
+*.ipin SPI_MOSI
+*.ipin SPI_RST_N
+*.opin C2F_COMP
+*.opin C2F_REQ
+*.opin C2F_ACK
+x1 VDD NNDPI_gain_VNI NNDPI_lk_VNI NN1_MEM_PROB NN1_REQ NNADAP_gain_VPI NNADAPDPI_gain_VNI NNADAP_cap_VTO NN1_ACK NNADAPDPI_lk_VNI
++ NNREF_lk_VNI VSS NNREF_cap_VTO NNPULEXT_pwbias_VPI net1 neuron
+x2 BG_BIAS BYP_EN BG_100mV EXT_REF_EN VDD ref_VUN[7] ref_VUN[6] ref_VUN[6] ref_VUN[6] ref_VUN[6] ref_VUN[6] ref_VUN[6] ref_VUN[6]
++ ref_VUN[6] ref_VUN[6] ref_VUN[5] ref_VUN[5] ref_VUN[5] ref_VUN[5] ref_VUN[5] ref_VUN[5] ref_VUN[5] ref_VUN[5] ref_VUN[5] ref_VUN[4]
++ ref_VUN[4] ref_VUN[4] ref_VUN[4] ref_VUN[4] ref_VUN[4] ref_VUN[4] ref_VUN[4] ref_VUN[4] ref_VUN[3] ref_VUN[3] ref_VUN[3] ref_VUN[3]
++ ref_VUN[3] ref_VUN[3] ref_VUN[3] ref_VUN[3] ref_VUN[3] ref_VUN[2] ref_VUN[2] ref_VUN[2] ref_VUN[2] ref_VUN[2] ref_VUN[2] ref_VUN[2]
++ ref_VUN[2] ref_VUN[2] ref_VUN[1] ref_VUN[1] ref_VUN[1] ref_VUN[1] ref_VUN[1] ref_VUN[1] ref_VUN[1] ref_VUN[1] ref_VUN[1] ref_VUN[0]
++ ref_VUN[0] ref_VUN[0] ref_VUN[0] ref_VUN[0] ref_VUN[0] ref_VUN[0] ref_VUN[0] ref_VUN[0] BG_100k VSS MasterBias
+x5 ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0] VSS BIASGEN_en_VS CoreDiodeT
+x3 VDD V2I_imax_VPI V2I_INN V2I_INP net1 VSS V2I
+x6 en_VS_1[10] en_VS_1[9] en_VS_1[8] en_VS_1[7] en_VS_1[6] en_VS_1[5] en_VS_1[4] en_VS_1[3] en_VS_1[2] en_VS_1[1] en_VS_1[0] VSS
++ VDD net6 NNDPI_gain_VNI ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0] BIASGEN_en_VS
++ CoreFineDAC_N
+x4 en_VS_2[10] en_VS_2[9] en_VS_2[8] en_VS_2[7] en_VS_2[6] en_VS_2[5] en_VS_2[4] en_VS_2[3] en_VS_2[2] en_VS_2[1] en_VS_2[0] VSS
++ VDD net7 NNDPI_lk_VNI ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0] BIASGEN_en_VS
++ CoreFineDAC_N
+x7 en_VS_3[10] en_VS_3[9] en_VS_3[8] en_VS_3[7] en_VS_3[6] en_VS_3[5] en_VS_3[4] en_VS_3[3] en_VS_3[2] en_VS_3[1] en_VS_3[0] VSS
++ VDD NNPULEXT_pwbias_VPI net8 ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0] BIASGEN_en_VS
++ CoreFineDAC_N
+x8 en_VS_4[10] en_VS_4[9] en_VS_4[8] en_VS_4[7] en_VS_4[6] en_VS_4[5] en_VS_4[4] en_VS_4[3] en_VS_4[2] en_VS_4[1] en_VS_4[0] VSS
++ VDD NNADAP_gain_VPI net9 ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0] BIASGEN_en_VS
++ CoreFineDAC_N
+x9 en_VS_5[10] en_VS_5[9] en_VS_5[8] en_VS_5[7] en_VS_5[6] en_VS_5[5] en_VS_5[4] en_VS_5[3] en_VS_5[2] en_VS_5[1] en_VS_5[0] VSS
++ VDD net10 NNADAPDPI_gain_VNI ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0] BIASGEN_en_VS
++ CoreFineDAC_N
+x10 en_VS_6[10] en_VS_6[9] en_VS_6[8] en_VS_6[7] en_VS_6[6] en_VS_6[5] en_VS_6[4] en_VS_6[3] en_VS_6[2] en_VS_6[1] en_VS_6[0] VSS
++ VDD net11 NNADAPDPI_lk_VNI ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0] BIASGEN_en_VS
++ CoreFineDAC_N
+x11 en_VS_7[10] en_VS_7[9] en_VS_7[8] en_VS_7[7] en_VS_7[6] en_VS_7[5] en_VS_7[4] en_VS_7[3] en_VS_7[2] en_VS_7[1] en_VS_7[0] VSS
++ VDD net12 NNREF_lk_VNI ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0] BIASGEN_en_VS
++ CoreFineDAC_N
+x12 en_VS_0[10] en_VS_0[9] en_VS_0[8] en_VS_0[7] en_VS_0[6] en_VS_0[5] en_VS_0[4] en_VS_0[3] en_VS_0[2] en_VS_0[1] en_VS_0[0] VSS
++ VDD V2I_imax_VPI net13 ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0] BIASGEN_en_VS
++ CoreFineDAC_N
+x13 VDD NNDPI_gain_VNI NNDPI_lk_VNI NN2_MEM_PROB NN2_REQ NNADAP_gain_VPI NNADAPDPI_gain_VNI NNADAP_cap_VTO NN2_ACK
++ NNADAPDPI_lk_VNI NNREF_lk_VNI VSS NNREF_cap_VTO NNPULEXT_pwbias_VPI net2 neuron
+x14 VDD V2I_imax_VPI V2I_INN V2I_INP net2 VSS V2I
+x15 VDD NNDPI_gain_VNI NNDPI_lk_VNI NN3_MEM_PROB NN3_REQ NNADAP_gain_VPI NNADAPDPI_gain_VNI NNADAP_cap_VTO NN3_ACK
++ NNADAPDPI_lk_VNI NNREF_lk_VNI VSS NNREF_cap_VTO NNPULEXT_pwbias_VPI net3 neuron
+x16 VDD V2I_imax_VPI V2I_INN V2I_INP net3 VSS V2I
+x17 en_VS_8[10] en_VS_8[9] en_VS_8[8] en_VS_8[7] en_VS_8[6] en_VS_8[5] en_VS_8[4] en_VS_8[3] en_VS_8[2] en_VS_8[1] en_VS_8[0] VSS
++ VDD net4 net14 ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0] BIASGEN_en_VS CoreFineDAC_N
+x18 en_VS_9[10] en_VS_9[9] en_VS_9[8] en_VS_9[7] en_VS_9[6] en_VS_9[5] en_VS_9[4] en_VS_9[3] en_VS_9[2] en_VS_9[1] en_VS_9[0] VSS
++ VDD net5 net15 ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0] BIASGEN_en_VS CoreFineDAC_N
+x19 en_VS_10[10] en_VS_10[9] en_VS_10[8] en_VS_10[7] en_VS_10[6] en_VS_10[5] en_VS_10[4] en_VS_10[3] en_VS_10[2] en_VS_10[1]
++ en_VS_10[0] VSS VDD BG_PROB net16 ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0] BIASGEN_en_VS
++ CoreFineDAC_N
+**.ends
+
+* expanding   symbol:  neuron.sym # of pins=15
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/neuron.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/neuron.sch
+.subckt neuron vdda DPI_gain_VNI DPI_lk_VNI SOM_mem_VTO req_VAO ADAP_gain_VPI ADAPDPI_gain_VNI ADAPDPI_cap_VTO ack_VAI
++ ADAPDPI_lk_VNI REF_lk_VNI vssa REF_cap_VTO PULEXT_pwbias_VPI DPI_in_UNI
+.ends
+
+
+* expanding   symbol:  MasterBias.sym # of pins=15
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/MasterBias.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/MasterBias.sch
+.subckt MasterBias VBP_TIA BYP_EN VREF_100mV EXT_REF_EN VDDA IREF_1uA[0] IREF_100nA[8] IREF_100nA[7] IREF_100nA[6] IREF_100nA[5]
++ IREF_100nA[4] IREF_100nA[3] IREF_100nA[2] IREF_100nA[1] IREF_100nA[0] IREF_10nA[8] IREF_10nA[7] IREF_10nA[6] IREF_10nA[5] IREF_10nA[4]
++ IREF_10nA[3] IREF_10nA[2] IREF_10nA[1] IREF_10nA[0] IREF_1nA[8] IREF_1nA[7] IREF_1nA[6] IREF_1nA[5] IREF_1nA[4] IREF_1nA[3] IREF_1nA[2]
++ IREF_1nA[1] IREF_1nA[0] IREF_100pA[8] IREF_100pA[7] IREF_100pA[6] IREF_100pA[5] IREF_100pA[4] IREF_100pA[3] IREF_100pA[2] IREF_100pA[1]
++ IREF_100pA[0] IREF_10pA[8] IREF_10pA[7] IREF_10pA[6] IREF_10pA[5] IREF_10pA[4] IREF_10pA[3] IREF_10pA[2] IREF_10pA[1] IREF_10pA[0] IREF_1pA[8]
++ IREF_1pA[7] IREF_1pA[6] IREF_1pA[5] IREF_1pA[4] IREF_1pA[3] IREF_1pA[2] IREF_1pA[1] IREF_1pA[0] IREF_100fA[8] IREF_100fA[7] IREF_100fA[6]
++ IREF_100fA[5] IREF_100fA[4] IREF_100fA[3] IREF_100fA[2] IREF_100fA[1] IREF_100fA[0] VREG_pad VSSA
+.ends
+
+
+* expanding   symbol:  CoreDiodeT.sym # of pins=3
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/CoreDiodeT.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/CoreDiodeT.sch
+.subckt CoreDiodeT ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0] vssa en_VS
+.ends
+
+
+* expanding   symbol:  V2I.sym # of pins=6
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/V2I.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/V2I.sch
+.subckt V2I VDD imax_VPI inputcm_VNI inputcm_VPI out vssa
+.ends
+
+
+* expanding   symbol:  CoreFineDAC_N.sym # of pins=7
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/CoreFineDAC_N.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/CoreFineDAC_N.sch
+.subckt CoreFineDAC_N en_VS[10] en_VS[9] en_VS[8] en_VS[7] en_VS[6] en_VS[5] en_VS[4] en_VS[3] en_VS[2] en_VS[1] en_VS[0] vssa
++ vdda bias_VP bias_VN MASTER_CoreDiodeT_bias_VN[7] MASTER_CoreDiodeT_bias_VN[6] MASTER_CoreDiodeT_bias_VN[5]
++ MASTER_CoreDiodeT_bias_VN[4] MASTER_CoreDiodeT_bias_VN[3] MASTER_CoreDiodeT_bias_VN[2] MASTER_CoreDiodeT_bias_VN[1] MASTER_CoreDiodeT_bias_VN[0] BIASGEN_en_VS
+.ends
+
+.end

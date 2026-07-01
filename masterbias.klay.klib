@@ -1,0 +1,27 @@
+{
+    "technology": "",
+    "statements": [
+        {
+            "lib_name": "DecadeDivider_2",
+            "lib_path": "DecadeDivider_2.klay.gds"
+        },
+        {
+            "lib_name": "DecadeDividerAux",
+            "lib_path": "DecadeDividerAux.klay.gds"
+        },
+        {
+            "lib_name": "EXT_REF_ENB",
+            "lib_path": "EXT_REF_ENB.gds"
+        },
+        {
+            "lib_name": "OTA_b",
+            "lib_path": "OTA_b.gds"
+        },
+        {
+            "include_path": "DecadeDivider_2.klay.klib"
+        },
+        {
+            "include_path": "DecadeDividerAux.klay.klib"
+        }
+    ]
+}

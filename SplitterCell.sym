@@ -1,0 +1,37 @@
+v {xschem version=3.4.8RC file_version=1.3}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+spectre_format="@name ( @pinlist ) @symname"
+template="name=x1"
+}
+V {}
+S {}
+F {}
+E {}
+L 4 -60 50 -60 70 {}
+L 4 -100 50 -100 70 {}
+L 7 -20 50 -20 70 {}
+L 7 -60 -170 -60 -150 {}
+L 7 -100 -170 -100 -150 {}
+B 5 -62.5 67.5 -57.5 72.5 {name=en_VS dir=in}
+B 5 -132.5 -2.5 -127.5 2.5 {name=A_UN dir=inout}
+B 5 7.5 -2.5 12.5 2.5 {name=B_UN dir=inout}
+B 5 -102.5 67.5 -97.5 72.5 {name=en_VSB dir=in}
+B 5 -132.5 -72.5 -127.5 -67.5 {name=bias_VN dir=in}
+B 5 -22.5 67.5 -17.5 72.5 {name=vssa dir=inout}
+B 5 -62.5 -172.5 -57.5 -167.5 {name=out_UPB dir=inout}
+B 5 -102.5 -172.5 -97.5 -167.5 {name=out_UP dir=inout}
+B 5 7.5 -72.5 12.5 -67.5 {name=bias_VN dir=in}
+P 4 5 10 -150 -130 -150 -130 50 10 50 10 -150 {}
+T {@symname} -102 -36 0 0 0.3 0.3 {}
+T {@name} 15 -152 0 0 0.2 0.2 {}
+T {en_VS} -64 45 3 0 0.2 0.2 {}
+T {A_UN} -125 -4 0 0 0.2 0.2 {}
+T {B_UN} 5 -4 0 1 0.2 0.2 {}
+T {en_VSB} -104 45 3 0 0.2 0.2 {}
+T {bias_VN} -125 -74 0 0 0.2 0.2 {}
+T {vssa} -16 45 1 1 0.2 0.2 {}
+T {out_UPB} -64 -145 3 1 0.2 0.2 {}
+T {out_UP} -104 -145 3 1 0.2 0.2 {}
+T {bias_VN} 5 -74 0 1 0.2 0.2 {}

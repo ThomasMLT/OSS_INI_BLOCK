@@ -1,0 +1,9 @@
+{
+    "technology": "",
+    "statements": [
+        {
+            "lib_name": "ISINK",
+            "lib_path": "ISINK.gds"
+        }
+    ]
+}

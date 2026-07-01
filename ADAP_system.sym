@@ -1,0 +1,38 @@
+v {xschem version=3.4.8RC file_version=1.3}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+F {}
+E {}
+L 4 -150 40 -130 40 {}
+L 4 130 10 150 10 {}
+L 4 -150 -40 -130 -40 {}
+L 4 130 -20 150 -20 {}
+L 4 -150 -20 -130 -20 {}
+L 4 -150 0 -130 0 {}
+L 7 0 -70 0 -50 {}
+L 7 0 50 0 70 {}
+B 5 -2.5 -72.5 2.5 -67.5 {name=vdda dir=inout}
+B 5 -152.5 37.5 -147.5 42.5 {name=ackext_VABI dir=in}
+B 5 147.5 7.5 152.5 12.5 {name=DPI_capabias_VP dir=inout}
+B 5 -152.5 -42.5 -147.5 -37.5 {name=gain_VPI dir=in}
+B 5 147.5 -22.5 152.5 -17.5 {name=in_UNO dir=inout}
+B 5 -152.5 -22.5 -147.5 -17.5 {name=DPI_gain_VNI dir=in}
+B 5 -152.5 -2.5 -147.5 2.5 {name=DPI_lk_VNI dir=in}
+B 5 -2.5 67.5 2.5 72.5 {name=vssa dir=inout}
+P 4 5 130 -50 -130 -50 -130 50 130 50 130 -50 {}
+T {@symname} -67.5 -6 0 0 0.3 0.3 {}
+T {@name} -175 -62 0 0 0.2 0.2 {}
+T {vdda} 5 -44 0 1 0.2 0.2 {}
+T {ackext_VABI} -70 31 0 1 0.2 0.2 {}
+T {DPI_capabias_VP} 125 6 0 1 0.2 0.2 {}
+T {gain_VPI} -125 -44 0 0 0.2 0.2 {}
+T {in_UNO} 85 -24 0 0 0.2 0.2 {}
+T {DPI_gain_VNI} -125 -24 0 0 0.2 0.2 {}
+T {DPI_lk_VNI} -125 -4 0 0 0.2 0.2 {}
+T {vssa} 5 36 0 1 0.2 0.2 {}
+T {nwell} -25 -44 0 1 0.2 0.2 {}

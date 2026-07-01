@@ -1,0 +1,93 @@
+* Extracted by KLayout with SG13CMOS5L LVS runset on : 01/07/2026 16:43
+
+.SUBCKT neuron vssa V_mem|capabias_VPN|mem_VNO capabias_VPN
++ DPI_capabias_VP|capabias_VPN capa_VP in|in_VAI OUT|in in|out out|req_VABI
++ ack_VABI|out ackext_VABI|out lk_VPI lk_VNI lk_VNI$1 in|out_VAO vdda
++ in_UI|in_UN0 in_UI gain_VPI gain_VNI gain_VNI$1 pwbias_VPI
+M$32 vssa lk_VNI V_mem|capabias_VPN|mem_VNO vssa sg13_hv_nmos L=4u W=16u
++ AS=3.04p AD=3.04p PS=19.04u PD=19.04u rfmode=0
+M$44 vssa lk_VPI \$54 vssa sg13_hv_nmos L=4u W=16u AS=3.04p AD=3.04p PS=19.04u
++ PD=19.04u rfmode=0
+M$50 vssa DPI_capabias_VP|capabias_VPN in_UI|in_UN0 vssa sg13_hv_nmos L=4u
++ W=16u AS=3.04p AD=3.04p PS=19.04u PD=19.04u rfmode=0
+M$56 vssa lk_VNI$1 DPI_capabias_VP|capabias_VPN vssa sg13_hv_nmos L=4u W=16u
++ AS=3.04p AD=3.04p PS=19.04u PD=19.04u rfmode=0
+M$62 vssa V_mem|capabias_VPN|mem_VNO \$56 vssa sg13_hv_nmos L=2u W=2u AS=0.38p
++ AD=0.38p PS=2.76u PD=2.76u rfmode=0
+M$63 \$56 V_mem|capabias_VPN|mem_VNO \$57 vssa sg13_hv_nmos L=2u W=2u AS=0.38p
++ AD=0.38p PS=2.76u PD=2.76u rfmode=0
+M$64 \$57 V_mem|capabias_VPN|mem_VNO \$58 vssa sg13_hv_nmos L=2u W=2u AS=0.38p
++ AD=0.38p PS=2.76u PD=2.76u rfmode=0
+M$65 \$58 V_mem|capabias_VPN|mem_VNO OUT|in vssa sg13_hv_nmos L=2u W=2u
++ AS=0.38p AD=0.38p PS=2.76u PD=2.76u rfmode=0
+M$66 OUT|in vssa vssa vssa sg13_hv_nmos L=2u W=2u AS=0.38p AD=0.68p PS=2.76u
++ PD=5.36u rfmode=0
+M$73 vssa OUT|in in|out vssa sg13_hv_nmos L=0.5u W=10u AS=2.65p AD=2.65p
++ PS=16.06u PD=16.06u rfmode=0
+M$75 vssa in|out out|req_VABI vssa sg13_hv_nmos L=0.5u W=4u AS=1.36p AD=1.36p
++ PS=8.68u PD=8.68u rfmode=0
+M$76 ack_VABI|out in|in_VAI vssa vssa sg13_hv_nmos L=0.5u W=4u AS=1.36p
++ AD=1.36p PS=8.68u PD=8.68u rfmode=0
+M$77 ackext_VABI|out in|out_VAO vssa vssa sg13_hv_nmos L=0.5u W=4u AS=1.36p
++ AD=1.36p PS=8.68u PD=8.68u rfmode=0
+M$79 vssa in|in_VAI capa_VP vssa sg13_hv_nmos L=2u W=4u AS=0.76p AD=0.76p
++ PS=5.52u PD=5.52u rfmode=0
+M$109 vssa capa_VP in|out_VAO vssa sg13_hv_nmos L=2u W=4u AS=0.76p AD=0.76p
++ PS=5.52u PD=5.52u rfmode=0
+M$132 vssa capabias_VPN V_mem|capabias_VPN|mem_VNO vssa sg13_hv_nmos L=0.5u
++ W=1u AS=0.34p AD=0.34p PS=2.68u PD=2.68u rfmode=0
+M$133 \$54 out|req_VABI capabias_VPN vssa sg13_hv_nmos L=0.5u W=1u AS=0.34p
++ AD=0.34p PS=2.68u PD=2.68u rfmode=0
+M$178 vdda vdda in_UI|in_UN0 vdda sg13_hv_pmos L=2u W=8u AS=2.12p AD=2.12p
++ PS=16.24u PD=16.24u rfmode=0
+M$179 in_UI|in_UN0 gain_VNI vssa vdda sg13_hv_pmos L=2u W=16u AS=3.04p AD=3.04p
++ PS=22.08u PD=22.08u rfmode=0
+M$181 in_UI|in_UN0 V_mem|capabias_VPN|mem_VNO V_mem|capabias_VPN|mem_VNO vdda
++ sg13_hv_pmos L=2u W=16u AS=3.04p AD=3.04p PS=22.08u PD=22.08u rfmode=0
+M$194 vdda vdda \$155 vdda sg13_hv_pmos L=2.75u W=8.6u AS=2.279p AD=2.279p
++ PS=16.08u PD=16.08u rfmode=0
+M$195 \$155 gain_VPI in_UI vdda sg13_hv_pmos L=4u W=16u AS=3.04p AD=3.04p
++ PS=19.04u PD=19.04u rfmode=0
+M$200 vdda vdda in_UI vdda sg13_hv_pmos L=2u W=8u AS=2.12p AD=2.12p PS=16.24u
++ PD=16.24u rfmode=0
+M$201 in_UI gain_VNI$1 vssa vdda sg13_hv_pmos L=2u W=16u AS=3.04p AD=3.04p
++ PS=22.08u PD=22.08u rfmode=0
+M$203 in_UI DPI_capabias_VP|capabias_VPN DPI_capabias_VP|capabias_VPN vdda
++ sg13_hv_pmos L=2u W=16u AS=3.04p AD=3.04p PS=22.08u PD=22.08u rfmode=0
+M$226 vdda vdda OUT|in vdda sg13_hv_pmos L=2u W=2u AS=0.53p AD=0.53p PS=4.06u
++ PD=4.06u rfmode=0
+M$227 OUT|in V_mem|capabias_VPN|mem_VNO \$195 vdda sg13_hv_pmos L=2u W=4u
++ AS=0.76p AD=0.76p PS=5.52u PD=5.52u rfmode=0
+M$232 vdda OUT|in in|out vdda sg13_hv_pmos L=0.5u W=10u AS=2.65p AD=2.65p
++ PS=16.06u PD=16.06u rfmode=0
+M$245 vdda capa_VP in|out_VAO vdda sg13_hv_pmos L=2u W=4u AS=0.76p AD=0.76p
++ PS=5.52u PD=5.52u rfmode=0
+M$261 vdda \$195 \$195 vdda sg13_hv_pmos L=2u W=4u AS=0.76p AD=0.76p PS=5.52u
++ PD=5.52u rfmode=0
+M$266 vdda in|out out|req_VABI vdda sg13_hv_pmos L=0.5u W=4u AS=1.36p AD=1.36p
++ PS=8.68u PD=8.68u rfmode=0
+M$267 ack_VABI|out in|in_VAI vdda vdda sg13_hv_pmos L=0.5u W=4u AS=1.36p
++ AD=1.36p PS=8.68u PD=8.68u rfmode=0
+M$284 ackext_VABI|out in|out_VAO vdda vdda sg13_hv_pmos L=0.5u W=4u AS=1.36p
++ AD=1.36p PS=8.68u PD=8.68u rfmode=0
+M$286 vdda in|out_VAO capa_VP vdda sg13_hv_pmos L=2u W=4u AS=0.76p AD=0.76p
++ PS=5.52u PD=5.52u rfmode=0
+M$301 vdda vdda V_mem|capabias_VPN|mem_VNO vdda sg13_hv_pmos L=2u W=1u AS=0.34p
++ AD=0.19p PS=2.68u PD=1.38u rfmode=0
+M$302 V_mem|capabias_VPN|mem_VNO \$195 \$223 vdda sg13_hv_pmos L=2u W=1u
++ AS=0.19p AD=0.19p PS=1.38u PD=1.38u rfmode=0
+M$303 \$223 \$195 \$224 vdda sg13_hv_pmos L=2u W=1u AS=0.19p AD=0.19p PS=1.38u
++ PD=1.38u rfmode=0
+M$304 \$224 \$195 \$225 vdda sg13_hv_pmos L=2u W=1u AS=0.19p AD=0.19p PS=1.38u
++ PD=1.38u rfmode=0
+M$305 \$225 \$195 vdda vdda sg13_hv_pmos L=2u W=1u AS=0.19p AD=0.19p PS=1.38u
++ PD=1.38u rfmode=0
+M$313 capabias_VPN out|req_VABI \$196 vdda sg13_hv_pmos L=0.5u W=1u AS=0.34p
++ AD=0.19p PS=2.68u PD=1.38u rfmode=0
+M$314 \$196 ack_VABI|out vdda vdda sg13_hv_pmos L=0.5u W=1u AS=0.19p AD=0.34p
++ PS=1.38u PD=2.68u rfmode=0
+M$332 vdda pwbias_VPI capa_VP vdda sg13_hv_pmos L=2u W=4u AS=0.76p AD=0.76p
++ PS=5.52u PD=5.52u rfmode=0
+M$354 \$155 ackext_VABI|out vdda vdda sg13_hv_pmos L=4u W=1.2u AS=0.228p
++ AD=0.228p PS=2.72u PD=2.72u rfmode=0
+.ENDS neuron

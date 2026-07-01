@@ -1,0 +1,12 @@
+** sch_path: /foss/designs/ihp_INI_project/xschem_ttihp26a_update_adapt/V2I.sch
+.subckt V2I vdda imax_VPI inputcm_VNI inputcm_VPI out_UPO vssa
+*.PININFO inputcm_VNI:I inputcm_VPI:I out_UPO:O imax_VPI:I vdda:B vssa:B
+MMIRA Vm Vm vssa vssa sg13_hv_nmos w=4u l=1u ng=2 m=4
+MMBIAS Vb imax_VPI vdda vdda sg13_hv_pmos w=4u l=1u ng=2 m=4
+MMIRB out_UPO Vm vssa vssa sg13_hv_nmos w=4u l=1u ng=2 m=4
+MMdiffINN out_UPO inputcm_VNI Vb vdda sg13_hv_pmos w=4u l=1u ng=2 m=4
+MMIDC out_UPO imax_VPI vdda vdda sg13_hv_pmos w=3u l=1u ng=2 m=4
+MMdiffINP Vm inputcm_VPI Vb vdda sg13_hv_pmos w=4u l=1u ng=2 m=4
+MMDdiffINP Vb Vb Vb vdda sg13_hv_pmos w=4u l=1u ng=2 m=2
+MMDdiffINN Vb Vb Vb vdda sg13_hv_pmos w=4u l=1u ng=2 m=2
+.ends

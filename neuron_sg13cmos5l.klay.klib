@@ -1,0 +1,36 @@
+{
+    "technology": "",
+    "statements": [
+        {
+            "lib_name": "DPI_gain",
+            "lib_path": "DPI_gain.gds"
+        },
+        {
+            "lib_name": "ADAP_system",
+            "lib_path": "ADAP_system.klay.gds"
+        },
+        {
+            "lib_name": "FB_system",
+            "lib_path": "FB_system.gds"
+        },
+        {
+            "lib_name": "inv",
+            "lib_path": "inv.gds"
+        },
+        {
+            "lib_name": "REF_system",
+            "lib_path": "REF_system.gds"
+        },
+        {
+            "lib_name": "inv_hc",
+            "lib_path": "inv_hc.gds"
+        },
+        {
+            "lib_name": "pulse_extender",
+            "lib_path": "pulse_extender.gds"
+        },
+        {
+            "include_path": "ADAP_system.klay.klib"
+        }
+    ]
+}
