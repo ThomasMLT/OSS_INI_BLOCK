@@ -43,7 +43,7 @@ N -660 -950 -660 -770 {lab=en_VS_5[10:0] bus=true}
 N -640 -950 -640 -770 {lab=en_VS_6[10:0] bus=true}
 N -620 -950 -620 -770 {lab=en_VS_7[10:0] bus=true}
 N -760 -950 -760 -770 {lab=en_VS_0[10:0] bus=true}
-N -530 -950 -530 -770 {lab=BIASGEN_en_VS}
+N -530 -950 -530 -770 {lab=BIASGEN_en_VS[0]}
 N -780 -950 -780 -770 {lab=ref_VUN[7:0] bus=true}
 N -240 190 -200 190 {lab=NNPULEXT_pwbias_VPI}
 N -240 210 -200 210 {lab=NNADAP_gain_VPI}
@@ -74,8 +74,8 @@ N 100 190 330 190 {lab=NN2_REQ}
 N -440 10 -200 10 {lab=NN1_ACK}
 N -440 290 -200 290 {lab=NN2_ACK}
 N -440 560 -200 560 {lab=NN3_ACK}
-N 90 1110 90 1140 {lab=BYP_EN}
-N 130 1110 130 1140 {lab=EXT_REF_EN}
+N 90 1110 90 1370 {lab=BIASGEN_BYP_en_VS[0]}
+N 130 1110 130 1370 {lab=BIASGEN_EXT_REF_en_VS[0]}
 N 110 1110 110 1250 {lab=BG_100mV}
 N 70 1110 70 1250 {lab=BG_BIAS}
 N 390 650 390 810 {lab=BG_100k}
@@ -96,17 +96,25 @@ N -860 520 -810 520 {lab=V2I_INN}
 N -800 -30 -800 250 {lab=V2I_INN}
 N -800 -30 -770 -30 {lab=V2I_INN}
 N -810 250 -800 250 {lab=V2I_INN}
-N 710 -1510 820 -1510 {lab=SPI_CS_N}
-N 710 -1490 820 -1490 {lab=SPI_MISO}
-N 710 -1470 820 -1470 {lab=SPI_SCK}
-N 710 -1450 820 -1450 {lab=SPI_MOSI}
-N 710 -1430 820 -1430 {lab=SPI_RST_N}
-N 1760 40 1870 40 {lab=C2F_en_VSBI}
+N 890 -1510 1000 -1510 {lab=SPI_CS_N}
+N 890 -1490 1000 -1490 {lab=SPI_MISO}
+N 890 -1470 1000 -1470 {lab=SPI_SCK}
+N 890 -1450 1000 -1450 {lab=SPI_MOSI}
+N 890 -1430 1000 -1430 {lab=SPI_RST_N}
+N 1760 40 1870 40 {lab=C2F_en_VSBI[0]}
 N 2170 80 2230 80 {lab=C2F_COMP}
 N 2170 0 2230 0 {lab=C2F_REQ}
 N 2170 40 2230 40 {lab=C2F_ACK}
 N 1760 0 1870 -0 {lab=C2F_Iin}
 N 1760 80 1870 80 {lab=C2F_Vb}
+N 1620 -1590 1700 -1590 {lab=BIASGEN_en_VS[10:1]
+bus=true}
+N 1620 -1550 1700 -1550 {lab=BIASGEN_BYP_en_VS[10:1]
+bus=true}
+N 1620 -1500 1700 -1500 {lab=BIASGEN_EXT_REF_en_VS[10:1]
+bus=true}
+N 1620 -1460 1700 -1460 {lab=C2F_en_VSBI[10:1]
+bus=true}
 C {neuron.sym} -50 -60 0 0 {name=x1}
 C {MasterBias.sym} 190 960 3 0 {name=x2}
 C {lab_wire.sym} 370 760 1 0 {name=p61 sig_type=std_logic lab=ref_VUN[0]
@@ -130,8 +138,6 @@ C {lab_wire.sym} 410 810 1 0 {name=p69 sig_type=std_logic lab=VSS
 C {lab_wire.sym} -70 810 3 1 {name=p70 sig_type=std_logic lab=VDD
 }
 C {CoreDiodeT.sym} 3040 -470 0 0 {name=x5}
-C {lab_wire.sym} 2950 -510 0 0 {name=p51 sig_type=std_logic lab=BIASGEN_en_VS
-}
 C {lab_wire.sym} 3040 -430 2 0 {name=p52 sig_type=std_logic lab=VSS
 }
 C {lab_wire.sym} 2370 -750 0 0 {name=p1 sig_type=std_logic lab=ref_VUN[0]
@@ -198,7 +204,7 @@ C {lab_wire.sym} -620 -950 1 0 {name=p72 sig_type=std_logic lab=en_VS_7[10:0]
 }
 C {lab_wire.sym} -760 -950 1 0 {name=p77 sig_type=std_logic lab=en_VS_0[10:0]
 }
-C {lab_wire.sym} -530 -950 1 0 {name=p78 sig_type=std_logic lab=BIASGEN_en_VS
+C {lab_wire.sym} -530 -950 1 0 {name=p78 sig_type=std_logic lab=BIASGEN_en_VS[0]
 }
 C {lab_wire.sym} -780 -950 1 0 {name=p81 sig_type=std_logic lab=ref_VUN[7:0]
 }
@@ -253,10 +259,6 @@ C {opin.sym} 330 460 0 0 {name=p117 lab=NN3_REQ}
 C {ipin.sym} -440 10 0 0 {name=p118 lab=NN1_ACK}
 C {ipin.sym} -440 290 0 0 {name=p119 lab=NN2_ACK}
 C {ipin.sym} -440 560 0 0 {name=p120 lab=NN3_ACK}
-C {lab_wire.sym} 130 1140 3 0 {name=p121 sig_type=std_logic lab=EXT_REF_EN
-}
-C {lab_wire.sym} 90 1140 3 0 {name=p122 sig_type=std_logic lab=BYP_EN
-}
 C {iopin.sym} 110 1250 1 0 {name=p123 lab=BG_100mV}
 C {ipin.sym} 70 1250 3 0 {name=p124 lab=BG_BIAS}
 C {iopin.sym} 390 650 3 0 {name=p125 lab=BG_100k}
@@ -272,47 +274,45 @@ C {opin.sym} 330 -110 0 0 {name=p143 lab=NN1_MEM_PROB}
 C {opin.sym} 330 440 0 0 {name=p13 lab=NN3_MEM_PROB}
 C {ipin.sym} -860 520 0 0 {name=p107 lab=V2I_INN}
 C {ipin.sym} -860 460 0 0 {name=p145 lab=V2I_INP}
-C {bias_gen_spi_top.sym} -490 -1470 0 0 {}
-C {lab_wire.sym} -720 -1250 3 0 {name=p146 sig_type=std_logic lab=en_VS_0[10:0]
+C {bias_gen_spi_top.sym} -310 -1470 0 0 {}
+C {lab_wire.sym} -540 -1250 3 0 {name=p146 sig_type=std_logic lab=en_VS_0[10:0]
 }
-C {lab_wire.sym} -690 -1250 3 0 {name=p147 sig_type=std_logic lab=en_VS_1[10:0]
+C {lab_wire.sym} -510 -1250 3 0 {name=p147 sig_type=std_logic lab=en_VS_1[10:0]
 }
-C {lab_wire.sym} -660 -1250 3 0 {name=p148 sig_type=std_logic lab=en_VS_2[10:0]
+C {lab_wire.sym} -480 -1250 3 0 {name=p148 sig_type=std_logic lab=en_VS_2[10:0]
 }
-C {lab_wire.sym} -630 -1250 3 0 {name=p149 sig_type=std_logic lab=en_VS_3[10:0]
+C {lab_wire.sym} -450 -1250 3 0 {name=p149 sig_type=std_logic lab=en_VS_3[10:0]
 }
-C {lab_wire.sym} -600 -1250 3 0 {name=p150 sig_type=std_logic lab=en_VS_4[10:0]
+C {lab_wire.sym} -420 -1250 3 0 {name=p150 sig_type=std_logic lab=en_VS_4[10:0]
 }
-C {lab_wire.sym} -570 -1250 3 0 {name=p151 sig_type=std_logic lab=en_VS_5[10:0]
+C {lab_wire.sym} -390 -1250 3 0 {name=p151 sig_type=std_logic lab=en_VS_5[10:0]
 }
-C {lab_wire.sym} -540 -1250 3 0 {name=p152 sig_type=std_logic lab=en_VS_6[10:0]
+C {lab_wire.sym} -360 -1250 3 0 {name=p152 sig_type=std_logic lab=en_VS_6[10:0]
 }
-C {lab_wire.sym} -510 -1250 3 0 {name=p153 sig_type=std_logic lab=en_VS_7[10:0]
+C {lab_wire.sym} -330 -1250 3 0 {name=p153 sig_type=std_logic lab=en_VS_7[10:0]
 }
-C {lab_wire.sym} -480 -1250 3 0 {name=p154 sig_type=std_logic lab=en_VS_8[10:0]
+C {lab_wire.sym} -300 -1250 3 0 {name=p154 sig_type=std_logic lab=en_VS_8[10:0]
 }
-C {lab_wire.sym} -450 -1250 3 0 {name=p155 sig_type=std_logic lab=en_VS_9[10:0]
+C {lab_wire.sym} -270 -1250 3 0 {name=p155 sig_type=std_logic lab=en_VS_9[10:0]
 }
-C {lab_wire.sym} -420 -1250 3 0 {name=p156 sig_type=std_logic lab=en_VS_10[10:0]
+C {lab_wire.sym} -240 -1250 3 0 {name=p156 sig_type=std_logic lab=en_VS_10[10:0]
 }
-C {ipin.sym} 820 -1510 2 0 {name=p157 lab=SPI_CS_N}
-C {opin.sym} 820 -1490 2 1 {name=p158 lab=SPI_MISO}
-C {ipin.sym} 820 -1470 2 0 {name=p159 lab=SPI_SCK}
-C {ipin.sym} 820 -1450 2 0 {name=p160 lab=SPI_MOSI}
-C {ipin.sym} 820 -1430 2 0 {name=p161 lab=SPI_RST_N}
+C {ipin.sym} 1000 -1510 2 0 {name=p157 lab=SPI_CS_N}
+C {opin.sym} 1000 -1490 2 1 {name=p158 lab=SPI_MISO}
+C {ipin.sym} 1000 -1470 2 0 {name=p159 lab=SPI_SCK}
+C {ipin.sym} 1000 -1450 2 0 {name=p160 lab=SPI_MOSI}
+C {ipin.sym} 1000 -1430 2 0 {name=p161 lab=SPI_RST_N}
 C {C2F.sym} 2020 40 0 0 {}
-C {lab_wire.sym} 1760 40 0 0 {name=p131 sig_type=std_logic lab=C2F_en_VSBI
-}
 C {lab_wire.sym} 2020 -70 2 1 {name=p137 sig_type=std_logic lab=VDD
 }
 C {lab_wire.sym} 2020 150 0 0 {name=p162 sig_type=std_logic lab=VSS
 }
 C {opin.sym} 2230 80 0 0 {name=p163 lab=C2F_COMP}
 C {opin.sym} 2230 0 0 0 {name=p164 lab=C2F_REQ}
-C {opin.sym} 2230 40 0 0 {name=p165 lab=C2F_ACK}
-C {lab_wire.sym} 100 -1250 3 0 {name=p166 sig_type=std_logic lab=VSS
+C {ipin.sym} 2230 40 2 0 {name=p165 lab=C2F_ACK}
+C {iopin.sym} 280 -1250 3 1 {name=p166 lab=VSS
 }
-C {lab_wire.sym} 100 -1690 3 1 {name=p167 sig_type=std_logic lab=VDD
+C {iopin.sym} 280 -1690 3 0 {name=p167 lab=VDD
 }
 C {BiasBlock.sym} -660 -620 3 1 {name=x4}
 C {lab_wire.sym} -500 -770 1 0 {name=p3 sig_type=std_logic lab=VSS
@@ -323,8 +323,32 @@ C {lab_pin.sym} -570 -470 3 0 {name=p5 sig_type=std_logic lab=C2F_Vb}
 C {lab_pin.sym} -750 -470 3 0 {name=p7 sig_type=std_logic lab=C2F_Iin}
 C {lab_pin.sym} 1760 80 0 0 {name=p21 sig_type=std_logic lab=C2F_Vb}
 C {lab_pin.sym} 1760 0 0 0 {name=p22 sig_type=std_logic lab=C2F_Iin}
-C {noconn.sym} -390 -1250 0 0 {name=l1}
-C {noconn.sym} -360 -1250 0 0 {name=l2}
-C {noconn.sym} -330 -1250 0 0 {name=l3}
-C {noconn.sym} -300 -1250 0 0 {name=l4}
-C {noconn.sym} -270 -1250 0 0 {name=l5}
+C {noconn.sym} -90 -1250 0 0 {name=l5}
+C {lab_wire.sym} -210 -1250 3 0 {name=p23 sig_type=std_logic lab=BIASGEN_en_VS[10:0]
+}
+C {lab_wire.sym} 2950 -510 2 1 {name=p25 sig_type=std_logic lab=BIASGEN_en_VS[0]
+}
+C {lab_wire.sym} -120 -1240 3 0 {name=p28 sig_type=std_logic lab=C2F_en_VSBI[10:0]
+}
+C {lab_wire.sym} 1760 40 0 0 {name=p29 sig_type=std_logic lab=C2F_en_VSBI[0]
+}
+C {lab_wire.sym} -180 -1250 3 0 {name=p30 sig_type=std_logic lab=BIASGEN_BYP_en_VS[10:0]
+}
+C {lab_wire.sym} -150 -1250 3 0 {name=p31 sig_type=std_logic lab=BIASGEN_EXT_REF_en_VS[10:0]
+}
+C {lab_wire.sym} 90 1370 3 0 {name=p35 sig_type=std_logic lab=BIASGEN_BYP_en_VS[0]
+}
+C {lab_wire.sym} 130 1370 3 0 {name=p36 sig_type=std_logic lab=BIASGEN_EXT_REF_en_VS[0]
+}
+C {lab_wire.sym} 1620 -1590 0 0 {name=p37 sig_type=std_logic lab=BIASGEN_en_VS[10:1]
+}
+C {noconn.sym} 1700 -1590 0 1 {name=l1}
+C {lab_wire.sym} 1620 -1550 0 0 {name=p38 sig_type=std_logic lab=BIASGEN_BYP_en_VS[10:1]
+}
+C {noconn.sym} 1700 -1550 0 1 {name=l2}
+C {lab_wire.sym} 1620 -1500 0 0 {name=p41 sig_type=std_logic lab=BIASGEN_EXT_REF_en_VS[10:1]
+}
+C {noconn.sym} 1700 -1500 0 1 {name=l3}
+C {lab_wire.sym} 1620 -1460 0 0 {name=p42 sig_type=std_logic lab=C2F_en_VSBI[10:1]
+}
+C {noconn.sym} 1700 -1460 0 1 {name=l4}

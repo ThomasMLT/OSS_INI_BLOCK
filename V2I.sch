@@ -44,11 +44,11 @@ N -880 -600 -880 -570 {lab=Vb}
 N -880 -570 -870 -570 {lab=Vb}
 N -880 -570 -880 -540 {lab=Vb}
 N -880 -540 -830 -540 {lab=Vb}
-N -830 -570 -790 -570 {lab=VDD}
+N -830 -570 -790 -570 {lab=vdda}
 N -680 -600 -630 -600 {lab=Vb}
 N -680 -600 -680 -570 {lab=Vb}
 N -680 -570 -670 -570 {lab=Vb}
-N -630 -570 -590 -570 {lab=VDD}
+N -630 -570 -590 -570 {lab=vdda}
 N -830 -650 -830 -600 {lab=Vb}
 N -630 -650 -630 -600 {lab=Vb}
 N -680 -540 -630 -540 {lab=Vb}
@@ -136,9 +136,9 @@ m=2
 model=sg13_hv_pmos
 spiceprefix=X
 }
-C {lab_wire.sym} -820 -570 0 1 {name=p22 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} -610 -570 0 1 {name=p23 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} -610 -570 0 1 {name=p23 sig_type=std_logic lab=vdda}
 C {lab_wire.sym} -630 -620 0 0 {name=p36 sig_type=std_logic lab=Vb
 }
 C {lab_wire.sym} -830 -620 0 0 {name=p35 sig_type=std_logic lab=Vb
 }
+C {lab_wire.sym} -820 -570 2 0 {name=p6 sig_type=std_logic lab=vdda}

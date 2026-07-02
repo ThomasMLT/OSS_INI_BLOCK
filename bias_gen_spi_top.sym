@@ -1,6 +1,46 @@
 v {xschem version=3.4.8RC file_version=1.3}
 G {}
-K {}
+K {type=subcircuit
+format="@name @@cs_n @@miso mosi @@\\reg_out10[0] @@\\reg_out10[10] 
++ @@\\reg_out10[1] @@\\reg_out10[2] @@\\reg_out10[3] @@\\reg_out10[4] @@\\reg_out10[5] 
++ @@\\reg_out10[6] @@\\reg_out10[7] @@\\reg_out10[8] @@\\reg_out10[9] @@\\reg_out11[0] 
++ @@\\reg_out11[10] @@\\reg_out11[1] @@\\reg_out11[2] @@\\reg_out11[3] @@\\reg_out11[4] 
++ @@\\reg_out11[5] @@\\reg_out11[6] @@\\reg_out11[7] @@\\reg_out11[8] @@\\reg_out11[9] 
++ @@\\reg_out12[0] @@\\reg_out12[10] @@\\reg_out12[1] @@\\reg_out12[2] @@\\reg_out12[3] 
++ @@\\reg_out12[4] @@\\reg_out12[5] @@\\reg_out12[6] @@\\reg_out12[7] @@\\reg_out12[8] 
++ @@\\reg_out12[9] @@\\reg_out13[0] @@\\reg_out13[10] @@\\reg_out13[1] @@\\reg_out13[2] 
++ @@\\reg_out13[3] @@\\reg_out13[4] @@\\reg_out13[5] @@\\reg_out13[6] @@\\reg_out13[7] 
++ @@\\reg_out13[8] @@\\reg_out13[9] @@\\reg_out14[0] @@\\reg_out14[10] @@\\reg_out14[1] 
++ @@\\reg_out14[2] @@\\reg_out14[3] @@\\reg_out14[4] @@\\reg_out14[5] @@\\reg_out14[6] 
++ @@\\reg_out14[7] @@\\reg_out14[8] @@\\reg_out14[9] @@\\reg_out15[0] @@\\reg_out15[10] 
++ @@\\reg_out15[1] @@\\reg_out15[2] @@\\reg_out15[3] @@\\reg_out15[4] @@\\reg_out15[5] 
++ @@\\reg_out15[6] @@\\reg_out15[7] @@\\reg_out15[8] @@\\reg_out15[9] @@\\reg_out16[0] 
++ @@\\reg_out16[10] @@\\reg_out16[1] @@\\reg_out16[2] @@\\reg_out16[3] @@\\reg_out16[4] 
++ @@\\reg_out16[5] @@\\reg_out16[6] @@\\reg_out16[7] @@\\reg_out16[8] @@\\reg_out16[9] 
++ @@\\reg_out1[0] @@\\reg_out1[10] @@\\reg_out1[1] @@\\reg_out1[2] @@\\reg_out1[3] 
++ @@\\reg_out1[4] @@\\reg_out1[5] @@\\reg_out1[6] @@\\reg_out1[7] @@\\reg_out1[8] @@\\reg_out1[9] 
++ @@\\reg_out2[0] @@\\reg_out2[10] @@\\reg_out2[1] @@\\reg_out2[2] @@\\reg_out2[3] 
++ @@\\reg_out2[4] @@\\reg_out2[5] @@\\reg_out2[6] @@\\reg_out2[7] @@\\reg_out2[8] @@\\reg_out2[9] 
++ @@\\reg_out3[0] @@\\reg_out3[10] @@\\reg_out3[1] @@\\reg_out3[2] @@\\reg_out3[3] 
++ @@\\reg_out3[4] @@\\reg_out3[5] @@\\reg_out3[6] @@\\reg_out3[7] @@\\reg_out3[8] @@\\reg_out3[9] 
++ @@\\reg_out4[0] @@\\reg_out4[10] @@\\reg_out4[1] @@\\reg_out4[2] @@\\reg_out4[3] 
++ @@\\reg_out4[4] @@\\reg_out4[5] @@\\reg_out4[6] @@\\reg_out4[7] @@\\reg_out4[8] @@\\reg_out4[9] 
++ @@\\reg_out5[0] @@\\reg_out5[10] @@\\reg_out5[1] @@\\reg_out5[2] @@\\reg_out5[3] 
++ @@\\reg_out5[4] @@\\reg_out5[5] @@\\reg_out5[6] @@\\reg_out5[7] @@\\reg_out5[8] @@\\reg_out5[9] 
++ @@\\reg_out6[0] @@\\reg_out6[10] @@\\reg_out6[1] @@\\reg_out6[2] @@\\reg_out6[3] 
++ @@\\reg_out6[4] @@\\reg_out6[5] @@\\reg_out6[6] @@\\reg_out6[7] @@\\reg_out6[8] @@\\reg_out6[9] 
++ @@\\reg_out7[0] @@\\reg_out7[10] @@\\reg_out7[1] @@\\reg_out7[2] @@\\reg_out7[3] 
++ @@\\reg_out7[4] @@\\reg_out7[5] @@\\reg_out7[6] @@\\reg_out7[7] @@\\reg_out7[8] @@\\reg_out7[9] 
++ @@\\reg_out8[0] @@\\reg_out8[10] @@\\reg_out8[1] @@\\reg_out8[2] @@\\reg_out8[3] 
++ @@\\reg_out8[4] @@\\reg_out8[5] @@\\reg_out8[6] @@\\reg_out8[7] @@\\reg_out8[8] @@\\reg_out8[9] 
++ @@\\reg_out9[0] @@\\reg_out9[10] @@\\reg_out9[1] @@\\reg_out9[2] @@\\reg_out9[3] 
++ @@\\reg_out9[4] @@\\reg_out9[5] @@\\reg_out9[6] @@\\reg_out9[7] @@\\reg_out9[8] @@\\reg_out9[9] 
++ @@rst_n @@sck @@VDD @@VSS @symname"
+spectre_format="@name ( @pinlist ) @symname"
+symname = bias_gen_spi_top
+template="name=x1"
+spice_sym_def=".include ./bias_gen_spi_top_lvs.spice"
+}
 V {}
 S {}
 F {}
@@ -50,7 +90,7 @@ B 5 217.5 217.5 222.5 222.5 {name=reg_out16[10:0] dir=out}
 B 5 7.5 217.5 12.5 222.5 {name=reg_out9[10:0] dir=out}
 B 5 37.5 217.5 42.5 222.5 {name=reg_out10[10:0] dir=out}
 B 5 587.5 217.5 592.5 222.5 {name=vss dir=inout}
-B 5 587.5 -222.5 592.5 -217.5 {name=vdd dir=inout}
+B 5 587.5 -222.5 592.5 -217.5 {name=VDD dir=inout}
 P 4 5 1180 -200 -320 -200 -320 200 1180 200 1180 -200 {}
 T {@symname} -85 -6 0 0 0.3 0.3 {}
 T {@name} 1185 -202 0 0 0.2 0.2 {}
@@ -76,4 +116,4 @@ T {reg_out16[10:0]} 224 195 1 1 0.2 0.2 {}
 T {reg_out9[10:0]} 14 195 1 1 0.2 0.2 {}
 T {reg_out10[10:0]} 44 195 1 1 0.2 0.2 {}
 T {vss} 594 195 1 1 0.2 0.2 {}
-T {vdd} 586 -195 3 1 0.2 0.2 {}
+T {VDD} 586 -195 3 1 0.2 0.2 {}
