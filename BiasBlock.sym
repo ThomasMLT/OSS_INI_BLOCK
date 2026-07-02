@@ -1,0 +1,92 @@
+v {xschem version=3.4.8RC file_version=1.3}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+spectre_format="@name ( @pinlist ) @symname"
+template="name=x1"
+}
+V {}
+S {}
+F {}
+E {}
+L 4 -150 60 -130 60 {}
+L 4 -150 -120 -130 -120 {}
+L 4 -150 80 -130 80 {}
+L 4 -150 -100 -130 -100 {}
+L 4 -150 -80 -130 -80 {}
+L 4 -150 130 -130 130 {}
+L 4 -150 100 -130 100 {}
+L 4 -150 -40 -130 -40 {}
+L 4 -150 40 -130 40 {}
+L 4 -150 -20 -130 -20 {}
+L 4 -150 20 -130 20 {}
+L 4 -150 -60 -130 -60 {}
+L 4 -150 0 -130 0 {}
+L 4 130 -90 150 -90 {}
+L 4 130 -70 150 -70 {}
+L 4 130 -50 150 -50 {}
+L 4 130 -30 150 -30 {}
+L 4 130 -10 150 -10 {}
+L 4 130 10 150 10 {}
+L 4 130 30 150 30 {}
+L 4 130 50 150 50 {}
+L 4 130 70 150 70 {}
+L 4 130 90 150 90 {}
+L 4 130 110 150 110 {}
+L 7 -150 180 -130 180 {}
+L 7 -150 160 -130 160 {}
+B 5 -152.5 57.5 -147.5 62.5 {name=en_VS_8[10:0] dir=in}
+B 5 -152.5 -122.5 -147.5 -117.5 {name=ref_VUN[7:0] dir=in}
+B 5 -152.5 77.5 -147.5 82.5 {name=en_VS_9[10:0] dir=in}
+B 5 -152.5 -102.5 -147.5 -97.5 {name=en_VS_0[10:0] dir=in}
+B 5 -152.5 -82.5 -147.5 -77.5 {name=en_VS_1[10:0] dir=in}
+B 5 -152.5 127.5 -147.5 132.5 {name=BIASGEN_en_VS dir=in}
+B 5 -152.5 97.5 -147.5 102.5 {name=en_VS_10[10:0] dir=in}
+B 5 -152.5 -42.5 -147.5 -37.5 {name=en_VS_3[10:0] dir=in}
+B 5 -152.5 37.5 -147.5 42.5 {name=en_VS_7[10:0] dir=in}
+B 5 -152.5 -22.5 -147.5 -17.5 {name=en_VS_4[10:0] dir=in}
+B 5 -152.5 17.5 -147.5 22.5 {name=en_VS_6[10:0] dir=in}
+B 5 -152.5 -62.5 -147.5 -57.5 {name=en_VS_2[10:0] dir=in}
+B 5 -152.5 -2.5 -147.5 2.5 {name=en_VS_5[10:0] dir=in}
+B 5 147.5 -92.5 152.5 -87.5 {name=C2F_Iin dir=out}
+B 5 147.5 -72.5 152.5 -67.5 {name=NNPULEXT_pwbias_VPI sig_type=std_logic dir=out}
+B 5 147.5 -52.5 152.5 -47.5 {name=NNDPI_gain_VNI sig_type=std_logic dir=out}
+B 5 147.5 -32.5 152.5 -27.5 {name=NNREF_lk_VNI sig_type=std_logic dir=out}
+B 5 147.5 -12.5 152.5 -7.5 {name=NNADAPDPI_lk_VNI sig_type=std_logic dir=out}
+B 5 147.5 7.5 152.5 12.5 {name=NNADAPDPI_gain_VNI sig_type=std_logic dir=out}
+B 5 147.5 27.5 152.5 32.5 {name=V2I_imax_VPI sig_type=std_logic dir=out}
+B 5 147.5 47.5 152.5 52.5 {name=NNADAP_gain_VPI sig_type=std_logic dir=out}
+B 5 147.5 67.5 152.5 72.5 {name=NNDPI_lk_VNI sig_type=std_logic dir=out}
+B 5 147.5 87.5 152.5 92.5 {name=C2F_Vb dir=out}
+B 5 147.5 107.5 152.5 112.5 {name=BG_PROB dir=out}
+B 5 -152.5 177.5 -147.5 182.5 {name=VDD dir=inout}
+B 5 -152.5 157.5 -147.5 162.5 {name=VSS dir=inout}
+P 4 5 130 -140 -130 -140 -130 190 130 190 130 -140 {}
+T {@symname} -58.5 -6 0 0 0.3 0.3 {}
+T {@name} 135 -152 0 0 0.2 0.2 {}
+T {en_VS_8[10:0]} -125 56 0 0 0.2 0.2 {}
+T {ref_VUN[7:0]} -125 -124 0 0 0.2 0.2 {}
+T {en_VS_9[10:0]} -125 76 0 0 0.2 0.2 {}
+T {en_VS_0[10:0]} -125 -104 0 0 0.2 0.2 {}
+T {en_VS_1[10:0]} -125 -84 0 0 0.2 0.2 {}
+T {BIASGEN_en_VS} -125 126 0 0 0.2 0.2 {}
+T {en_VS_10[10:0]} -125 96 0 0 0.2 0.2 {}
+T {en_VS_3[10:0]} -125 -44 0 0 0.2 0.2 {}
+T {en_VS_7[10:0]} -125 36 0 0 0.2 0.2 {}
+T {en_VS_4[10:0]} -125 -24 0 0 0.2 0.2 {}
+T {en_VS_6[10:0]} -125 16 0 0 0.2 0.2 {}
+T {en_VS_2[10:0]} -125 -64 0 0 0.2 0.2 {}
+T {en_VS_5[10:0]} -125 -4 0 0 0.2 0.2 {}
+T {C2F_Iin} 125 -94 0 1 0.2 0.2 {}
+T {NNPULEXT_pwbias_VPI} 125 -74 0 1 0.2 0.2 {}
+T {NNDPI_gain_VNI} 125 -54 0 1 0.2 0.2 {}
+T {NNREF_lk_VNI} 125 -34 0 1 0.2 0.2 {}
+T {NNADAPDPI_lk_VNI} 125 -14 0 1 0.2 0.2 {}
+T {NNADAPDPI_gain_VNI} 125 6 0 1 0.2 0.2 {}
+T {V2I_imax_VPI} 125 26 0 1 0.2 0.2 {}
+T {NNADAP_gain_VPI} 125 46 0 1 0.2 0.2 {}
+T {NNDPI_lk_VNI} 125 66 0 1 0.2 0.2 {}
+T {C2F_Vb} 125 86 0 1 0.2 0.2 {}
+T {BG_PROB} 125 106 0 1 0.2 0.2 {}
+T {VDD} -125 184 2 1 0.2 0.2 {}
+T {VSS} -125 164 2 1 0.2 0.2 {}
