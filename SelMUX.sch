@@ -24,19 +24,19 @@ N 280 50 280 370 {lab=MASTER_biasout_VN}
 N 280 370 320 370 {lab=MASTER_biasout_VN}
 N 280 370 280 690 {lab=MASTER_biasout_VN}
 N -200 850 -200 900 {lab=en_VSB[0]}
-N -200 1010 -200 1050 {lab=en_VS[0]}
-N -200 690 -200 730 {lab=en_VS[0]}
+N -200 1010 -200 1050 {lab=en_VS[8]}
+N -200 690 -200 730 {lab=en_VS[8]}
 N -200 530 -200 580 {lab=en_VSB[0]}
-N -200 370 -200 410 {lab=en_VS[0]}
-N -200 50 -200 70 {lab=en_VS[0]}
+N -200 370 -200 410 {lab=en_VS[8]}
+N -200 50 -200 70 {lab=en_VS[8]}
 N -200 -110 -200 -80 {lab=en_VSB[0]}
 N -200 210 -200 260 {lab=en_VSB[0]}
-N 0 910 0 950 {lab=en_VS[1]}
-N 0 590 0 640 {lab=en_VSB[1]}
-N 0 270 0 310 {lab=en_VS[1]}
-N 0 -50 0 0 {lab=en_VSB[1]}
-N 200 90 200 140 {lab=en_VSB[2]}
-N 200 730 200 750 {lab=en_VS[2]}
+N 0 910 0 950 {lab=en_VS[9]}
+N 0 590 0 640 {lab=en_VSB[9]}
+N 0 270 0 310 {lab=en_VS[9]}
+N 0 -50 0 0 {lab=en_VSB[9]}
+N 200 90 200 140 {lab=en_VSB[10]}
+N 200 730 200 750 {lab=en_VS[10]}
 N -140 170 -140 230 {lab=#net3}
 N -140 230 -140 330 {lab=#net3}
 N -140 490 -140 550 {lab=#net2}
@@ -183,20 +183,20 @@ m=1
 model=sg13_hv_nmos
 spiceprefix=X
 }
-C {lab_wire.sym} -200 1010 3 0 {name=p_en0_a sig_type=std_logic lab=en_VS[0]}
-C {lab_wire.sym} -200 850 3 0 {name=p_en0_b sig_type=std_logic lab=en_VSB[0]}
-C {lab_wire.sym} -200 690 3 0 {name=p_en0_c sig_type=std_logic lab=en_VS[0]}
-C {lab_wire.sym} -200 530 3 0 {name=p_en0_d sig_type=std_logic lab=en_VSB[0]}
-C {lab_wire.sym} -200 370 3 0 {name=p_en0_e sig_type=std_logic lab=en_VS[0]}
-C {lab_wire.sym} -200 210 3 0 {name=p_en0_f sig_type=std_logic lab=en_VSB[0]}
-C {lab_wire.sym} -200 50 3 0 {name=p_en0_g sig_type=std_logic lab=en_VS[0]}
-C {lab_wire.sym} -200 -110 3 0 {name=p_en0_h sig_type=std_logic lab=en_VSB[0]}
-C {lab_wire.sym} 0 910 3 0 {name=p_en1_a sig_type=std_logic lab=en_VS[1]}
-C {lab_wire.sym} 0 590 3 0 {name=p_en1_b sig_type=std_logic lab=en_VSB[1]}
-C {lab_wire.sym} 0 270 3 0 {name=p_en1_c sig_type=std_logic lab=en_VS[1]}
-C {lab_wire.sym} 0 -50 3 0 {name=p_en1_d sig_type=std_logic lab=en_VSB[1]}
-C {lab_wire.sym} 200 730 3 0 {name=p_en2_a sig_type=std_logic lab=en_VS[2]}
-C {lab_wire.sym} 200 90 3 0 {name=p_en2_b sig_type=std_logic lab=en_VSB[2]}
+C {lab_wire.sym} -200 1010 3 0 {name=p_en0_a sig_type=std_logic lab=en_VS[8]}
+C {lab_wire.sym} -200 850 3 0 {name=p_en0_b sig_type=std_logic lab=en_VSB[8]}
+C {lab_wire.sym} -200 690 3 0 {name=p_en0_c sig_type=std_logic lab=en_VS[8]}
+C {lab_wire.sym} -200 530 3 0 {name=p_en0_d sig_type=std_logic lab=en_VSB[8]}
+C {lab_wire.sym} -200 370 3 0 {name=p_en0_e sig_type=std_logic lab=en_VS[8]}
+C {lab_wire.sym} -200 210 3 0 {name=p_en0_f sig_type=std_logic lab=en_VSB[8]}
+C {lab_wire.sym} -200 50 3 0 {name=p_en0_g sig_type=std_logic lab=en_VS[8]}
+C {lab_wire.sym} -200 -110 3 0 {name=p_en0_h sig_type=std_logic lab=en_VSB[8]}
+C {lab_wire.sym} 0 910 3 0 {name=p_en1_a sig_type=std_logic lab=en_VS[9]}
+C {lab_wire.sym} 0 590 3 0 {name=p_en1_b sig_type=std_logic lab=en_VSB[9]}
+C {lab_wire.sym} 0 270 3 0 {name=p_en1_c sig_type=std_logic lab=en_VS[9]}
+C {lab_wire.sym} 0 -50 3 0 {name=p_en1_d sig_type=std_logic lab=en_VSB[9]}
+C {lab_wire.sym} 200 730 3 0 {name=p_en2_a sig_type=std_logic lab=en_VS[10]}
+C {lab_wire.sym} 200 90 3 0 {name=p_en2_b sig_type=std_logic lab=en_VSB[10]}
 C {lab_wire.sym} -490 -150 0 0 {name=p_mb0 sig_type=std_logic lab=MASTER_bias_VN[0]}
 C {lab_wire.sym} -490 10 0 0 {name=p_mb1 sig_type=std_logic lab=MASTER_bias_VN[1]}
 C {lab_wire.sym} -490 170 0 0 {name=p_mb2 sig_type=std_logic lab=MASTER_bias_VN[2]}
@@ -207,8 +207,8 @@ C {lab_wire.sym} -490 810 0 0 {name=p_mb6 sig_type=std_logic lab=MASTER_bias_VN[
 C {lab_wire.sym} -490 970 0 0 {name=p_mb7 sig_type=std_logic lab=MASTER_bias_VN[7]}
 C {ipin.sym} -120 -470 3 0 {name=p_mbias_bus lab=MASTER_bias_VN[7:0]}
 C {opin.sym} 320 370 0 0 {name=p_bias_out lab=MASTER_biasout_VN}
-C {ipin.sym} 80 -470 3 0 {name=p_en_cb1 lab=en_VS[2:0]}
-C {ipin.sym} 160 -470 3 0 {name=p_en_cbb1 lab=en_VSB[2:0]}
+C {ipin.sym} 80 -470 3 0 {name=p_en_cb1 lab=en_VS[10:8]}
+C {ipin.sym} 160 -470 3 0 {name=p_en_cbb1 lab=en_VSB[10:8]}
 C {iopin.sym} -360 -470 1 0 {name=p_en_cbb2 lab=vssa}
 C {lab_wire.sym} -200 170 3 1 {name=p_en1 sig_type=std_logic lab=vssa}
 C {lab_wire.sym} 0 230 3 1 {name=p_en2 sig_type=std_logic lab=vssa}

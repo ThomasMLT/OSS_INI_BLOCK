@@ -1,9 +1,0 @@
-02-Jul-2026 01:08:03 | INFO    | KLayout version detected: 0.30.8
-02-Jul-2026 01:08:03 | INFO    | Using DRC JSON file: /foss/pdks/ihp-sg13cmos5l/libs.tech/klayout/python/sg13cmos5l_pycell_lib/sg13cmos5l_tech_mod.json
-02-Jul-2026 01:08:03 | INFO    | Running IHP-SG13CMOS5L main checks on design /foss/designs/ihp_INI_project/INI_Block/CoreFineDAC.klay.gds, topcell: CoreFineDAC_N
-02-Jul-2026 01:08:11 | INFO    | Running IHP-SG13CMOS5L sg13cmos5l_maximal checks on design /foss/designs/ihp_INI_project/INI_Block/CoreFineDAC.klay.gds, topcell: CoreFineDAC_N
-02-Jul-2026 01:08:28 | INFO    | Completed running Sg13cmos5l_maximal checks.
-02-Jul-2026 01:08:29 | INFO    | =====================================================================================
-02-Jul-2026 01:08:29 | INFO    | KLayout DRC Check Passed: No DRC violations detected in the layout.
-02-Jul-2026 01:08:29 | INFO    | =====================================================================================
-02-Jul-2026 01:08:29 | INFO    | Total DRC Run time: 25.35 seconds (including execution, analysis, and reporting)
