@@ -1,0 +1,87 @@
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/CoreDiodeT.sch
+.subckt CoreDiodeT ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0] vssa en_VS
+*.PININFO ref_VUN[7:0]:B en_VS:I vssa:B
+x2[8] ref_VUN[7] vssa en_VS ref_VUN[7] ISINK
+x2[7] ref_VUN[7] vssa en_VS ref_VUN[7] ISINK
+x2[6] ref_VUN[7] vssa en_VS ref_VUN[7] ISINK
+x2[5] ref_VUN[7] vssa en_VS ref_VUN[7] ISINK
+x2[4] ref_VUN[7] vssa en_VS ref_VUN[7] ISINK
+x2[3] ref_VUN[7] vssa en_VS ref_VUN[7] ISINK
+x2[2] ref_VUN[7] vssa en_VS ref_VUN[7] ISINK
+x2[1] ref_VUN[7] vssa en_VS ref_VUN[7] ISINK
+x9[8] ref_VUN[6] vssa en_VS ref_VUN[6] ISINK
+x9[7] ref_VUN[6] vssa en_VS ref_VUN[6] ISINK
+x9[6] ref_VUN[6] vssa en_VS ref_VUN[6] ISINK
+x9[5] ref_VUN[6] vssa en_VS ref_VUN[6] ISINK
+x9[4] ref_VUN[6] vssa en_VS ref_VUN[6] ISINK
+x9[3] ref_VUN[6] vssa en_VS ref_VUN[6] ISINK
+x9[2] ref_VUN[6] vssa en_VS ref_VUN[6] ISINK
+x9[1] ref_VUN[6] vssa en_VS ref_VUN[6] ISINK
+x10[8] ref_VUN[5] vssa en_VS ref_VUN[5] ISINK
+x10[7] ref_VUN[5] vssa en_VS ref_VUN[5] ISINK
+x10[6] ref_VUN[5] vssa en_VS ref_VUN[5] ISINK
+x10[5] ref_VUN[5] vssa en_VS ref_VUN[5] ISINK
+x10[4] ref_VUN[5] vssa en_VS ref_VUN[5] ISINK
+x10[3] ref_VUN[5] vssa en_VS ref_VUN[5] ISINK
+x10[2] ref_VUN[5] vssa en_VS ref_VUN[5] ISINK
+x10[1] ref_VUN[5] vssa en_VS ref_VUN[5] ISINK
+x11[8] ref_VUN[4] vssa en_VS ref_VUN[4] ISINK
+x11[7] ref_VUN[4] vssa en_VS ref_VUN[4] ISINK
+x11[6] ref_VUN[4] vssa en_VS ref_VUN[4] ISINK
+x11[5] ref_VUN[4] vssa en_VS ref_VUN[4] ISINK
+x11[4] ref_VUN[4] vssa en_VS ref_VUN[4] ISINK
+x11[3] ref_VUN[4] vssa en_VS ref_VUN[4] ISINK
+x11[2] ref_VUN[4] vssa en_VS ref_VUN[4] ISINK
+x11[1] ref_VUN[4] vssa en_VS ref_VUN[4] ISINK
+x12[8] ref_VUN[3] vssa en_VS ref_VUN[3] ISINK
+x12[7] ref_VUN[3] vssa en_VS ref_VUN[3] ISINK
+x12[6] ref_VUN[3] vssa en_VS ref_VUN[3] ISINK
+x12[5] ref_VUN[3] vssa en_VS ref_VUN[3] ISINK
+x12[4] ref_VUN[3] vssa en_VS ref_VUN[3] ISINK
+x12[3] ref_VUN[3] vssa en_VS ref_VUN[3] ISINK
+x12[2] ref_VUN[3] vssa en_VS ref_VUN[3] ISINK
+x12[1] ref_VUN[3] vssa en_VS ref_VUN[3] ISINK
+x13[8] ref_VUN[2] vssa en_VS ref_VUN[2] ISINK
+x13[7] ref_VUN[2] vssa en_VS ref_VUN[2] ISINK
+x13[6] ref_VUN[2] vssa en_VS ref_VUN[2] ISINK
+x13[5] ref_VUN[2] vssa en_VS ref_VUN[2] ISINK
+x13[4] ref_VUN[2] vssa en_VS ref_VUN[2] ISINK
+x13[3] ref_VUN[2] vssa en_VS ref_VUN[2] ISINK
+x13[2] ref_VUN[2] vssa en_VS ref_VUN[2] ISINK
+x13[1] ref_VUN[2] vssa en_VS ref_VUN[2] ISINK
+x14[8] ref_VUN[1] vssa en_VS ref_VUN[1] ISINK
+x14[7] ref_VUN[1] vssa en_VS ref_VUN[1] ISINK
+x14[6] ref_VUN[1] vssa en_VS ref_VUN[1] ISINK
+x14[5] ref_VUN[1] vssa en_VS ref_VUN[1] ISINK
+x14[4] ref_VUN[1] vssa en_VS ref_VUN[1] ISINK
+x14[3] ref_VUN[1] vssa en_VS ref_VUN[1] ISINK
+x14[2] ref_VUN[1] vssa en_VS ref_VUN[1] ISINK
+x14[1] ref_VUN[1] vssa en_VS ref_VUN[1] ISINK
+x8[8] ref_VUN[0] vssa en_VS ref_VUN[0] ISINK
+x8[7] ref_VUN[0] vssa en_VS ref_VUN[0] ISINK
+x8[6] ref_VUN[0] vssa en_VS ref_VUN[0] ISINK
+x8[5] ref_VUN[0] vssa en_VS ref_VUN[0] ISINK
+x8[4] ref_VUN[0] vssa en_VS ref_VUN[0] ISINK
+x8[3] ref_VUN[0] vssa en_VS ref_VUN[0] ISINK
+x8[2] ref_VUN[0] vssa en_VS ref_VUN[0] ISINK
+x8[1] ref_VUN[0] vssa en_VS ref_VUN[0] ISINK
+CC1 ref_VUN[7] vssa cap_mfringe w=140.0u l=6.37u mmin=1 mmax=4
+CC2 ref_VUN[6] vssa cap_mfringe w=140.0u l=6.37u mmin=1 mmax=4
+CC3 ref_VUN[5] vssa cap_mfringe w=140.0u l=6.37u mmin=1 mmax=4
+CC4 ref_VUN[4] vssa cap_mfringe w=140.0u l=6.37u mmin=1 mmax=4
+CC5 ref_VUN[3] vssa cap_mfringe w=140.0u l=6.37u mmin=1 mmax=4
+CC6 ref_VUN[2] vssa cap_mfringe w=140.0u l=6.37u mmin=1 mmax=4
+CC7 ref_VUN[1] vssa cap_mfringe w=140.0u l=6.37u mmin=1 mmax=4
+CC8 ref_VUN[0] vssa cap_mfringe w=140.0u l=6.37u mmin=1 mmax=4
+.ends
+
+* expanding   symbol:  ISINK.sym # of pins=4
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/ISINK.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/ISINK.sch
+.subckt ISINK bias_VN vssa en_VS io_UN
+*.PININFO en_VS:I vssa:B bias_VN:I io_UN:B
+MM1 io_UN en_VS net2 vssa sg13_hv_nmos w=2.5u l=0.5u ng=1
+MM2 net2 bias_VN net1 vssa sg13_hv_nmos w=1u l=4u ng=1
+MM3 net1 bias_VN vssa vssa sg13_hv_nmos w=1u l=4u ng=1
+.ends
+
