@@ -122,45 +122,69 @@ C {lab_wire.sym} 560 -320 0 0 {name=p8 sig_type=std_logic lab=ref_VUN[3]}
 C {lab_wire.sym} 730 -320 0 0 {name=p9 sig_type=std_logic lab=ref_VUN[2]}
 C {lab_wire.sym} 890 -320 0 0 {name=p10 sig_type=std_logic lab=ref_VUN[1]}
 C {lab_wire.sym} 1070 -320 0 0 {name=p11 sig_type=std_logic lab=ref_VUN[0]}
-C {capa.sym} 1120 40 0 0 {name=C0
-m=1
-value=2p
-footprint=1206
-device="ceramic capacitor"}
-C {capa.sym} 940 40 0 0 {name=C1
-m=1
-value=2p
-footprint=1206
-device="ceramic capacitor"}
-C {capa.sym} 780 40 0 0 {name=C2
-m=1
-value=2p
-footprint=1206
-device="ceramic capacitor"}
-C {capa.sym} 610 40 0 0 {name=C3
-m=1
-value=2p
-footprint=1206
-device="ceramic capacitor"}
-C {capa.sym} 450 40 0 0 {name=C4
-m=1
-value=2p
-footprint=1206
-device="ceramic capacitor"}
-C {capa.sym} 270 40 0 0 {name=C5
-m=1
-value=2p
-footprint=1206
-device="ceramic capacitor"}
-C {capa.sym} 100 40 0 0 {name=C6
-m=1
-value=2p
-footprint=1206
-device="ceramic capacitor"}
-C {capa.sym} -80 40 0 0 {name=C7
-m=1
-value=2p
-footprint=1206
-device="ceramic capacitor"}
 C {ipin.sym} -290 -470 3 0 {name=p_en lab=en_VS}
 C {iopin.sym} -820 -470 1 0 {name=p_vssa1 lab=vssa}
+C {sg13g2_pr/cap_mfringe.sym} -80 40 0 0 {name=C1
+model=cap_mfringe
+w=140.0u
+l=6.37u
+mmin=1
+mmax=4
+spiceprefix=X
+}
+C {sg13g2_pr/cap_mfringe.sym} 100 40 0 0 {name=C2
+model=cap_mfringe
+w=140.0u
+l=6.37u
+mmin=1
+mmax=4
+spiceprefix=X
+}
+C {sg13g2_pr/cap_mfringe.sym} 270 40 0 0 {name=C3
+model=cap_mfringe
+w=140.0u
+l=6.37u
+mmin=1
+mmax=4
+spiceprefix=X
+}
+C {sg13g2_pr/cap_mfringe.sym} 450 40 0 0 {name=C4
+model=cap_mfringe
+w=140.0u
+l=6.37u
+mmin=1
+mmax=4
+spiceprefix=X
+}
+C {sg13g2_pr/cap_mfringe.sym} 610 40 0 0 {name=C5
+model=cap_mfringe
+w=140.0u
+l=6.37u
+mmin=1
+mmax=4
+spiceprefix=X
+}
+C {sg13g2_pr/cap_mfringe.sym} 780 40 0 0 {name=C6
+model=cap_mfringe
+w=140.0u
+l=6.37u
+mmin=1
+mmax=4
+spiceprefix=X
+}
+C {sg13g2_pr/cap_mfringe.sym} 940 40 0 0 {name=C7
+model=cap_mfringe
+w=140.0u
+l=6.37u
+mmin=1
+mmax=4
+spiceprefix=X
+}
+C {sg13g2_pr/cap_mfringe.sym} 1120 40 0 0 {name=C8
+model=cap_mfringe
+w=140.0u
+l=6.37u
+mmin=1
+mmax=4
+spiceprefix=X
+}
