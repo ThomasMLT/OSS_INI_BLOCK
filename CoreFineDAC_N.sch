@@ -115,21 +115,16 @@ N 2890 -220 2890 -190 {lab=bias_test}
 N 2830 -220 2890 -220 {lab=bias_test}
 N 2950 -220 2950 -190 {lab=bias_test}
 N 2890 -220 2950 -220 {lab=bias_test}
-N 3320 -660 3440 -660 {lab=vdda}
 N 3440 -660 3440 -600 {lab=vdda}
 N 3180 -660 3180 -600 {lab=vdda}
 N 1720 -660 3180 -660 {lab=vdda}
 N 3180 -540 3180 -470 {lab=#net4}
 N 3440 -540 3440 -470 {lab=#net5}
-N 3320 -570 3400 -570 {lab=bias_VP}
 N 3180 -410 3180 -360 {lab=bias_VP}
 N 3440 -60 3440 20 {lab=bias_VN}
-N 3320 -590 3320 -570 {lab=bias_VP}
-N 3320 -660 3320 -650 {lab=vdda}
-N 3270 -660 3320 -660 {lab=vdda}
 N 3440 170 3440 360 {lab=vssa}
 N 3440 -410 3440 -60 {lab=bias_VN}
-N 3300 310 3300 360 {lab=vssa}
+N 3300 330 3300 360 {lab=vssa}
 N 3300 360 3440 360 {lab=vssa}
 N 3440 -60 3580 -60 {lab=bias_VN}
 N 1860 -400 1860 -320 {lab=vdda}
@@ -149,7 +144,6 @@ N 3220 -500 3220 -440 {lab=MASTER_CoreDiodeT_bias_VN[2]}
 N 3400 -500 3580 -500 {lab=MASTER_CoreDiodeT_bias_VN[2]}
 N 3400 -500 3400 -440 {lab=MASTER_CoreDiodeT_bias_VN[2]}
 N 2740 360 3300 360 {lab=vssa}
-N 3300 110 3300 250 {lab=bias_VN}
 N 3300 110 3360 110 {lab=bias_VN}
 N 3300 -60 3300 110 {lab=bias_VN}
 N 3300 -60 3440 -60 {lab=bias_VN}
@@ -166,23 +160,12 @@ N 1100 -150 1650 -150 {lab=V_drain_ISINK}
 N 1100 -150 1100 -90 {lab=V_drain_ISINK}
 N 870 360 1100 360 {lab=vssa}
 N 690 -0 1020 -0 {lab=MASTER_biasout_VN}
-N 3320 -570 3320 -360 {lab=bias_VP}
 N 3220 -500 3400 -500 {lab=MASTER_CoreDiodeT_bias_VN[2]}
 N 1300 -220 1300 -60 {lab=bias_test}
 N 1300 60 1300 120 {lab=#net6}
 N 1370 60 1370 150 {lab=#net6}
 N 1300 60 1370 60 {lab=#net6}
 N 1300 0 1300 60 {lab=#net6}
-N 3080 310 3300 310 {lab=vssa}
-N 3080 250 3300 250 {lab=bias_VN}
-N 3270 -570 3320 -570 {lab=bias_VP}
-N 3270 -590 3270 -570 {lab=bias_VP}
-N 3230 -570 3270 -570 {lab=bias_VP}
-N 3270 -660 3270 -650 {lab=vdda}
-N 3230 -660 3270 -660 {lab=vdda}
-N 3230 -590 3230 -570 {lab=bias_VP}
-N 3230 -660 3230 -650 {lab=vdda}
-N 3180 -660 3230 -660 {lab=vdda}
 N -60 -1590 -10 -1590 {lab=vdda}
 N -60 -1700 -10 -1700 {lab=vdda}
 N -10 -1700 -10 -1670 {lab=vdda}
@@ -191,11 +174,17 @@ N 30 -1700 30 -1670 {lab=vdda}
 N -10 -1590 -10 -1560 {lab=vdda}
 N -10 -1560 30 -1560 {lab=vdda}
 N 30 -1590 30 -1560 {lab=vdda}
-N 3220 -570 3230 -570 {lab=bias_VP}
 N 1100 60 1100 360 {lab=vssa}
 N 1070 60 1100 60 {lab=vssa}
 N 840 190 870 190 {lab=vssa}
 N 3410 170 3440 170 {lab=vssa}
+N 3300 110 3300 220 {lab=bias_VN}
+N 3180 -660 3440 -660 {lab=vdda}
+N 3320 -550 3320 -360 {lab=bias_VP}
+N 3320 -550 3400 -550 {lab=bias_VP}
+N 3400 -570 3400 -550 {lab=bias_VP}
+N 3220 -550 3320 -550 {lab=bias_VP}
+N 3220 -570 3220 -550 {lab=bias_VP}
 C {lab_wire.sym} 720 -990 0 0 {name=p18 sig_type=std_logic lab=en_VS[10:0]
 }
 C {lab_wire.sym} 780 -1040 0 1 {name=p19 sig_type=std_logic lab=vdda
@@ -408,54 +397,6 @@ m=1
 model=sg13_hv_nmos
 spiceprefix=X
 }
-C {sg13g2_pr/cap_mfringe.sym} 3300 280 0 0 {name=C2
-model=cap_mfringe
-w=4.44u
-l=5u
-mmin=1
-mmax=4
-spiceprefix=X
-}
-C {sg13g2_pr/cap_mfringe.sym} 3190 280 2 1 {name=C5
-model=cap_mfringe
-w=8.96u
-l=19.18u
-mmin=1
-mmax=4
-spiceprefix=X
-}
-C {sg13g2_pr/cap_mfringe.sym} 3080 280 2 0 {name=C6
-model=cap_mfringe
-w=19.73u
-l=31u
-mmin=1
-mmax=4
-spiceprefix=X
-}
-C {sg13g2_pr/cap_mfringe.sym} 3320 -620 0 1 {name=C3
-model=cap_mfringe
-w=9.3750u
-l=22.5u
-mmin=1
-mmax=4
-spiceprefix=X
-}
-C {sg13g2_pr/cap_mfringe.sym} 3270 -620 0 1 {name=C1
-model=cap_mfringe
-w=9.3750u
-l=11.26u
-mmin=1
-mmax=4
-spiceprefix=X
-}
-C {sg13g2_pr/cap_mfringe.sym} 3230 -620 2 0 {name=C4
-model=cap_mfringe
-w=15u
-l=36.5u
-mmin=1
-mmax=4
-spiceprefix=X
-}
 C {sg13g2_pr/sg13_hv_pmos.sym} 10 -1700 0 1 {name=M3
 l=0.45u
 w=4u
@@ -478,3 +419,5 @@ C {lab_wire.sym} -60 -1590 2 1 {name=p12 sig_type=std_logic lab=vdda
 }
 C {lab_pin.sym} -10 -1620 0 0 {name=p_en_cbb7 lab=bias_VN}
 C {lab_pin.sym} -10 -1730 0 0 {name=p_en_cbb8 lab=bias_VP}
+C {cfringe33x55.sym} 3300 310 0 0 {name=x2}
+C {cfringe34x70.sym} 3320 -600 0 1 {name=x3}

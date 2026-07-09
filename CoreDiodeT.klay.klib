@@ -4,6 +4,10 @@
         {
             "lib_name": "ISINK",
             "lib_path": "ISINK.gds"
+        },
+        {
+            "lib_name": "cfringe140x6",
+            "lib_path": "cfringe140x6.gds"
         }
     ]
 }
