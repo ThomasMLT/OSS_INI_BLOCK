@@ -64,6 +64,10 @@ Xinv3 vdda net2 ack_VAI vssa inv
 Xinv4 vdda PULEXT_ackext_VABO net3 vssa inv
 x1 vdda req_VAO FB_cmpstate_VABO vssa inv_hc
 Xdpi1 DPI_in_UNI vdda SOM_mem_VTO DPI_gain_VNI vssa DPI_lk_VNI DPI_gain
+x2 SOM_mem_VTO vssa cfringe60x8
+x3 ADAPDPI_cap_VTO vssa cfringe35x8
+x4 REF_cap_VTO vssa cfringe35x8
+x5 PULEXT_cap_VP vssa cfringe6x3
 .ends
 
 
@@ -318,6 +322,33 @@ MMdifr capabias_VPN capabias_VPN in_UI vdda sg13_hv_pmos w=2u l=2u ng=2 m=8
 MMtau capabias_VPN lk_VNI vssa vssa sg13_hv_nmos w=4u l=4u ng=2 m=4
 MMdum2 in_UI vdda vdda vdda sg13_hv_pmos w=1u l=2u ng=1 m=8
 MM2 vdda vdda vdda vdda sg13_hv_pmos w=10u l=2u ng=1
+.ends
+
+
+* expanding   symbol:  cfringe60x8.sym # of pins=2
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/cfringe60x8.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/cfringe60x8.sch
+.subckt cfringe60x8 C2 C1
+*.PININFO C1:B C2:B
+CC1 C1 C2 cap_mfringe w=60.0u l=8.0u mmin=1 mmax=4
+.ends
+
+
+* expanding   symbol:  cfringe35x8.sym # of pins=2
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/cfringe35x8.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/cfringe35x8.sch
+.subckt cfringe35x8 C2 C1
+*.PININFO C1:B C2:B
+CC1 C1 C2 cap_mfringe w=35.0u l=8.0u mmin=1 mmax=4
+.ends
+
+
+* expanding   symbol:  cfringe6x3.sym # of pins=2
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/cfringe6x3.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/cfringe6x3.sch
+.subckt cfringe6x3 C2 C1
+*.PININFO C1:B C2:B
+CC1 C1 C2 cap_mfringe w=6.0u l=3.0u mmin=1 mmax=4
 .ends
 
 

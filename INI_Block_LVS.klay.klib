@@ -1,0 +1,55 @@
+{
+    "technology": "",
+    "statements": [
+        {
+            "lib_name": "CoreFineDAC",
+            "lib_path": "CoreFineDAC.klay.gds"
+        },
+        {
+            "lib_name": "neuron",
+            "lib_path": "neuron_sg13cmos5l.klay.gds"
+        },
+        {
+            "lib_name": "V2I",
+            "lib_path": "V2I.gds"
+        },
+        {
+            "lib_name": "CoreDiodeT",
+            "lib_path": "CoreDiodeT.klay.gds"
+        },
+        {
+            "lib_name": "Masterbias",
+            "lib_path": "Masterbias.klay.gds"
+        },
+        {
+            "lib_name": "bias_gen_spi_top",
+            "lib_path": "bias_gen_spi_top.gds"
+        },
+        {
+            "lib_name": "CoreFineDAC_CurrentOutput",
+            "lib_path": "CoreFineDAC_CurrentOutput.klay.gds"
+        },
+        {
+            "lib_name": "neuron_lvs",
+            "lib_path": "neuron_lvs.klay.gds"
+        },
+        {
+            "include_path": "CoreFineDAC.klay.klib"
+        },
+        {
+            "include_path": "CoreDiodeT.klay.klib"
+        },
+        {
+            "include_path": "masterbias.klay.klib"
+        },
+        {
+            "include_path": "neuron_sg13cmos5l.klay.klib"
+        },
+        {
+            "include_path": "CoreFineDAC_CurrentOutput.klay.klib"
+        },
+        {
+            "include_path": "neuron_lvs.klay.klib"
+        }
+    ]
+}
