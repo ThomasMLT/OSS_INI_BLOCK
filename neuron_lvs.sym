@@ -1,0 +1,57 @@
+v {xschem version=3.4.7 file_version=1.2}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 -150 -70 -130 -70 {}
+L 4 -150 -50 -130 -50 {}
+L 4 130 -50 150 -50 {}
+L 4 130 -30 150 -30 {}
+L 4 -150 10 -130 10 {}
+L 4 130 -10 150 -10 {}
+L 4 -150 70 -130 70 {}
+L 4 -150 30 -130 30 {}
+L 4 -150 50 -130 50 {}
+L 4 130 10 150 10 {}
+L 4 -150 -30 -130 -30 {}
+L 4 -150 -10 -130 -10 {}
+L 4 -150 -90 -130 -90 {}
+L 7 130 -70 150 -70 {}
+L 7 130 50 150 50 {}
+B 5 147.5 -72.5 152.5 -67.5 {name=vdda dir=inout}
+B 5 -152.5 -72.5 -147.5 -67.5 {name=DPI_gain_VNI dir=in}
+B 5 -152.5 -52.5 -147.5 -47.5 {name=DPI_lk_VNI dir=in}
+B 5 147.5 -52.5 152.5 -47.5 {name=SOM_mem_VTO dir=out}
+B 5 147.5 -32.5 152.5 -27.5 {name=req_VAO dir=out}
+B 5 -152.5 -12.5 -147.5 -7.5 {name=ADAP_gain_VPI dir=in}
+B 5 -152.5 7.5 -147.5 12.5 {name=ADAPDPI_gain_VNI dir=in}
+B 5 147.5 -12.5 152.5 -7.5 {name=ADAPDPI_cap_VTO dir=out}
+B 5 -152.5 67.5 -147.5 72.5 {name=ack_VAI dir=in}
+B 5 -152.5 27.5 -147.5 32.5 {name=ADAPDPI_lk_VNI dir=in}
+B 5 -152.5 47.5 -147.5 52.5 {name=REF_lk_VNI dir=in}
+B 5 147.5 47.5 152.5 52.5 {name=vssa dir=inout}
+B 5 147.5 7.5 152.5 12.5 {name=REF_cap_VTO dir=out}
+B 5 -152.5 -32.5 -147.5 -27.5 {name=PULEXT_pwbias_VPI dir=in}
+B 5 -152.5 -92.5 -147.5 -87.5 {name=DPI_in_UNI dir=inout}
+P 4 5 130 -100 -130 -100 -130 80 130 80 130 -100 {}
+T {@symname} -45 -16 0 0 0.3 0.3 {}
+T {@name} 135 -102 0 0 0.2 0.2 {}
+T {vdda} 125 -74 0 1 0.2 0.2 {}
+T {DPI_gain_VNI} -125 -74 0 0 0.2 0.2 {}
+T {DPI_lk_VNI} -125 -54 0 0 0.2 0.2 {}
+T {SOM_mem_VTO} 125 -54 0 1 0.2 0.2 {}
+T {req_VAO} 125 -34 0 1 0.2 0.2 {}
+T {ADAP_gain_VPI} -125 -14 0 0 0.2 0.2 {}
+T {ADAPDPI_gain_VNI} -125 6 0 0 0.2 0.2 {}
+T {ADAPDPI_cap_VTO} 125 -14 0 1 0.2 0.2 {}
+T {ack_VAI} -125 66 0 0 0.2 0.2 {}
+T {ADAPDPI_lk_VNI} -125 26 0 0 0.2 0.2 {}
+T {REF_lk_VNI} -125 46 0 0 0.2 0.2 {}
+T {vssa} 125 46 0 1 0.2 0.2 {}
+T {REF_cap_VTO} 125 6 0 1 0.2 0.2 {}
+T {PULEXT_pwbias_VPI} -125 -34 0 0 0.2 0.2 {}
+T {DPI_in_UNI} -125 -94 0 0 0.2 0.2 {}
