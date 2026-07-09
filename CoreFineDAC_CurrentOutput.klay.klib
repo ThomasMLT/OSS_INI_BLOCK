@@ -1,0 +1,21 @@
+{
+    "technology": "",
+    "statements": [
+        {
+            "lib_name": "SelMUX",
+            "lib_path": "SelMUX.gds"
+        },
+        {
+            "lib_name": "SplitterCells",
+            "lib_path": "SplitterCells.gds"
+        },
+        {
+            "lib_name": "ISINK",
+            "lib_path": "ISINK.gds"
+        },
+        {
+            "lib_name": "inv_BG",
+            "lib_path": "inv_BG.gds"
+        }
+    ]
+}
