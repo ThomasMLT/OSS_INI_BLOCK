@@ -121,3 +121,11 @@ C {lab_pin.sym} 120 570 0 1 {name=p38 sig_type=std_logic lab=vssa}
 C {inv_hc.sym} 540 -130 0 0 {name=x1}
 C {DPI_gain.sym} -360 -130 0 0 {name=Xdpi1}
 C {lab_pin.sym} 450 510 0 1 {name=p49 sig_type=std_logic lab=PULEXT_cap_VP}
+C {cfringe60x8.sym} -150 -10 0 0 {name=x2}
+C {lab_pin.sym} -150 50 0 1 {name=p29 sig_type=std_logic lab=vssa}
+C {cfringe35x8.sym} -600 600 0 0 {name=x3}
+C {lab_pin.sym} -600 650 0 0 {name=p30 sig_type=std_logic lab=vssa}
+C {cfringe35x8.sym} 630 300 0 0 {name=x4}
+C {lab_pin.sym} 630 350 0 0 {name=p33 sig_type=std_logic lab=vssa}
+C {cfringe6x3.sym} 450 690 0 0 {name=x5}
+C {lab_pin.sym} 450 750 0 0 {name=p39 sig_type=std_logic lab=vssa}
