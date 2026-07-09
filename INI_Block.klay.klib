@@ -26,6 +26,10 @@
             "lib_path": "bias_gen_spi_top.gds"
         },
         {
+            "lib_name": "CoreFineDAC_CurrentOutput",
+            "lib_path": "CoreFineDAC_CurrentOutput.klay.gds"
+        },
+        {
             "include_path": "CoreFineDAC.klay.klib"
         },
         {
@@ -36,6 +40,9 @@
         },
         {
             "include_path": "neuron_sg13cmos5l.klay.klib"
+        },
+        {
+            "include_path": "CoreFineDAC_CurrentOutput.klay.klib"
         }
     ]
 }

@@ -222,14 +222,6 @@ N -420 -140 -350 -140 {lab=#net12}
 N -420 180 -350 180 {lab=#net11}
 N -220 -320 -170 -320 {lab=MASTER_biasout_VN}
 N -220 320 -170 320 {lab=MASTER_biasout_VN}
-N -1070 -1920 -1020 -1920 {lab=vdda}
-N -1070 -2030 -1020 -2030 {lab=vdda}
-N -1020 -2030 -1020 -2000 {lab=vdda}
-N -1020 -2000 -980 -2000 {lab=vdda}
-N -980 -2030 -980 -2000 {lab=vdda}
-N -1020 -1920 -1020 -1890 {lab=vdda}
-N -1020 -1890 -980 -1890 {lab=vdda}
-N -980 -1920 -980 -1890 {lab=vdda}
 N 3340 -590 3340 -570 {lab=biasgen_VP}
 N 3320 -570 3340 -570 {lab=biasgen_VP}
 N 3290 -590 3290 -570 {lab=biasgen_VP}
@@ -244,6 +236,14 @@ N 3250 -660 3250 -650 {lab=vdda}
 N 3180 -660 3250 -660 {lab=vdda}
 N 3080 310 3300 310 {lab=vssa}
 N 3080 250 3300 250 {lab=biasgen_VN}
+N -630 -2330 -580 -2330 {lab=vdda}
+N -630 -2440 -580 -2440 {lab=vdda}
+N -580 -2440 -580 -2410 {lab=vdda}
+N -580 -2410 -540 -2410 {lab=vdda}
+N -540 -2440 -540 -2410 {lab=vdda}
+N -580 -2330 -580 -2300 {lab=vdda}
+N -580 -2300 -540 -2300 {lab=vdda}
+N -540 -2330 -540 -2300 {lab=vdda}
 C {iopin.sym} 0 360 2 0 {name=p8 sig_type=std_logic lab=vssa
 }
 C {ISINK.sym} 850 100 0 1 {name=xisink0}
@@ -696,28 +696,6 @@ C {lab_wire.sym} -250 -320 3 1 {name=p_en11 sig_type=std_logic lab=vssa}
 C {lab_wire.sym} -450 -460 3 1 {name=p_en12 sig_type=std_logic lab=vssa}
 C {lab_wire.sym} -650 -360 3 1 {name=p_en13 sig_type=std_logic lab=vssa}
 C {lab_wire.sym} -650 -520 3 1 {name=p_en14 sig_type=std_logic lab=vssa}
-C {sg13g2_pr/sg13_hv_pmos.sym} -1000 -2030 0 1 {name=M3
-l=0.45u
-w=4u
-ng=1
-m=2
-model=sg13_hv_pmos
-spiceprefix=X
-}
-C {sg13g2_pr/sg13_hv_pmos.sym} -1000 -1920 0 1 {name=M4
-l=0.45u
-w=4u
-ng=1
-m=2
-model=sg13_hv_pmos
-spiceprefix=X
-}
-C {lab_wire.sym} -1070 -2030 2 1 {name=p6 sig_type=std_logic lab=vdda
-}
-C {lab_wire.sym} -1070 -1920 2 1 {name=p10 sig_type=std_logic lab=vdda
-}
-C {lab_pin.sym} -1020 -1950 0 0 {name=p_en_cbb1 lab=biasgen_VN}
-C {lab_pin.sym} -1020 -2060 0 0 {name=p_en_cbb2 lab=biasgen_VP}
 C {sg13g2_pr/cap_mfringe.sym} 3290 -620 2 0 {name=C1
 model=cap_mfringe
 w=9.3750u
@@ -766,3 +744,25 @@ mmin=1
 mmax=4
 spiceprefix=X
 }
+C {sg13g2_pr/sg13_hv_pmos.sym} -560 -2440 0 1 {name=M3
+l=0.45u
+w=4u
+ng=1
+m=2
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {sg13g2_pr/sg13_hv_pmos.sym} -560 -2330 0 1 {name=M4
+l=0.45u
+w=4u
+ng=1
+m=2
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {lab_wire.sym} -630 -2440 2 1 {name=p6 sig_type=std_logic lab=vdda
+}
+C {lab_wire.sym} -630 -2330 2 1 {name=p10 sig_type=std_logic lab=vdda
+}
+C {lab_pin.sym} -580 -2360 0 0 {name=p_en_cbb1 lab=biasgen_VN}
+C {lab_pin.sym} -580 -2470 0 0 {name=p_en_cbb2 lab=biasgen_VP}

@@ -22,7 +22,7 @@ N -1470 -1430 -1300 -1430 {lab=out}
 N -1580 -2050 -1580 -2000 {lab=vdda}
 N -1580 -2000 -1470 -2000 {lab=vdda}
 N -1470 -1700 -1470 -1560 {lab=Vmir}
-N -1470 -1370 -1440 -1370 {lab=sub}
+N -1470 -1370 -1440 -1370 {lab=vssa}
 N -1470 -1160 -1470 -1060 {lab=vssa}
 N -1470 -1530 -1440 -1530 {lab=vdda}
 N -1690 -1370 -1550 -1370 {lab=V_mem}
@@ -40,9 +40,9 @@ N -1650 -1940 -1620 -1940 {lab=Vmir}
 N -1690 -2000 -1690 -1970 {lab=vdda}
 N -1470 -1760 -1430 -1760 {lab=vdda}
 N -1470 -2000 -1470 -1790 {lab=vdda}
-N -1470 -1310 -1440 -1310 {lab=sub}
-N -1470 -1250 -1440 -1250 {lab=sub}
-N -1470 -1190 -1440 -1190 {lab=sub}
+N -1470 -1310 -1440 -1310 {lab=vssa}
+N -1470 -1250 -1440 -1250 {lab=vssa}
+N -1470 -1190 -1440 -1190 {lab=vssa}
 N -1550 -1370 -1550 -1310 {lab=V_mem}
 N -1550 -1310 -1510 -1310 {lab=V_mem}
 N -1550 -1310 -1550 -1250 {lab=V_mem}
@@ -64,12 +64,28 @@ N -2420 -2160 -2420 -2130 {lab=vdda}
 N -2420 -2160 -2370 -2160 {lab=vdda}
 N -2370 -2100 -2370 -2080 {lab=V_mem}
 N -1690 -1730 -1690 -1370 {lab=V_mem}
-N -2470 -1980 -2450 -1980 {lab=sub}
+N -2470 -1980 -2450 -1980 {lab=vssa}
 N -2470 -2030 -2470 -2010 {lab=vssa}
 N -2520 -1980 -2510 -1980 {lab=vssa}
 N -2520 -2010 -2520 -1980 {lab=vssa}
 N -2520 -2010 -2470 -2010 {lab=vssa}
 N -2470 -1950 -2470 -1930 {lab=out}
+N -2670 -1970 -2650 -1970 {lab=vssa}
+N -2670 -2020 -2670 -2000 {lab=vssa}
+N -2720 -1970 -2710 -1970 {lab=vssa}
+N -2720 -2000 -2720 -1970 {lab=vssa}
+N -2720 -2000 -2670 -2000 {lab=vssa}
+N -2670 -1940 -2670 -1920 {lab=vssa}
+N -2720 -1920 -2670 -1920 {lab=vssa}
+N -2720 -1970 -2720 -1920 {lab=vssa}
+N -2690 -2130 -2670 -2130 {lab=vdda}
+N -2690 -2180 -2690 -2160 {lab=vdda}
+N -2740 -2130 -2730 -2130 {lab=vdda}
+N -2740 -2160 -2740 -2130 {lab=vdda}
+N -2740 -2160 -2690 -2160 {lab=vdda}
+N -2690 -2100 -2690 -2080 {lab=vdda}
+N -2740 -2080 -2690 -2080 {lab=vdda}
+N -2740 -2130 -2740 -2080 {lab=vdda}
 C {sg13g2_pr/sg13_hv_pmos.sym} -1490 -1760 0 0 {name=Mmirr
 l=2u
 w=4u
@@ -203,3 +219,25 @@ C {lab_wire.sym} -1440 -1370 0 1 {name=p4 sig_type=std_logic lab=vssa}
 C {lab_wire.sym} -1440 -1310 0 1 {name=p14 sig_type=std_logic lab=vssa}
 C {lab_wire.sym} -1440 -1250 0 1 {name=p15 sig_type=std_logic lab=vssa}
 C {lab_wire.sym} -1440 -1190 0 1 {name=p16 sig_type=std_logic lab=vssa}
+C {sg13g2_pr/sg13_hv_nmos.sym} -2690 -1970 0 0 {name=Mdum2
+l=2u
+w=12u
+ng=2
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {lab_wire.sym} -2670 -2020 0 0 {name=p20 sig_type=std_logic lab=vssa
+}
+C {lab_wire.sym} -2650 -1970 0 1 {name=p21 sig_type=std_logic lab=vssa}
+C {sg13g2_pr/sg13_hv_pmos.sym} -2710 -2130 0 0 {name=Mdum3
+l=2u
+w=12u
+ng=2
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {lab_wire.sym} -2690 -2180 0 0 {name=p19 sig_type=std_logic lab=vdda
+}
+C {lab_wire.sym} -2670 -2130 0 1 {name=p22 sig_type=std_logic lab=vdda}

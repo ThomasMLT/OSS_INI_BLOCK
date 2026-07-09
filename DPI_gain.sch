@@ -33,6 +33,10 @@ N -290 -570 -250 -570 {lab=vdda}
 N -250 -590 -250 -570 {lab=vdda}
 N -290 -570 -290 -540 {lab=vdda}
 N -250 -510 -250 -490 {lab=in_UI}
+N -40 -530 10 -530 {lab=vdda}
+N -80 -500 -40 -500 {lab=vdda}
+N -80 -560 -80 -500 {lab=vdda}
+N -80 -560 -40 -560 {lab=vdda}
 C {sg13g2_pr/sg13_hv_pmos.sym} 330 -260 0 0 {name=Mdifl
 l=2u
 w=2u
@@ -78,3 +82,13 @@ C {lab_wire.sym} -250 -590 0 1 {name=p14 sig_type=std_logic lab=vdda}
 C {lab_wire.sym} 510 -260 0 0 {name=p15 sig_type=std_logic lab=vdda}
 C {lab_wire.sym} 380 -260 0 1 {name=p8 sig_type=std_logic lab=vdda}
 C {lab_wire.sym} -220 -540 0 1 {name=p12 sig_type=std_logic lab=vdda}
+C {sg13g2_pr/sg13_hv_pmos.sym} -60 -530 0 0 {name=M2
+l=2u
+w=10u
+ng=1
+m=1
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {lab_wire.sym} 10 -530 0 1 {name=p11 sig_type=std_logic lab=vdda}
+C {lab_wire.sym} -40 -560 0 1 {name=p4 sig_type=std_logic lab=vdda}
