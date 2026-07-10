@@ -340,10 +340,10 @@ x6 VDDA net6 IREF_1pA net7 VSSA DecadeDivider_2
 x7 VDDA net7 IREF_100fA net1 VSSA DecadeDivider_2
 x8 VDDA net9 IREF_1uA VSSA DecadeDividerAux
 x9 VDDA VBP_TIA net10 net8 VBIAS VREF_100mV VSSA OTA_bc
-RR3 VSENSE VSSA 91.97k $SUB=VSSA $[rhigh] w=0.5e-6 l=31e-6 b=0
 x11 VSSA VDDA Cap1
 x12 net9 VDDA cap4
 x13 net10 VBIAS Cap5
+x14 VSSA VSENSE VSSA reshigh_92K
 .ends
 
 
@@ -700,7 +700,7 @@ MM7 vout1stage n1 VSSA VSSA sg13_hv_nmos w=1.75u l=0.5u ng=2 m=4
 MM8 VOP vout1stage VSSA VSSA sg13_hv_nmos w=4u l=0.5u ng=4 m=4
 MM9 VOP VBP VDDA VDDA sg13_hv_pmos w=4u l=0.5u ng=2
 MM10 vpmirr n2 VSSA VSSA sg13_hv_nmos w=2u l=0.5u ng=2 m=4
-RR1 vout1stage C_p1 49.84k $SUB=VSSA $[rhigh] w=0.5e-6 l=16.75e-6 b=0
+x1 C_p1 vout1stage VSSA reshigh_50k
 .ends
 
 
@@ -731,6 +731,15 @@ CC3 Cp2 Cp1 cap_mfringe w=28.0u l=10.0u mmin=1 mmax=4
 .ends
 
 
+* expanding   symbol:  reshigh_92K.sym # of pins=3
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/reshigh_92K.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/reshigh_92K.sch
+.subckt reshigh_92K R1 R2 VSSA
+*.PININFO R2:B R1:B VSSA:B
+RR3 R1 R2 91.97k $SUB=VSSA $[rhigh] w=0.5e-6 l=31e-6 b=0
+.ends
+
+
 * expanding   symbol:  ISOURCE.sym # of pins=6
 ** sym_path: /foss/designs/ihp_INI_project/INI_Block/ISOURCE.sym
 ** sch_path: /foss/designs/ihp_INI_project/INI_Block/ISOURCE.sch
@@ -758,5 +767,14 @@ MM3 net1 MBIAS VSSA bulk sg13_hv_nmos w=1u l=2u ng=1
 .subckt Cap3 Cp1 Cp2
 *.PININFO Cp2:B Cp1:B
 CC4 Cp1 Cp2 cap_mfringe w=14.0u l=88.0u mmin=1 mmax=4
+.ends
+
+
+* expanding   symbol:  reshigh_50k.sym # of pins=3
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/reshigh_50k.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/reshigh_50k.sch
+.subckt reshigh_50k R1 R2 VSSA
+*.PININFO R2:B R1:B VSSA:B
+RR1 R2 R1 49.84k $SUB=VSSA $[rhigh] w=0.5e-6 l=16.75e-6 b=0
 .ends
 

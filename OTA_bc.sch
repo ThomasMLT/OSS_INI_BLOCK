@@ -32,9 +32,7 @@ N 370 150 480 150 {lab=VSSA}
 N -60 -220 -10 -220 {lab=vpmirr}
 N -10 -250 -10 -220 {lab=vpmirr}
 N -20 -250 -10 -250 {lab=vpmirr}
-N 570 -140 590 -140 {lab=C_p1}
 N 690 -180 690 -90 {lab=VOP}
-N 480 -140 510 -140 {lab=vout1stage}
 N 480 -220 480 -140 {lab=vout1stage}
 N 410 90 440 90 {lab=n1}
 N 370 90 370 150 {lab=VSSA}
@@ -55,6 +53,8 @@ N -310 -450 -60 -450 {lab=VDDA}
 N 690 -90 750 -90 {lab=VOP}
 N 480 -450 480 -250 {lab=VDDA}
 N 210 -450 210 -330 {lab=VDDA}
+N 480 -140 490 -140 {lab=vout1stage}
+N 660 -140 670 -140 {lab=C_p1}
 C {sg13g2_pr/sg13_hv_nmos.sym} 390 90 0 1 {name=M13
 l=0.5u
 w=2u
@@ -156,14 +156,6 @@ C {lab_wire.sym} 210 -120 0 0 {name=p10 sig_type=std_logic lab=vtail}
 C {lab_wire.sym} 170 -250 0 0 {name=p11 sig_type=std_logic lab=vpmirr}
 C {opin.sym} 750 -90 0 0 {name=p12 lab=VOP}
 C {lab_wire.sym} 480 -150 1 0 {name=p13 sig_type=std_logic lab=vout1stage}
-C {sg13g2_pr/rhigh.sym} 540 -140 3 1 {name=R1
-w=0.5e-6
-l=16.75e-6
-model=rhigh
-body=VSSA
-spiceprefix=X
-b=0
-m=1
-value="expr_eng(  ( 1.6e-4 / @w + 1360.0 * ( (@b + 1)* @l + ( 1.081*( @w - 0.04e-6 ) + 0.18e-6 )*@b ) / ( @w - 0.04e-6 ) ) / @m  )"
-}
-C {ipin.sym} 590 -140 2 0 {name=p14 lab=C_p1}
+C {ipin.sym} 670 -140 2 0 {name=p14 lab=C_p1}
+C {reshigh_50k.sym} 570 -140 0 1 {name=x1}
+C {lab_wire.sym} 570 -180 0 0 {name=p15 sig_type=std_logic lab=VSSA}

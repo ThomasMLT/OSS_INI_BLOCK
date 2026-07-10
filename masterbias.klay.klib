@@ -15,7 +15,7 @@
         },
         {
             "lib_name": "OTA_b",
-            "lib_path": "OTA_b.gds"
+            "lib_path": "OTA_b.klay.gds"
         },
         {
             "lib_name": "cap4",
@@ -30,10 +30,17 @@
             "lib_path": "Cap1.gds"
         },
         {
+            "lib_name": "reshigh_92k",
+            "lib_path": "reshigh_92k.gds"
+        },
+        {
             "include_path": "DecadeDivider_2.klay.klib"
         },
         {
             "include_path": "DecadeDividerAux.klay.klib"
+        },
+        {
+            "include_path": "OTA_b.klay.klib"
         }
     ]
 }

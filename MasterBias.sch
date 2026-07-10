@@ -54,8 +54,7 @@ N -1630 60 -1630 170 {lab=#net8}
 N -1780 200 -1670 200 {lab=EXT_REF_ENB}
 N -1360 60 -1300 60 {lab=#net8}
 N -1240 60 -1140 60 {lab=VREG_pad}
-N -1630 380 -1630 420 {lab=VSSA}
-N -1630 220 -1630 320 {lab=VSENSE}
+N -1630 410 -1630 420 {lab=VSSA}
 N -2670 -460 -2590 -460 {lab=VDDA}
 N -2590 -280 -2590 -260 {lab=VSSA}
 N -2520 -330 -2470 -330 {lab=EXT_REF_ENB}
@@ -88,6 +87,7 @@ N -2210 -270 -2180 -270 {lab=#net9}
 N -2590 -460 -2590 -380 {lab=VDDA}
 N -2780 -330 -2650 -330 {lab=EXT_REF_EN}
 N -2180 -390 -2180 -380 {lab=VDDA}
+N -1630 220 -1630 240 {lab=VSENSE}
 C {lab_wire.sym} 60 -80 1 0 {name=p4 sig_type=std_logic lab=VSSA}
 C {lab_wire.sym} 300 -80 1 0 {name=p1 sig_type=std_logic lab=VSSA}
 C {lab_wire.sym} 540 -80 1 0 {name=p2 sig_type=std_logic lab=VSSA}
@@ -163,18 +163,10 @@ C {DecadeDivider_2.sym} 1080 -240 0 0 {name=x5}
 C {DecadeDivider_2.sym} 1320 -240 0 0 {name=x6}
 C {DecadeDivider_2.sym} 1560 -240 0 0 {name=x7}
 C {DecadeDividerAux.sym} -2360 -260 0 0 {name=x8}
-C {lab_wire.sym} -1630 270 0 0 {name=p_vbias_lbl1 sig_type=std_logic lab=VSENSE}
+C {lab_wire.sym} -1630 230 0 0 {name=p_vbias_lbl1 sig_type=std_logic lab=VSENSE}
 C {OTA_bc.sym} -1770 -160 0 0 {name=x9}
-C {sg13g2_pr/rhigh.sym} -1630 350 0 0 {name=R3
-w=0.5e-6
-l=31e-6
-model=rhigh
-body=VSSA
-spiceprefix=X
-b=0
-m=1
-value="expr_eng(  ( 1.6e-4 / @w + 1360.0 * ( (@b + 1)* @l + ( 1.081*( @w - 0.04e-6 ) + 0.18e-6 )*@b ) / ( @w - 0.04e-6 ) ) / @m  )"
-}
 C {Cap1.sym} -1510 -440 2 1 {name=x11}
 C {cap4.sym} -2180 -330 2 1 {name=x12}
 C {Cap5.sym} -1820 -30 0 0 {name=x13}
+C {reshigh_92K.sym} -1630 330 1 1 {name=x14}
+C {lab_wire.sym} -1590 330 1 0 {name=p_vssa_ota4 sig_type=std_logic lab=VSSA}
