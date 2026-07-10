@@ -1,0 +1,114 @@
+v {xschem version=3.4.8RC file_version=1.3}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+spectre_format="@name ( @pinlist ) @symname"
+template="name=x1"
+}
+V {}
+S {}
+F {}
+E {}
+L 4 90 -300 90 -280 {}
+L 4 130 -300 130 -280 {}
+L 4 110 -300 110 -280 {}
+L 4 -30 -300 -30 -280 {}
+L 4 10 -300 10 -280 {}
+L 4 -150 -300 -150 -280 {}
+L 4 -50 -300 -50 -280 {}
+L 4 -70 -300 -70 -280 {}
+L 4 -110 -300 -110 -280 {}
+L 4 -10 -300 -10 -280 {}
+L 4 -130 -300 -130 -280 {}
+L 4 -90 -300 -90 -280 {}
+L 4 30 240 30 260 {}
+L 4 -140 240 -140 260 {}
+L 4 90 240 90 260 {}
+L 4 70 240 70 260 {}
+L 4 -120 240 -120 260 {}
+L 4 330 40 350 40 {}
+L 4 330 60 350 60 {}
+L 4 250 240 250 260 {}
+L 4 -160 240 -160 260 {}
+L 4 -230 240 -230 260 {}
+L 4 330 0 350 0 {}
+L 4 -210 240 -210 260 {}
+L 4 -10 240 -10 260 {}
+L 4 330 20 350 20 {}
+L 4 270 240 270 260 {}
+L 4 -30 240 -30 260 {}
+L 4 -50 240 -50 260 {}
+L 4 330 -110 350 -110 {}
+L 4 330 -90 350 -90 {}
+L 4 330 -70 350 -70 {}
+L 4 -290 -30 -270 -30 {}
+B 5 87.5 -302.5 92.5 -297.5 {name=BIASGEN_en_VS[10:0] sig_type=std_logic dir=in}
+B 5 127.5 -302.5 132.5 -297.5 {name=BIASGEN_BYP_en_VS[10:0] sig_type=std_logic dir=in}
+B 5 107.5 -302.5 112.5 -297.5 {name=BIASGEN_EXT_REF_en_VS[10:0] sig_type=std_logic dir=in}
+B 5 -32.5 -302.5 -27.5 -297.5 {name=reg_out7[10:0] dir=in}
+B 5 7.5 -302.5 12.5 -297.5 {name=reg_out9[10:0] dir=in}
+B 5 -152.5 -302.5 -147.5 -297.5 {name=reg_out1[10:0] dir=in}
+B 5 -52.5 -302.5 -47.5 -297.5 {name=reg_out6[10:0] dir=in}
+B 5 -72.5 -302.5 -67.5 -297.5 {name=reg_out5[10:0] dir=in}
+B 5 -112.5 -302.5 -107.5 -297.5 {name=reg_out3[10:0] dir=in}
+B 5 -12.5 -302.5 -7.5 -297.5 {name=reg_out8[10:0] dir=in}
+B 5 -132.5 -302.5 -127.5 -297.5 {name=reg_out2[10:0] dir=in}
+B 5 -92.5 -302.5 -87.5 -297.5 {name=reg_out4[10:0] dir=in}
+B 5 27.5 257.5 32.5 262.5 {name=BG_PROB dir=out}
+B 5 -142.5 257.5 -137.5 262.5 {name=NN3_MEM_PROB dir=out}
+B 5 87.5 257.5 92.5 262.5 {name=NN3_REQ dir=out}
+B 5 67.5 257.5 72.5 262.5 {name=NN3_ACK dir=in}
+B 5 -122.5 257.5 -117.5 262.5 {name=NN2_MEM_PROB dir=out}
+B 5 347.5 37.5 352.5 42.5 {name=NN2_REQ dir=out}
+B 5 347.5 57.5 352.5 62.5 {name=NN2_ACK dir=in}
+B 5 247.5 257.5 252.5 262.5 {name=VDD sig_type=std_logic dir=in}
+B 5 -162.5 257.5 -157.5 262.5 {name=NN1_MEM_PROB dir=out}
+B 5 -232.5 257.5 -227.5 262.5 {name=V2I_INP dir=in}
+B 5 347.5 -2.5 352.5 2.5 {name=NN1_REQ dir=out}
+B 5 -212.5 257.5 -207.5 262.5 {name=V2I_INN dir=in}
+B 5 -12.5 257.5 -7.5 262.5 {name=BG_100kRES sig_type=std_logic dir=in}
+B 5 347.5 17.5 352.5 22.5 {name=NN1_ACK dir=in}
+B 5 267.5 257.5 272.5 262.5 {name=VSS sig_type=std_logic dir=in}
+B 5 -32.5 257.5 -27.5 262.5 {name=BG_BIAS sig_type=std_logic dir=in}
+B 5 -52.5 257.5 -47.5 262.5 {name=BG_100mV sig_type=std_logic dir=in}
+B 5 347.5 -112.5 352.5 -107.5 {name=C2F_REQ dir=out}
+B 5 347.5 -92.5 352.5 -87.5 {name=C2F_ACK dir=in}
+B 5 347.5 -72.5 352.5 -67.5 {name=C2F_COMP dir=out}
+B 5 -292.5 -32.5 -287.5 -27.5 {dir=in
+name=MEM_bufferbias}
+P 4 5 330 -280 -270 -280 -270 240 330 240 330 -280 {}
+T {@symname} -16.5 -16 0 0 0.3 0.3 {}
+T {@name} 335 -282 0 0 0.2 0.2 {}
+T {BIASGEN_en_VS[10:0]} 94 -275 1 0 0.2 0.2 {}
+T {BIASGEN_BYP_en_VS[10:0]} 134 -275 1 0 0.2 0.2 {}
+T {BIASGEN_EXT_REF_en_VS[10:0]} 114 -275 1 0 0.2 0.2 {}
+T {reg_out7[10:0]} -26 -275 1 0 0.2 0.2 {}
+T {reg_out9[10:0]} 14 -275 1 0 0.2 0.2 {}
+T {reg_out1[10:0]} -146 -275 1 0 0.2 0.2 {}
+T {reg_out6[10:0]} -46 -275 1 0 0.2 0.2 {}
+T {reg_out5[10:0]} -66 -275 1 0 0.2 0.2 {}
+T {reg_out3[10:0]} -106 -275 1 0 0.2 0.2 {}
+T {reg_out8[10:0]} -6 -275 1 0 0.2 0.2 {}
+T {reg_out2[10:0]} -126 -275 1 0 0.2 0.2 {}
+T {reg_out4[10:0]} -86 -275 1 0 0.2 0.2 {}
+T {BG_PROB} 34 235 1 1 0.2 0.2 {}
+T {NN3_MEM_PROB} -136 235 1 1 0.2 0.2 {}
+T {NN3_REQ} 94 235 1 1 0.2 0.2 {}
+T {NN3_ACK} 66 235 3 0 0.2 0.2 {}
+T {NN2_MEM_PROB} -116 235 1 1 0.2 0.2 {}
+T {NN2_REQ} 325 36 0 1 0.2 0.2 {}
+T {NN2_ACK} 325 64 2 0 0.2 0.2 {}
+T {VDD} 246 235 3 0 0.2 0.2 {}
+T {NN1_MEM_PROB} -156 235 1 1 0.2 0.2 {}
+T {V2I_INP} -234 235 3 0 0.2 0.2 {}
+T {NN1_REQ} 325 -4 0 1 0.2 0.2 {}
+T {V2I_INN} -214 235 3 0 0.2 0.2 {}
+T {BG_100kRES} -14 235 3 0 0.2 0.2 {}
+T {NN1_ACK} 325 24 2 0 0.2 0.2 {}
+T {VSS} 266 235 3 0 0.2 0.2 {}
+T {BG_BIAS} -34 235 3 0 0.2 0.2 {}
+T {BG_100mV} -54 235 3 0 0.2 0.2 {}
+T {C2F_REQ} 325 -114 0 1 0.2 0.2 {}
+T {C2F_ACK} 325 -86 2 0 0.2 0.2 {}
+T {C2F_COMP} 325 -74 0 1 0.2 0.2 {}
+T {MEM_bufferbias} -265 -34 0 0 0.2 0.2 {}
