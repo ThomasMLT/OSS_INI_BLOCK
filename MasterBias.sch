@@ -168,5 +168,5 @@ C {OTA_bc.sym} -1770 -160 0 0 {name=x9}
 C {Cap1.sym} -1510 -440 2 1 {name=x11}
 C {cap4.sym} -2180 -330 2 1 {name=x12}
 C {Cap5.sym} -1820 -30 0 0 {name=x13}
-C {reshigh_92K.sym} -1630 330 1 1 {name=x14}
+C {reshigh_92k.sym} -1630 330 1 1 {name=x14}
 C {lab_wire.sym} -1590 330 1 0 {name=p_vssa_ota4 sig_type=std_logic lab=VSSA}

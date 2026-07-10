@@ -19,7 +19,7 @@
         },
         {
             "lib_name": "cap4",
-            "lib_path": "cap4.gds"
+            "lib_path": "Cap4.gds"
         },
         {
             "lib_name": "Cap5",
