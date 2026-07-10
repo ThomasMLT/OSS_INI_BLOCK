@@ -83,11 +83,11 @@ N 1400 -460 1640 -460 {lab=VDDA}
 N -2180 -270 -1630 -270 {lab=#net9}
 N -2320 -390 -2180 -390 {lab=VDDA}
 N -2320 -460 -2320 -390 {lab=VDDA}
-N -2180 -290 -2180 -270 {lab=#net9}
+N -2180 -280 -2180 -270 {lab=#net9}
 N -2210 -270 -2180 -270 {lab=#net9}
-N -2180 -390 -2180 -370 {lab=VDDA}
 N -2590 -460 -2590 -380 {lab=VDDA}
 N -2780 -330 -2650 -330 {lab=EXT_REF_EN}
+N -2180 -390 -2180 -380 {lab=VDDA}
 C {lab_wire.sym} 60 -80 1 0 {name=p4 sig_type=std_logic lab=VSSA}
 C {lab_wire.sym} 300 -80 1 0 {name=p1 sig_type=std_logic lab=VSSA}
 C {lab_wire.sym} 540 -80 1 0 {name=p2 sig_type=std_logic lab=VSSA}
@@ -175,6 +175,6 @@ b=0
 m=1
 value="expr_eng(  ( 1.6e-4 / @w + 1360.0 * ( (@b + 1)* @l + ( 1.081*( @w - 0.04e-6 ) + 0.18e-6 )*@b ) / ( @w - 0.04e-6 ) ) / @m  )"
 }
-C {Cap1.sym} -1510 -380 0 0 {name=x11}
-C {cap4.sym} -2180 -330 0 0 {name=x12}
+C {Cap1.sym} -1510 -440 2 1 {name=x11}
+C {cap4.sym} -2180 -330 2 1 {name=x12}
 C {Cap5.sym} -1820 -30 0 0 {name=x13}
