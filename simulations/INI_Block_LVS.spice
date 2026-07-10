@@ -336,7 +336,7 @@ x6 VDDA net6 IREF_1pA net7 VSSA DecadeDivider_2
 x7 VDDA net7 IREF_100fA net1 VSSA DecadeDivider_2
 x8 VDDA net9 IREF_1uA VSSA DecadeDividerAux
 x9 VDDA VBP_TIA net10 net8 VBIAS VREF_100mV VSSA OTA_bc
-RR3 VSENSE VSSA 91.97k $SUB=vssa $[rhigh] w=0.5e-6 l=31e-6 b=0
+RR3 VSENSE VSSA 91.97k $SUB=vssa $[res_rhigh] w=0.5e-6 l=31e-6 b=0
 x11 VSSA VDDA Cap1
 x12 net9 VDDA cap4
 x13 net10 VBIAS Cap5
@@ -673,7 +673,7 @@ MM7 vout1stage n1 VSSA VSSA sg13_hv_nmos w=1.75u l=0.5u ng=2 m=4
 MM8 VOP vout1stage VSSA VSSA sg13_hv_nmos w=4u l=0.5u ng=4 m=4
 MM9 VOP VBP VDDA VDDA sg13_hv_pmos w=4u l=0.5u ng=2
 MM10 vpmirr n2 VSSA VSSA sg13_hv_nmos w=2u l=0.5u ng=2 m=4
-RR1 vout1stage C_p1 49.84k $SUB=VSSA $[rhigh] w=0.5e-6 l=16.75e-6 b=0
+RR1 vout1stage C_p1 49.84k $SUB=VSSA $[res_rhigh] w=0.5e-6 l=16.75e-6 b=0
 .ends
 
 
