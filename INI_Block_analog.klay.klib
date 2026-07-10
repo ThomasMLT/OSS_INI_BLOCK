@@ -35,7 +35,7 @@
         },
         {
             "lib_name": "a_buffP",
-            "lib_path": "a_buffP.klay.gds"
+            "lib_path": "a_buffP.gds"
         },
         {
             "include_path": "CoreFineDAC.klay.klib"

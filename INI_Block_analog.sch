@@ -12,11 +12,11 @@ N -240 520 -200 520 {lab=NNADAPDPI_lk_VNI}
 N -240 540 -200 540 {lab=NNREF_lk_VNI}
 N -240 440 -200 440 {lab=NNDPI_lk_VNI}
 N -240 420 -200 420 {lab=NNDPI_gain_VNI}
-N 100 440 330 440 {lab=NN1_MEM_PROB}
+N 100 440 480 440 {lab=#net1}
 N 100 480 130 480 {lab=NN1_ADAP_cap_VTO}
 N 100 500 130 500 {lab=NN1_REF_cap_VTO}
-N -580 400 -200 400 {lab=#net1}
-N -580 400 -580 490 {lab=#net1}
+N -580 400 -200 400 {lab=#net2}
+N -580 400 -580 490 {lab=#net2}
 N 100 460 330 460 {lab=NN1_REQ}
 N -440 560 -200 560 {lab=NN1_ACK}
 N -850 460 -770 460 {lab=V2I_INP}
@@ -31,31 +31,31 @@ bus=true}
 N 1620 -1500 1700 -1500 {lab=BIASGEN_EXT_REF_en_VS[10:1]
 bus=true}
 N -320 -1480 -320 -1300 {lab=reg_out9[10:0] bus=true}
-N -360 -1480 -360 -1300 {lab=BIASGEN_en_VS}
+N -360 -1480 -360 -1300 {lab=BIASGEN_en_VS[0]}
 N -280 -1480 -280 -1300 {lab=ref_VUN[7:0] bus=true}
 N -640 -1480 -640 -1300 {lab=reg_out8[10:0] bus=true}
-N -680 -1480 -680 -1300 {lab=BIASGEN_en_VS}
+N -680 -1480 -680 -1300 {lab=BIASGEN_en_VS[0]}
 N -600 -1480 -600 -1300 {lab=ref_VUN[7:0] bus=true}
 N -970 -1480 -970 -1300 {lab=reg_out7[10:0] bus=true}
-N -1010 -1480 -1010 -1300 {lab=BIASGEN_en_VS}
+N -1010 -1480 -1010 -1300 {lab=BIASGEN_en_VS[0]}
 N -930 -1480 -930 -1300 {lab=ref_VUN[7:0] bus=true}
 N -1310 -1480 -1310 -1300 {lab=reg_out6[10:0] bus=true}
-N -1350 -1480 -1350 -1300 {lab=BIASGEN_en_VS}
+N -1350 -1480 -1350 -1300 {lab=BIASGEN_en_VS[0]}
 N -1270 -1480 -1270 -1300 {lab=ref_VUN[7:0] bus=true}
 N -1610 -1480 -1610 -1300 {lab=reg_out5[10:0] bus=true}
-N -1650 -1480 -1650 -1300 {lab=BIASGEN_en_VS}
+N -1650 -1480 -1650 -1300 {lab=BIASGEN_en_VS[0]}
 N -1570 -1480 -1570 -1300 {lab=ref_VUN[7:0] bus=true}
 N -1900 -1480 -1900 -1300 {lab=reg_out4[10:0] bus=true}
-N -1940 -1480 -1940 -1300 {lab=BIASGEN_en_VS}
+N -1940 -1480 -1940 -1300 {lab=BIASGEN_en_VS[0]}
 N -1860 -1480 -1860 -1300 {lab=ref_VUN[7:0] bus=true}
 N -2200 -1480 -2200 -1300 {lab=reg_out3[10:0] bus=true}
-N -2240 -1480 -2240 -1300 {lab=BIASGEN_en_VS}
+N -2240 -1480 -2240 -1300 {lab=BIASGEN_en_VS[0]}
 N -2160 -1480 -2160 -1300 {lab=ref_VUN[7:0] bus=true}
 N -2490 -1480 -2490 -1300 {lab=reg_out2[10:0] bus=true}
-N -2530 -1480 -2530 -1300 {lab=BIASGEN_en_VS}
+N -2530 -1480 -2530 -1300 {lab=BIASGEN_en_VS[0]}
 N -2450 -1480 -2450 -1300 {lab=ref_VUN[7:0] bus=true}
 N -2780 -1480 -2780 -1300 {lab=reg_out1[10:0] bus=true}
-N -2820 -1480 -2820 -1300 {lab=BIASGEN_en_VS}
+N -2820 -1480 -2820 -1300 {lab=BIASGEN_en_VS[0]}
 N -2740 -1480 -2740 -1300 {lab=ref_VUN[7:0] bus=true}
 N -850 190 -850 460 {lab=V2I_INP}
 N -850 190 -770 190 {lab=V2I_INP}
@@ -76,7 +76,6 @@ N -240 260 -200 260 {lab=NNADAPDPI_lk_VNI}
 N -240 280 -200 280 {lab=NNREF_lk_VNI}
 N -240 180 -200 180 {lab=NNDPI_lk_VNI}
 N -240 160 -200 160 {lab=NNDPI_gain_VNI}
-N 100 180 330 180 {lab=NN2_MEM_PROB}
 N 100 220 130 220 {lab=NN2_ADAP_cap_VTO}
 N 100 240 130 240 {lab=NN2_REF_cap_VTO}
 N 100 200 330 200 {lab=NN2_REQ}
@@ -88,15 +87,31 @@ N -240 -30 -200 -30 {lab=NNADAPDPI_lk_VNI}
 N -240 -10 -200 -10 {lab=NNREF_lk_VNI}
 N -240 -110 -200 -110 {lab=NNDPI_lk_VNI}
 N -240 -130 -200 -130 {lab=NNDPI_gain_VNI}
-N 100 -110 330 -110 {lab=NN3_MEM_PROB}
+N 100 -110 560 -110 {lab=#net3}
 N 100 -70 130 -70 {lab=NN3_ADAP_cap_VTO}
 N 100 -50 130 -50 {lab=NN3_REF_cap_VTO}
-N -580 -150 -200 -150 {lab=#net2}
-N -580 -150 -580 -60 {lab=#net2}
+N -580 -150 -200 -150 {lab=#net4}
+N -580 -150 -580 -60 {lab=#net4}
 N 100 -90 330 -90 {lab=NN3_REQ}
 N -440 10 -200 10 {lab=NN3_ACK}
-N -580 140 -200 140 {lab=#net3}
-N -580 140 -580 220 {lab=#net3}
+N -580 140 -200 140 {lab=#net5}
+N -580 140 -580 220 {lab=#net5}
+N 50 850 150 850 {lab=NN1_MEM_PROB}
+N 50 820 50 850 {lab=NN1_MEM_PROB}
+N 60 1190 160 1190 {lab=NN2_MEM_PROB}
+N 60 1160 60 1190 {lab=NN2_MEM_PROB}
+N 60 1550 160 1550 {lab=NN3_MEM_PROB}
+N 60 1520 60 1550 {lab=NN3_MEM_PROB}
+N -260 820 50 820 {lab=NN1_MEM_PROB}
+N -250 1160 60 1160 {lab=NN2_MEM_PROB}
+N -250 1520 60 1520 {lab=NN3_MEM_PROB}
+N 480 440 480 790 {lab=#net1}
+N 150 790 480 790 {lab=#net1}
+N 160 1130 520 1130 {lab=#net6}
+N 520 180 520 1130 {lab=#net6}
+N 100 180 520 180 {lab=#net6}
+N 560 -110 560 1490 {lab=#net3}
+N 160 1490 560 1490 {lab=#net3}
 C {neuron_LVS.sym} -50 490 0 0 {name=x15}
 C {lab_pin.sym} -240 440 0 0 {name=p100 sig_type=std_logic lab=NNDPI_lk_VNI}
 C {lab_pin.sym} -240 480 0 0 {name=p101 sig_type=std_logic lab=NNADAP_gain_VPI}
@@ -119,7 +134,6 @@ C {lab_pin.sym} 100 420 2 0 {name=p113 sig_type=std_logic lab=VDD
 C {lab_pin.sym} -710 420 1 0 {name=p114 sig_type=std_logic lab=V2I_imax_VPI}
 C {opin.sym} 330 460 0 0 {name=p117 lab=NN1_REQ}
 C {ipin.sym} -440 560 0 0 {name=p120 lab=NN1_ACK}
-C {opin.sym} 330 440 0 0 {name=p13 lab=NN1_MEM_PROB}
 C {ipin.sym} -860 520 0 0 {name=p107 lab=V2I_INN}
 C {ipin.sym} -860 460 0 0 {name=p145 lab=V2I_INP}
 C {lab_pin.sym} 1620 -1590 0 0 {name=p37 sig_type=std_logic lab=BIASGEN_en_VS[10:1]
@@ -127,7 +141,6 @@ C {lab_pin.sym} 1620 -1590 0 0 {name=p37 sig_type=std_logic lab=BIASGEN_en_VS[10
 C {noconn.sym} 1850 -1180 0 0 {name=l1}
 C {lab_pin.sym} 1620 -1550 0 0 {name=p38 sig_type=std_logic lab=BIASGEN_BYP_en_VS[10:1]
 }
-C {noconn.sym} -3010 -240 0 1 {name=l2}
 C {lab_pin.sym} 1620 -1500 0 0 {name=p41 sig_type=std_logic lab=BIASGEN_EXT_REF_en_VS[10:1]
 }
 C {noconn.sym} 1850 -1090 0 0 {name=l3}
@@ -311,7 +324,6 @@ C {lab_pin.sym} 100 160 2 0 {name=p87 sig_type=std_logic lab=VDD
 }
 C {opin.sym} 330 200 0 0 {name=p88 lab=NN2_REQ}
 C {ipin.sym} -440 300 0 0 {name=p89 lab=NN2_ACK}
-C {opin.sym} 330 180 0 0 {name=p90 lab=NN2_MEM_PROB}
 C {neuron_LVS.sym} -50 -60 0 0 {name=x13}
 C {lab_pin.sym} -240 -110 0 0 {name=p91 sig_type=std_logic lab=NNDPI_lk_VNI}
 C {lab_pin.sym} -240 -70 0 0 {name=p92 sig_type=std_logic lab=NNADAP_gain_VPI}
@@ -328,7 +340,6 @@ C {lab_pin.sym} 100 -130 2 0 {name=p121 sig_type=std_logic lab=VDD
 }
 C {opin.sym} 330 -90 0 0 {name=p122 lab=NN3_REQ}
 C {ipin.sym} -440 10 0 0 {name=p123 lab=NN3_ACK}
-C {opin.sym} 330 -110 0 0 {name=p124 lab=NN3_MEM_PROB}
 C {ipin.sym} 160 -1480 1 0 {name=p52 sig_type=std_logic lab=BIASGEN_en_VS[10:0]
 }
 C {ipin.sym} 120 -1480 1 0 {name=p53 sig_type=std_logic lab=BIASGEN_BYP_en_VS[10:0]
@@ -344,3 +355,27 @@ C {opin.sym} 1850 -1090 0 0 {name=p127 sig_type=std_logic lab=C2F_COMP
 C {noconn.sym} 1850 -1130 0 0 {name=l4}
 C {ipin.sym} 1850 -1130 0 1 {name=p128 sig_type=std_logic lab=C2F_ACK
 }
+C {a_buffP.sym} 80 820 0 1 {name=x18}
+C {lab_pin.sym} 80 900 1 1 {name=p129 sig_type=std_logic lab=VSS
+}
+C {lab_pin.sym} 60 740 1 0 {name=p130 sig_type=std_logic lab=VDD
+}
+C {ipin.sym} 40 900 3 0 {name=p131 sig_type=std_logic lab=MEM_bufferbias
+}
+C {opin.sym} -260 820 0 1 {name=p132 lab=NN1_MEM_PROB}
+C {a_buffP.sym} 90 1160 0 1 {name=x19}
+C {lab_pin.sym} 90 1240 1 1 {name=p13 sig_type=std_logic lab=VSS
+}
+C {lab_pin.sym} 70 1080 1 0 {name=p133 sig_type=std_logic lab=VDD
+}
+C {lab_pin.sym} 50 1240 3 0 {name=p134 sig_type=std_logic lab=MEM_bufferbias
+}
+C {opin.sym} -250 1160 0 1 {name=p135 lab=NN2_MEM_PROB}
+C {a_buffP.sym} 90 1520 0 1 {name=x20}
+C {lab_pin.sym} 90 1600 1 1 {name=p136 sig_type=std_logic lab=VSS
+}
+C {lab_pin.sym} 70 1440 1 0 {name=p138 sig_type=std_logic lab=VDD
+}
+C {lab_pin.sym} 50 1600 3 0 {name=p143 sig_type=std_logic lab=MEM_bufferbias
+}
+C {opin.sym} -250 1520 0 1 {name=p144 lab=NN3_MEM_PROB}
