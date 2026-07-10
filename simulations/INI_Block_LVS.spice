@@ -710,7 +710,7 @@ CC3 Cp2 Cp1 cap_mfringe w=28.0u l=10.0u mmin=1 mmax=4
 .subckt ISOURCE VDDA MBIAS bulk ENB VSSA IO
 *.PININFO VDDA:B MBIAS:I ENB:I IO:B VSSA:B bulk:B
 MM2 net1 MBIAS VDDA bulk sg13_hv_pmos w=1u l=5u ng=1
-MM1 IO ENB net1 bulk sg13_hv_pmos w=3.3u l=0.5u ng=1
+MM1 IO ENB net1 bulk sg13_hv_pmos w=3.3u l=0.5u ng=2
 .ends
 
 
