@@ -209,7 +209,7 @@ C {lab_wire.sym} 0 0 0 0 {name=p14 sig_type=std_logic lab=MASTER_CoreDiodeT_bias
 C {sg13g2_pr/sg13_hv_pmos.sym} 890 -580 0 1 {name=M1
 l=1u
 w=2u
-ng=2
+ng=1
 m=2
 model=sg13_hv_pmos
 spiceprefix=X
@@ -217,7 +217,7 @@ spiceprefix=X
 C {sg13g2_pr/sg13_hv_pmos.sym} 1280 -580 0 0 {name=M2
 l=1u
 w=2u
-ng=2
+ng=1
 m=2
 model=sg13_hv_pmos
 spiceprefix=X

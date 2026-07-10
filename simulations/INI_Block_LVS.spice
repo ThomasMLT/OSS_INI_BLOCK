@@ -130,8 +130,8 @@ x1 MASTER_CoreDiodeT_bias_VN[7] MASTER_CoreDiodeT_bias_VN[6] MASTER_CoreDiodeT_b
 + en_VSB[10] en_VSB[9] en_VSB[8] MASTER_biasout_VN SelMUX
 xisink0[2] MASTER_biasout_VN vssa BIASGEN_en_VS net1 vssa ISINK
 xisink0[1] MASTER_biasout_VN vssa BIASGEN_en_VS net1 vssa ISINK
-MM1 net1 net1 vdda vdda sg13_hv_pmos w=2u l=1u ng=2 m=2
-MM2 bias_test net1 vdda vdda sg13_hv_pmos w=2u l=1u ng=2 m=2
+MM1 net1 net1 vdda vdda sg13_hv_pmos w=2u l=1u ng=1 m=2
+MM2 bias_test net1 vdda vdda sg13_hv_pmos w=2u l=1u ng=1 m=2
 x4 en_VS[0] net7 net2 en_VSB[0] bias_test vssa vdda bias_VP SplitterCell
 MM_enb vdda vdda net3 vssa sg13_hv_nmos w=1u l=1u ng=1
 MM_s9 net2 bias_test net8 vssa sg13_hv_nmos w=2u l=10u ng=1
@@ -303,11 +303,11 @@ MM14 net1 lk_VPI vssa vssa sg13_hv_nmos w=4u l=4u ng=2 m=4
 ** sch_path: /foss/designs/ihp_INI_project/INI_Block/pulse_extender_V2.sch
 .subckt pulse_extender_V2 vdda vssa out_VAO in_VAI pwbias_VPI capa_VP
 *.PININFO out_VAO:O pwbias_VPI:I in_VAI:I capa_VP:B vssa:B vdda:B
-MMp1 out_VAO capa_VP vdda vdda sg13_hv_pmos w=4u l=2u ng=1
-MMn1 out_VAO capa_VP vssa vssa sg13_hv_nmos w=4u l=2u ng=1
-MMn4 capa_VP in_VAI vssa vssa sg13_hv_nmos w=4u l=2u ng=1
-MMstarve4 capa_VP pwbias_VPI vdda vdda sg13_hv_pmos w=4u l=2u ng=1
-MMp3 capa_VP out_VAO vdda vdda sg13_hv_pmos w=4u l=2u ng=1
+MMp1 out_VAO capa_VP vdda vdda sg13_hv_pmos w=4u l=2u ng=4
+MMn1 out_VAO capa_VP vssa vssa sg13_hv_nmos w=4u l=2u ng=4
+MMn4 capa_VP in_VAI vssa vssa sg13_hv_nmos w=4u l=2u ng=4
+MMstarve4 capa_VP pwbias_VPI vdda vdda sg13_hv_pmos w=4u l=2u ng=4
+MMp3 capa_VP out_VAO vdda vdda sg13_hv_pmos w=4u l=2u ng=4
 MMdum2 vssa vssa vssa vssa sg13_hv_nmos w=12u l=2u ng=2
 MMdum1 vdda vdda vdda vdda sg13_hv_pmos w=12u l=2u ng=2
 .ends
