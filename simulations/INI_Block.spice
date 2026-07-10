@@ -1,17 +1,12 @@
 ** sch_path: /foss/designs/ihp_INI_project/INI_Block/INI_Block.sch
 .subckt INI_Block NN1_REQ NN2_REQ NN3_REQ NN1_ACK NN2_ACK NN3_ACK BG_100mV BG_BIAS BG_100k BG_PROB NN2_MEM_PROB NN1_MEM_PROB
-+ NN3_MEM_PROB V2I_INN V2I_INP SPI_CS_N SPI_MISO SPI_SCK SPI_MOSI SPI_RST_N C2F_COMP C2F_REQ VSS VDD
++ NN3_MEM_PROB V2I_INN V2I_INP SPI_CS_N SPI_MISO SPI_SCK SPI_MOSI SPI_RST_N VSS VDD
 *.PININFO NN1_REQ:O NN2_REQ:O NN3_REQ:O NN1_ACK:I NN2_ACK:I NN3_ACK:I BG_100mV:B BG_BIAS:I BG_100k:B BG_PROB:B NN2_MEM_PROB:O
-*+ NN1_MEM_PROB:O NN3_MEM_PROB:O V2I_INN:I V2I_INP:I SPI_CS_N:I SPI_MISO:O SPI_SCK:I SPI_MOSI:I SPI_RST_N:I C2F_COMP:O C2F_REQ:O VSS:B VDD:B
+*+ NN1_MEM_PROB:O NN3_MEM_PROB:O V2I_INN:I V2I_INP:I SPI_CS_N:I SPI_MISO:O SPI_SCK:I SPI_MOSI:I SPI_RST_N:I VSS:B VDD:B
 x1 VDD NNDPI_gain_VNI NNDPI_lk_VNI NN1_MEM_PROB NN1_REQ NNADAP_gain_VPI NNADAPDPI_gain_VNI NN1_ADAP_cap_VTO NN1_ACK
 + NNADAPDPI_lk_VNI NNREF_lk_VNI VSS NN1_REF_cap_VTO NNPULEXT_pwbias_VPI net1 neuron
-x2 BG_BIAS BIASGEN_BYP_en_VS[0] BG_100mV BIASGEN_EXT_REF_en_VS[0] VDD ref_VUN[7] ref_VUN[6] ref_VUN[6] ref_VUN[6] ref_VUN[6]
-+ ref_VUN[6] ref_VUN[6] ref_VUN[6] ref_VUN[6] ref_VUN[6] ref_VUN[5] ref_VUN[5] ref_VUN[5] ref_VUN[5] ref_VUN[5] ref_VUN[5] ref_VUN[5]
-+ ref_VUN[5] ref_VUN[5] ref_VUN[4] ref_VUN[4] ref_VUN[4] ref_VUN[4] ref_VUN[4] ref_VUN[4] ref_VUN[4] ref_VUN[4] ref_VUN[4] ref_VUN[3]
-+ ref_VUN[3] ref_VUN[3] ref_VUN[3] ref_VUN[3] ref_VUN[3] ref_VUN[3] ref_VUN[3] ref_VUN[3] ref_VUN[2] ref_VUN[2] ref_VUN[2] ref_VUN[2]
-+ ref_VUN[2] ref_VUN[2] ref_VUN[2] ref_VUN[2] ref_VUN[2] ref_VUN[1] ref_VUN[1] ref_VUN[1] ref_VUN[1] ref_VUN[1] ref_VUN[1] ref_VUN[1]
-+ ref_VUN[1] ref_VUN[1] ref_VUN[0] ref_VUN[0] ref_VUN[0] ref_VUN[0] ref_VUN[0] ref_VUN[0] ref_VUN[0] ref_VUN[0] ref_VUN[0] BG_100k VSS
-+ MasterBias
+x2 BG_BIAS BIASGEN_BYP_en_VS[0] BG_100mV BIASGEN_EXT_REF_en_VS[0] VDD ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3]
++ ref_VUN[2] ref_VUN[1] ref_VUN[0] BG_100k VSS MasterBias
 x5 ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0] VSS BIASGEN_en_VS[0] CoreDiodeT
 x3 VDD V2I_imax_VPI V2I_INN V2I_INP net1 VSS V2I
 x13 VDD NNDPI_gain_VNI NNDPI_lk_VNI NN2_MEM_PROB NN2_REQ NNADAP_gain_VPI NNADAPDPI_gain_VNI NN2_ADAP_cap_VTO NN2_ACK
@@ -39,7 +34,7 @@ x4 en_VS_8[10] en_VS_8[9] en_VS_8[8] en_VS_8[7] en_VS_8[6] en_VS_8[5] en_VS_8[4]
 * noconn BIASGEN_BYP_en_VS[10:1]
 * noconn BIASGEN_EXT_REF_en_VS[10:1]
 * noconn C2F_en_VSBI[10:1]
-x6 VDD C2F_en_VSBI[0] C2F_Vb C2F_REQ C2F_Iin C2F_COMP VSS C-to-F
+* noconn #net4
 .ends
 
 * expanding   symbol:  neuron.sym # of pins=15
@@ -76,32 +71,28 @@ CC12 REF_cap_VTO vssa REF_cap_VTO vssa sg13_hv_svaricap w=9.74u l=0.8u Nx=3
 * expanding   symbol:  MasterBias.sym # of pins=15
 ** sym_path: /foss/designs/ihp_INI_project/INI_Block/MasterBias.sym
 ** sch_path: /foss/designs/ihp_INI_project/INI_Block/MasterBias.sch
-.subckt MasterBias VBP_TIA BYP_EN VREF_100mV EXT_REF_EN VDDA IREF_1uA[0] IREF_100nA[8] IREF_100nA[7] IREF_100nA[6] IREF_100nA[5]
-+ IREF_100nA[4] IREF_100nA[3] IREF_100nA[2] IREF_100nA[1] IREF_100nA[0] IREF_10nA[8] IREF_10nA[7] IREF_10nA[6] IREF_10nA[5] IREF_10nA[4]
-+ IREF_10nA[3] IREF_10nA[2] IREF_10nA[1] IREF_10nA[0] IREF_1nA[8] IREF_1nA[7] IREF_1nA[6] IREF_1nA[5] IREF_1nA[4] IREF_1nA[3] IREF_1nA[2]
-+ IREF_1nA[1] IREF_1nA[0] IREF_100pA[8] IREF_100pA[7] IREF_100pA[6] IREF_100pA[5] IREF_100pA[4] IREF_100pA[3] IREF_100pA[2] IREF_100pA[1]
-+ IREF_100pA[0] IREF_10pA[8] IREF_10pA[7] IREF_10pA[6] IREF_10pA[5] IREF_10pA[4] IREF_10pA[3] IREF_10pA[2] IREF_10pA[1] IREF_10pA[0] IREF_1pA[8]
-+ IREF_1pA[7] IREF_1pA[6] IREF_1pA[5] IREF_1pA[4] IREF_1pA[3] IREF_1pA[2] IREF_1pA[1] IREF_1pA[0] IREF_100fA[8] IREF_100fA[7] IREF_100fA[6]
-+ IREF_100fA[5] IREF_100fA[4] IREF_100fA[3] IREF_100fA[2] IREF_100fA[1] IREF_100fA[0] VREG_pad VSSA
-*.PININFO IREF_100nA[8:0]:B IREF_10nA[8:0]:B IREF_1nA[8:0]:B IREF_100pA[8:0]:B IREF_10pA[8:0]:B IREF_1pA[8:0]:B IREF_100fA[8:0]:B
-*+ VSSA:B IREF_1uA[0]:B VREF_100mV:I VBP_TIA:I VDDA:B BYP_EN:I EXT_REF_EN:I VREG_pad:B
+.subckt MasterBias VBP_TIA BYP_EN VREF_100mV EXT_REF_EN VDDA IREF_1uA IREF_100nA IREF_10nA IREF_1nA IREF_100pA IREF_10pA IREF_1pA
++ IREF_100fA VREG_pad VSSA
+*.PININFO IREF_100nA:B IREF_10nA:B IREF_1nA:B IREF_100pA:B IREF_10pA:B IREF_1pA:B IREF_100fA:B VSSA:B IREF_1uA:B VREF_100mV:I
+*+ VBP_TIA:I VDDA:B BYP_EN:I EXT_REF_EN:I VREG_pad:B
 MMnbias VREG_pad EXT_REF_EN net8 VSSA sg13_hv_nmos w=25u l=500n ng=20
-x_ota VDDA VBP_TIA net8 VREF_100mV VBIAS VSSA OTA_b
-*  C1 -  cap_mfringe  IS MISSING !!!!
-R1 VSSA net10 100k
-*  C2 -  cap_mfringe  IS MISSING !!!!
-MMnbias1 net10 EXT_REF_ENB net8 VSSA sg13_hv_nmos w=25u l=500n ng=20
+x10 VDDA EXT_REF_ENB EXT_REF_EN VSSA inv_BG
+MMnbias1 VSENSE EXT_REF_ENB net8 VSSA sg13_hv_nmos w=25u l=500n ng=20
 MMnbias2 net8 VBIAS net9 VSSA sg13_hv_nmos w=25u l=500n ng=20
 MMnbias3 net8 BYP_EN net9 VSSA sg13_hv_nmos w=25u l=500n ng=20
-x1 VDDA net9 IREF_100nA[8] net2 VSSA DecadeDivider_2
-x2 VDDA net3 IREF_1nA[8] net4 VSSA DecadeDivider_2
-x3 VDDA net2 IREF_10nA[8] net3 VSSA DecadeDivider_2
-x4 VDDA net4 IREF_100pA[8] net5 VSSA DecadeDivider_2
-x5 VDDA net5 IREF_10pA[8] net6 VSSA DecadeDivider_2
-x6 VDDA net6 IREF_1pA[8] net7 VSSA DecadeDivider_2
-x7 VDDA net7 IREF_100fA[8] net1 VSSA DecadeDivider_2
-x8 VDDA net9 IREF_1uA[0] VSSA DecadeDividerAux
-xinv VDDA EXT_REF_ENB EXT_REF_EN VSSA inv_BG
+x1 VDDA net9 IREF_100nA net2 VSSA DecadeDivider_2
+x2 VDDA net3 IREF_1nA net4 VSSA DecadeDivider_2
+x3 VDDA net2 IREF_10nA net3 VSSA DecadeDivider_2
+x4 VDDA net4 IREF_100pA net5 VSSA DecadeDivider_2
+x5 VDDA net5 IREF_10pA net6 VSSA DecadeDivider_2
+x6 VDDA net6 IREF_1pA net7 VSSA DecadeDivider_2
+x7 VDDA net7 IREF_100fA net1 VSSA DecadeDivider_2
+x8 VDDA net9 IREF_1uA VSSA DecadeDividerAux
+x9 VDDA VBP_TIA net10 net8 VBIAS VREF_100mV VSSA OTA_bc
+RR3 VSENSE VSSA 91.97k $SUB=VSSA $[rhigh] w=0.5e-6 l=31e-6 b=0
+x11 VSSA VDDA Cap1
+x12 net9 VDDA cap4
+x13 net10 VBIAS Cap5
 .ends
 
 
@@ -110,78 +101,78 @@ xinv VDDA EXT_REF_ENB EXT_REF_EN VSSA inv_BG
 ** sch_path: /foss/designs/ihp_INI_project/INI_Block/CoreDiodeT.sch
 .subckt CoreDiodeT ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0] vssa en_VS
 *.PININFO ref_VUN[7:0]:B en_VS:I vssa:B
-x2[8] ref_VUN[7] vssa en_VS ref_VUN[7] ISINK
-x2[7] ref_VUN[7] vssa en_VS ref_VUN[7] ISINK
-x2[6] ref_VUN[7] vssa en_VS ref_VUN[7] ISINK
-x2[5] ref_VUN[7] vssa en_VS ref_VUN[7] ISINK
-x2[4] ref_VUN[7] vssa en_VS ref_VUN[7] ISINK
-x2[3] ref_VUN[7] vssa en_VS ref_VUN[7] ISINK
-x2[2] ref_VUN[7] vssa en_VS ref_VUN[7] ISINK
-x2[1] ref_VUN[7] vssa en_VS ref_VUN[7] ISINK
-x9[8] ref_VUN[6] vssa en_VS ref_VUN[6] ISINK
-x9[7] ref_VUN[6] vssa en_VS ref_VUN[6] ISINK
-x9[6] ref_VUN[6] vssa en_VS ref_VUN[6] ISINK
-x9[5] ref_VUN[6] vssa en_VS ref_VUN[6] ISINK
-x9[4] ref_VUN[6] vssa en_VS ref_VUN[6] ISINK
-x9[3] ref_VUN[6] vssa en_VS ref_VUN[6] ISINK
-x9[2] ref_VUN[6] vssa en_VS ref_VUN[6] ISINK
-x9[1] ref_VUN[6] vssa en_VS ref_VUN[6] ISINK
-x10[8] ref_VUN[5] vssa en_VS ref_VUN[5] ISINK
-x10[7] ref_VUN[5] vssa en_VS ref_VUN[5] ISINK
-x10[6] ref_VUN[5] vssa en_VS ref_VUN[5] ISINK
-x10[5] ref_VUN[5] vssa en_VS ref_VUN[5] ISINK
-x10[4] ref_VUN[5] vssa en_VS ref_VUN[5] ISINK
-x10[3] ref_VUN[5] vssa en_VS ref_VUN[5] ISINK
-x10[2] ref_VUN[5] vssa en_VS ref_VUN[5] ISINK
-x10[1] ref_VUN[5] vssa en_VS ref_VUN[5] ISINK
-x11[8] ref_VUN[4] vssa en_VS ref_VUN[4] ISINK
-x11[7] ref_VUN[4] vssa en_VS ref_VUN[4] ISINK
-x11[6] ref_VUN[4] vssa en_VS ref_VUN[4] ISINK
-x11[5] ref_VUN[4] vssa en_VS ref_VUN[4] ISINK
-x11[4] ref_VUN[4] vssa en_VS ref_VUN[4] ISINK
-x11[3] ref_VUN[4] vssa en_VS ref_VUN[4] ISINK
-x11[2] ref_VUN[4] vssa en_VS ref_VUN[4] ISINK
-x11[1] ref_VUN[4] vssa en_VS ref_VUN[4] ISINK
-x12[8] ref_VUN[3] vssa en_VS ref_VUN[3] ISINK
-x12[7] ref_VUN[3] vssa en_VS ref_VUN[3] ISINK
-x12[6] ref_VUN[3] vssa en_VS ref_VUN[3] ISINK
-x12[5] ref_VUN[3] vssa en_VS ref_VUN[3] ISINK
-x12[4] ref_VUN[3] vssa en_VS ref_VUN[3] ISINK
-x12[3] ref_VUN[3] vssa en_VS ref_VUN[3] ISINK
-x12[2] ref_VUN[3] vssa en_VS ref_VUN[3] ISINK
-x12[1] ref_VUN[3] vssa en_VS ref_VUN[3] ISINK
-x13[8] ref_VUN[2] vssa en_VS ref_VUN[2] ISINK
-x13[7] ref_VUN[2] vssa en_VS ref_VUN[2] ISINK
-x13[6] ref_VUN[2] vssa en_VS ref_VUN[2] ISINK
-x13[5] ref_VUN[2] vssa en_VS ref_VUN[2] ISINK
-x13[4] ref_VUN[2] vssa en_VS ref_VUN[2] ISINK
-x13[3] ref_VUN[2] vssa en_VS ref_VUN[2] ISINK
-x13[2] ref_VUN[2] vssa en_VS ref_VUN[2] ISINK
-x13[1] ref_VUN[2] vssa en_VS ref_VUN[2] ISINK
-x14[8] ref_VUN[1] vssa en_VS ref_VUN[1] ISINK
-x14[7] ref_VUN[1] vssa en_VS ref_VUN[1] ISINK
-x14[6] ref_VUN[1] vssa en_VS ref_VUN[1] ISINK
-x14[5] ref_VUN[1] vssa en_VS ref_VUN[1] ISINK
-x14[4] ref_VUN[1] vssa en_VS ref_VUN[1] ISINK
-x14[3] ref_VUN[1] vssa en_VS ref_VUN[1] ISINK
-x14[2] ref_VUN[1] vssa en_VS ref_VUN[1] ISINK
-x14[1] ref_VUN[1] vssa en_VS ref_VUN[1] ISINK
-x8[8] ref_VUN[0] vssa en_VS ref_VUN[0] ISINK
-x8[7] ref_VUN[0] vssa en_VS ref_VUN[0] ISINK
-x8[6] ref_VUN[0] vssa en_VS ref_VUN[0] ISINK
-x8[5] ref_VUN[0] vssa en_VS ref_VUN[0] ISINK
-x8[4] ref_VUN[0] vssa en_VS ref_VUN[0] ISINK
-x8[3] ref_VUN[0] vssa en_VS ref_VUN[0] ISINK
-x8[2] ref_VUN[0] vssa en_VS ref_VUN[0] ISINK
-x8[1] ref_VUN[0] vssa en_VS ref_VUN[0] ISINK
-*  C1 -  cap_mfringe  IS MISSING !!!!
-*  C2 -  cap_mfringe  IS MISSING !!!!
-*  C3 -  cap_mfringe  IS MISSING !!!!
-*  C4 -  cap_mfringe  IS MISSING !!!!
-*  C5 -  cap_mfringe  IS MISSING !!!!
-*  C6 -  cap_mfringe  IS MISSING !!!!
-*  C7 -  cap_mfringe  IS MISSING !!!!
-*  C8 -  cap_mfringe  IS MISSING !!!!
+x2[8] ref_VUN[7] vssa en_VS ref_VUN[7] vssa ISINK
+x2[7] ref_VUN[7] vssa en_VS ref_VUN[7] vssa ISINK
+x2[6] ref_VUN[7] vssa en_VS ref_VUN[7] vssa ISINK
+x2[5] ref_VUN[7] vssa en_VS ref_VUN[7] vssa ISINK
+x2[4] ref_VUN[7] vssa en_VS ref_VUN[7] vssa ISINK
+x2[3] ref_VUN[7] vssa en_VS ref_VUN[7] vssa ISINK
+x2[2] ref_VUN[7] vssa en_VS ref_VUN[7] vssa ISINK
+x2[1] ref_VUN[7] vssa en_VS ref_VUN[7] vssa ISINK
+x9[8] ref_VUN[6] vssa en_VS ref_VUN[6] vssa ISINK
+x9[7] ref_VUN[6] vssa en_VS ref_VUN[6] vssa ISINK
+x9[6] ref_VUN[6] vssa en_VS ref_VUN[6] vssa ISINK
+x9[5] ref_VUN[6] vssa en_VS ref_VUN[6] vssa ISINK
+x9[4] ref_VUN[6] vssa en_VS ref_VUN[6] vssa ISINK
+x9[3] ref_VUN[6] vssa en_VS ref_VUN[6] vssa ISINK
+x9[2] ref_VUN[6] vssa en_VS ref_VUN[6] vssa ISINK
+x9[1] ref_VUN[6] vssa en_VS ref_VUN[6] vssa ISINK
+x10[8] ref_VUN[5] vssa en_VS ref_VUN[5] vssa ISINK
+x10[7] ref_VUN[5] vssa en_VS ref_VUN[5] vssa ISINK
+x10[6] ref_VUN[5] vssa en_VS ref_VUN[5] vssa ISINK
+x10[5] ref_VUN[5] vssa en_VS ref_VUN[5] vssa ISINK
+x10[4] ref_VUN[5] vssa en_VS ref_VUN[5] vssa ISINK
+x10[3] ref_VUN[5] vssa en_VS ref_VUN[5] vssa ISINK
+x10[2] ref_VUN[5] vssa en_VS ref_VUN[5] vssa ISINK
+x10[1] ref_VUN[5] vssa en_VS ref_VUN[5] vssa ISINK
+x11[8] ref_VUN[4] vssa en_VS ref_VUN[4] vssa ISINK
+x11[7] ref_VUN[4] vssa en_VS ref_VUN[4] vssa ISINK
+x11[6] ref_VUN[4] vssa en_VS ref_VUN[4] vssa ISINK
+x11[5] ref_VUN[4] vssa en_VS ref_VUN[4] vssa ISINK
+x11[4] ref_VUN[4] vssa en_VS ref_VUN[4] vssa ISINK
+x11[3] ref_VUN[4] vssa en_VS ref_VUN[4] vssa ISINK
+x11[2] ref_VUN[4] vssa en_VS ref_VUN[4] vssa ISINK
+x11[1] ref_VUN[4] vssa en_VS ref_VUN[4] vssa ISINK
+x12[8] ref_VUN[3] vssa en_VS ref_VUN[3] vssa ISINK
+x12[7] ref_VUN[3] vssa en_VS ref_VUN[3] vssa ISINK
+x12[6] ref_VUN[3] vssa en_VS ref_VUN[3] vssa ISINK
+x12[5] ref_VUN[3] vssa en_VS ref_VUN[3] vssa ISINK
+x12[4] ref_VUN[3] vssa en_VS ref_VUN[3] vssa ISINK
+x12[3] ref_VUN[3] vssa en_VS ref_VUN[3] vssa ISINK
+x12[2] ref_VUN[3] vssa en_VS ref_VUN[3] vssa ISINK
+x12[1] ref_VUN[3] vssa en_VS ref_VUN[3] vssa ISINK
+x13[8] ref_VUN[2] vssa en_VS ref_VUN[2] vssa ISINK
+x13[7] ref_VUN[2] vssa en_VS ref_VUN[2] vssa ISINK
+x13[6] ref_VUN[2] vssa en_VS ref_VUN[2] vssa ISINK
+x13[5] ref_VUN[2] vssa en_VS ref_VUN[2] vssa ISINK
+x13[4] ref_VUN[2] vssa en_VS ref_VUN[2] vssa ISINK
+x13[3] ref_VUN[2] vssa en_VS ref_VUN[2] vssa ISINK
+x13[2] ref_VUN[2] vssa en_VS ref_VUN[2] vssa ISINK
+x13[1] ref_VUN[2] vssa en_VS ref_VUN[2] vssa ISINK
+x14[8] ref_VUN[1] vssa en_VS ref_VUN[1] vssa ISINK
+x14[7] ref_VUN[1] vssa en_VS ref_VUN[1] vssa ISINK
+x14[6] ref_VUN[1] vssa en_VS ref_VUN[1] vssa ISINK
+x14[5] ref_VUN[1] vssa en_VS ref_VUN[1] vssa ISINK
+x14[4] ref_VUN[1] vssa en_VS ref_VUN[1] vssa ISINK
+x14[3] ref_VUN[1] vssa en_VS ref_VUN[1] vssa ISINK
+x14[2] ref_VUN[1] vssa en_VS ref_VUN[1] vssa ISINK
+x14[1] ref_VUN[1] vssa en_VS ref_VUN[1] vssa ISINK
+x8[8] ref_VUN[0] vssa en_VS ref_VUN[0] vssa ISINK
+x8[7] ref_VUN[0] vssa en_VS ref_VUN[0] vssa ISINK
+x8[6] ref_VUN[0] vssa en_VS ref_VUN[0] vssa ISINK
+x8[5] ref_VUN[0] vssa en_VS ref_VUN[0] vssa ISINK
+x8[4] ref_VUN[0] vssa en_VS ref_VUN[0] vssa ISINK
+x8[3] ref_VUN[0] vssa en_VS ref_VUN[0] vssa ISINK
+x8[2] ref_VUN[0] vssa en_VS ref_VUN[0] vssa ISINK
+x8[1] ref_VUN[0] vssa en_VS ref_VUN[0] vssa ISINK
+x1 vssa ref_VUN[7] cfringe140x6
+x2 vssa ref_VUN[6] cfringe140x6
+x3 vssa ref_VUN[5] cfringe140x6
+x4 vssa ref_VUN[4] cfringe140x6
+x5 vssa ref_VUN[3] cfringe140x6
+x6 vssa ref_VUN[2] cfringe140x6
+x7 vssa ref_VUN[1] cfringe140x6
+x8 vssa ref_VUN[0] cfringe140x6
 .ends
 
 
@@ -269,43 +260,6 @@ x2 en_VS_10[10] en_VS_10[9] en_VS_10[8] en_VS_10[7] en_VS_10[6] en_VS_10[5] en_V
 .ends
 
 
-* expanding   symbol:  C-to-F.sym # of pins=7
-** sym_path: /foss/designs/ihp_INI_project/INI_Block/C-to-F.sym
-** sch_path: /foss/designs/ihp_INI_project/INI_Block/C-to-F.sch
-.subckt C-to-F VDD EN VB Vspike IIN vx VSS
-*.PININFO vx:O VDD:B Vspike:O IIN:I EN:I VB:I VSS:B
-MM19 net2 net1 VDD VDD sg13_hv_pmos w=0.3u l=8u ng=1 m=2
-MM4 net9 net1 VDD VDD sg13_hv_pmos w=0.3u l=8u ng=1 m=2
-MM32 net1 net1 VDD VDD sg13_hv_pmos w=0.3u l=8u ng=1 m=2
-MM16 net3 VB VDD VDD sg13_hv_pmos w=1u l=0.5u ng=1 m=2
-MM8 vx net3 VSS VSS sg13_hv_nmos w=0.3u l=8u ng=1 m=2
-MM1 net3 net2 VSS VSS sg13_hv_nmos w=0.3u l=8u ng=1 m=2
-MM6 net2 net2 VSS VSS sg13_hv_nmos w=0.3u l=8u ng=1 m=20
-C5 vm VSS 100f
-MM12 net4 vm net8 VDD sg13_hv_pmos w=0.5u l=8u ng=1 m=2
-MM17 net7 net5 VSS VSS sg13_hv_nmos w=0.3u l=8u ng=1 m=2
-MM20 net6 net4 VSS VSS sg13_hv_nmos w=0.3u l=0.5u ng=1 m=2
-MM34 net5 net6 VSS VSS sg13_hv_nmos w=0.3u l=0.5u ng=1 m=2
-MM35 Vspike net5 VSS VSS sg13_hv_nmos w=0.3u l=0.5u ng=1 m=2
-MM15 net6 net4 VDD VDD sg13_hv_pmos w=1u l=0.5u ng=1 m=2
-MM24 net5 net6 VDD VDD sg13_hv_pmos w=1u l=0.5u ng=1 m=2
-MM31 Vspike net5 VDD VDD sg13_hv_pmos w=1u l=0.5u ng=1 m=2
-MM2 net8 vm VDD VDD sg13_hv_pmos w=0.5u l=8u ng=1 m=2
-MM10 net7 net4 net8 VDD sg13_hv_pmos w=1u l=0.5u ng=1 m=2
-MM9 net4 vm net7 VSS sg13_hv_nmos w=0.3u l=8u ng=1 m=2
-MM14 net1 IIN VSS VSS sg13_hv_nmos w=0.5u l=0.5u ng=1 m=2
-MM18 IIN IIN VSS VSS sg13_hv_nmos w=0.5u l=0.5u ng=1 m=2
-MM21 vx net3 VDD VDD sg13_hv_pmos w=0.5u l=8u ng=1 m=2
-MM13 vm net10 net9 VDD sg13_hv_pmos w=0.3u l=8u ng=1 m=2
-MM23 net10 EN VSS VSS sg13_hv_nmos w=0.3u l=0.5u ng=1 m=2
-MM25 net10 EN VDD VDD sg13_hv_pmos w=1u l=0.5u ng=1 m=2
-MM27 vm Vspike net11 VSS sg13_hv_nmos w=0.95u l=1.1u ng=1 m=2
-MM28 net11 Vspike net13 VSS sg13_hv_nmos w=0.95u l=1.1u ng=1 m=2
-MM29 net13 Vspike net12 VSS sg13_hv_nmos w=0.95u l=1.1u ng=1 m=2
-MM30 net12 Vspike VSS VSS sg13_hv_nmos w=0.95u l=1.1u ng=1 m=2
-.ends
-
-
 * expanding   symbol:  FB_system.sym # of pins=4
 ** sym_path: /foss/designs/ihp_INI_project/INI_Block/FB_system.sym
 ** sch_path: /foss/designs/ihp_INI_project/INI_Block/FB_system.sch
@@ -324,6 +278,8 @@ MMmem4 net6 V_mem vssa vssa sg13_hv_nmos w=1u l=2u ng=1 m=2
 MMdum6 out vdda vdda vdda sg13_hv_pmos w=1u l=2u ng=1 m=2
 MMdum7 V_mem vdda vdda vdda sg13_hv_pmos w=1u l=2u ng=1
 MMdum1 vssa vssa out vssa sg13_hv_nmos w=2u l=2u ng=2
+MMdum2 vssa vssa vssa vssa sg13_hv_nmos w=12u l=2u ng=2
+MMdum3 vdda vdda vdda vdda sg13_hv_pmos w=12u l=2u ng=2
 .ends
 
 
@@ -336,7 +292,8 @@ MM21 net1 gain_VPI net_DM1_SM21 vdda sg13_hv_pmos w=4u l=4u ng=2 m=4
 MM18 in_UNO DPI_capabias_VP vssa vssa sg13_hv_nmos w=4u l=4u ng=2 m=4
 MM1 net_DM1_SM21 ackext_VABI vdda vdda sg13_hv_pmos w=1.2u l=4u ng=4
 Xdpi2 net1 vdda DPI_capabias_VP DPI_gain_VNI vssa DPI_lk_VNI DPI_gain
-MMdum5 net_DM1_SM21 vdda vdda vdda sg13_hv_pmos w=8.6u l=2.75u ng=1
+MMdum5 net_DM1_SM21 vdda vdda vdda sg13_hv_pmos w=2u l=2.75u ng=1 m=4
+MMdum1 net_DM1_SM21 vdda vdda vdda sg13_hv_pmos w=0.3u l=2.75u ng=1 m=2
 .ends
 
 
@@ -358,11 +315,13 @@ MM14 net1 lk_VPI vssa vssa sg13_hv_nmos w=4u l=4u ng=2 m=4
 ** sch_path: /foss/designs/ihp_INI_project/INI_Block/pulse_extender_V2.sch
 .subckt pulse_extender_V2 vdda vssa out_VAO in_VAI pwbias_VPI capa_VP
 *.PININFO out_VAO:O pwbias_VPI:I in_VAI:I capa_VP:B vssa:B vdda:B
-MMp1 out_VAO capa_VP vdda vdda sg13_hv_pmos w=4u l=2u ng=1
-MMn1 out_VAO capa_VP vssa vssa sg13_hv_nmos w=4u l=2u ng=1
-MMn4 capa_VP in_VAI vssa vssa sg13_hv_nmos w=4u l=2u ng=1
-MMstarve4 capa_VP pwbias_VPI vdda vdda sg13_hv_pmos w=4u l=2u ng=1
-MMp3 capa_VP out_VAO vdda vdda sg13_hv_pmos w=4u l=2u ng=1
+MMp1 out_VAO capa_VP vdda vdda sg13_hv_pmos w=4u l=2u ng=4
+MMn1 out_VAO capa_VP vssa vssa sg13_hv_nmos w=4u l=2u ng=4
+MMn4 capa_VP in_VAI vssa vssa sg13_hv_nmos w=4u l=2u ng=4
+MMstarve4 capa_VP pwbias_VPI vdda vdda sg13_hv_pmos w=4u l=2u ng=4
+MMp3 capa_VP out_VAO vdda vdda sg13_hv_pmos w=4u l=2u ng=4
+MMdum2 vssa vssa vssa vssa sg13_hv_nmos w=12u l=2u ng=2
+MMdum1 vdda vdda vdda vdda sg13_hv_pmos w=12u l=2u ng=2
 .ends
 
 
@@ -381,8 +340,8 @@ MM2 out in vssa vssa sg13_hv_nmos w=4u l=0.5u ng=1
 ** sch_path: /foss/designs/ihp_INI_project/INI_Block/inv_hc.sch
 .subckt inv_hc vdda out in vssa
 *.PININFO in:I out:O vssa:B vdda:B
-MM1 out in vdda vdda sg13_hv_pmos w=10u l=0.5u ng=1
-MM2 out in vssa vssa sg13_hv_nmos w=10u l=0.5u ng=1
+MM1 out in vdda vdda sg13_hv_pmos w=10u l=0.5u ng=2
+MM2 out in vssa vssa sg13_hv_nmos w=10u l=0.5u ng=2
 .ends
 
 
@@ -395,279 +354,7 @@ MMdifl vssa gain_VNI in_UI vdda sg13_hv_pmos w=2u l=2u ng=2 m=8
 MMdifr capabias_VPN capabias_VPN in_UI vdda sg13_hv_pmos w=2u l=2u ng=2 m=8
 MMtau capabias_VPN lk_VNI vssa vssa sg13_hv_nmos w=4u l=4u ng=2 m=4
 MMdum2 in_UI vdda vdda vdda sg13_hv_pmos w=1u l=2u ng=1 m=8
-.ends
-
-
-* expanding   symbol:  OTA_b.sym # of pins=6
-** sym_path: /foss/designs/ihp_INI_project/INI_Block/OTA_b.sym
-** sch_path: /foss/designs/ihp_INI_project/INI_Block/OTA_b.sch
-.subckt OTA_b VDDA VBP INN INP VOP VSSA
-*.PININFO VBP:I INP:I INN:I VSSA:B VDDA:B VOP:O
-MM13 n1 n1 VSSA VSSA sg13_hv_nmos w=2u l=0.5u ng=2 m=2
-MM1 n2 n2 VSSA VSSA sg13_hv_nmos w=2u l=0.5u ng=2 m=2
-MM12 n1 INN vtail VDDA sg13_hv_pmos w=16u l=0.5u ng=2 m=4
-MM3 n2 INP vtail VDDA sg13_hv_pmos w=16u l=0.5u ng=2 m=4
-MM4 vtail VBP VDDA VDDA sg13_hv_pmos w=12u l=500n ng=2 m=8
-MM5 vpmirr vpmirr VDDA VDDA sg13_hv_pmos w=2u l=500n ng=2 m=4
-MM6 vout1stage vpmirr VDDA VDDA sg13_hv_pmos w=2u l=500n ng=2 m=4
-MM7 vout1stage n1 VSSA VSSA sg13_hv_nmos w=1.75u l=0.5u ng=2 m=4
-MM8 VOP vout1stage VSSA VSSA sg13_hv_nmos w=4u l=0.5u ng=4 m=4
-MM9 VOP VBP VDDA VDDA sg13_hv_pmos w=4u l=0.5u ng=2
-MM10 vpmirr n2 VSSA VSSA sg13_hv_nmos w=2u l=0.5u ng=2 m=4
-R1 net1 vout1stage 49.84k
-*  C1 -  cap_mfringe  IS MISSING !!!!
-.ends
-
-
-* expanding   symbol:  DecadeDivider_2.sym # of pins=5
-** sym_path: /foss/designs/ihp_INI_project/INI_Block/DecadeDivider_2.sym
-** sch_path: /foss/designs/ihp_INI_project/INI_Block/DecadeDivider_2.sch
-.subckt DecadeDivider_2 VDDA IREF IREF_CORE[0] IOUT VSSA
-*.PININFO VSSA:B VDDA:B IREF:B IREF_CORE[0]:B IOUT:B
-x1[2] VDDA IREF IREF VSSA IREF_CORE[0] ISOURCE
-x1[1] VDDA IREF IREF VSSA IREF_CORE[0] ISOURCE
-x10[2] VDDA IREF IREF VSSA Vbn ISOURCE
-x10[1] VDDA IREF IREF VSSA Vbn ISOURCE
-x11[20] VDDA IREF IREF VSSA IREF ISOURCE
-x11[19] VDDA IREF IREF VSSA IREF ISOURCE
-x11[18] VDDA IREF IREF VSSA IREF ISOURCE
-x11[17] VDDA IREF IREF VSSA IREF ISOURCE
-x11[16] VDDA IREF IREF VSSA IREF ISOURCE
-x11[15] VDDA IREF IREF VSSA IREF ISOURCE
-x11[14] VDDA IREF IREF VSSA IREF ISOURCE
-x11[13] VDDA IREF IREF VSSA IREF ISOURCE
-x11[12] VDDA IREF IREF VSSA IREF ISOURCE
-x11[11] VDDA IREF IREF VSSA IREF ISOURCE
-x11[10] VDDA IREF IREF VSSA IREF ISOURCE
-x11[9] VDDA IREF IREF VSSA IREF ISOURCE
-x11[8] VDDA IREF IREF VSSA IREF ISOURCE
-x11[7] VDDA IREF IREF VSSA IREF ISOURCE
-x11[6] VDDA IREF IREF VSSA IREF ISOURCE
-x11[5] VDDA IREF IREF VSSA IREF ISOURCE
-x11[4] VDDA IREF IREF VSSA IREF ISOURCE
-x11[3] VDDA IREF IREF VSSA IREF ISOURCE
-x11[2] VDDA IREF IREF VSSA IREF ISOURCE
-x11[1] VDDA IREF IREF VSSA IREF ISOURCE
-x12[15] Vbn VSSA Vbn Vbn ISINK
-x12[14] Vbn VSSA Vbn Vbn ISINK
-x12[13] Vbn VSSA Vbn Vbn ISINK
-x12[12] Vbn VSSA Vbn Vbn ISINK
-x12[11] Vbn VSSA Vbn Vbn ISINK
-x12[10] Vbn VSSA Vbn Vbn ISINK
-x12[9] Vbn VSSA Vbn Vbn ISINK
-x12[8] Vbn VSSA Vbn Vbn ISINK
-x12[7] Vbn VSSA Vbn Vbn ISINK
-x12[6] Vbn VSSA Vbn Vbn ISINK
-x12[5] Vbn VSSA Vbn Vbn ISINK
-x12[4] Vbn VSSA Vbn Vbn ISINK
-x12[3] Vbn VSSA Vbn Vbn ISINK
-x12[2] Vbn VSSA Vbn Vbn ISINK
-x12[1] Vbn VSSA Vbn Vbn ISINK
-x13[15] Vbn VSSA Vbn IOUT ISINK
-x13[14] Vbn VSSA Vbn IOUT ISINK
-x13[13] Vbn VSSA Vbn IOUT ISINK
-x13[12] Vbn VSSA Vbn IOUT ISINK
-x13[11] Vbn VSSA Vbn IOUT ISINK
-x13[10] Vbn VSSA Vbn IOUT ISINK
-x13[9] Vbn VSSA Vbn IOUT ISINK
-x13[8] Vbn VSSA Vbn IOUT ISINK
-x13[7] Vbn VSSA Vbn IOUT ISINK
-x13[6] Vbn VSSA Vbn IOUT ISINK
-x13[5] Vbn VSSA Vbn IOUT ISINK
-x13[4] Vbn VSSA Vbn IOUT ISINK
-x13[3] Vbn VSSA Vbn IOUT ISINK
-x13[2] Vbn VSSA Vbn IOUT ISINK
-x13[1] Vbn VSSA Vbn IOUT ISINK
-*  C1 -  cap_mfringe  IS MISSING !!!!
-.ends
-
-
-* expanding   symbol:  DecadeDividerAux.sym # of pins=4
-** sym_path: /foss/designs/ihp_INI_project/INI_Block/DecadeDividerAux.sym
-** sch_path: /foss/designs/ihp_INI_project/INI_Block/DecadeDividerAux.sch
-.subckt DecadeDividerAux VDDA VBIAS IREF_CORE[0] VSSA
-*.PININFO VSSA:B VDDA:B VBIAS:B IREF_CORE[0]:B
-x1[20] VDDA VBIAS VBIAS VSSA IREF_CORE[0] ISOURCE
-x1[19] VDDA VBIAS VBIAS VSSA IREF_CORE[0] ISOURCE
-x1[18] VDDA VBIAS VBIAS VSSA IREF_CORE[0] ISOURCE
-x1[17] VDDA VBIAS VBIAS VSSA IREF_CORE[0] ISOURCE
-x1[16] VDDA VBIAS VBIAS VSSA IREF_CORE[0] ISOURCE
-x1[15] VDDA VBIAS VBIAS VSSA IREF_CORE[0] ISOURCE
-x1[14] VDDA VBIAS VBIAS VSSA IREF_CORE[0] ISOURCE
-x1[13] VDDA VBIAS VBIAS VSSA IREF_CORE[0] ISOURCE
-x1[12] VDDA VBIAS VBIAS VSSA IREF_CORE[0] ISOURCE
-x1[11] VDDA VBIAS VBIAS VSSA IREF_CORE[0] ISOURCE
-x1[10] VDDA VBIAS VBIAS VSSA IREF_CORE[0] ISOURCE
-x1[9] VDDA VBIAS VBIAS VSSA IREF_CORE[0] ISOURCE
-x1[8] VDDA VBIAS VBIAS VSSA IREF_CORE[0] ISOURCE
-x1[7] VDDA VBIAS VBIAS VSSA IREF_CORE[0] ISOURCE
-x1[6] VDDA VBIAS VBIAS VSSA IREF_CORE[0] ISOURCE
-x1[5] VDDA VBIAS VBIAS VSSA IREF_CORE[0] ISOURCE
-x1[4] VDDA VBIAS VBIAS VSSA IREF_CORE[0] ISOURCE
-x1[3] VDDA VBIAS VBIAS VSSA IREF_CORE[0] ISOURCE
-x1[2] VDDA VBIAS VBIAS VSSA IREF_CORE[0] ISOURCE
-x1[1] VDDA VBIAS VBIAS VSSA IREF_CORE[0] ISOURCE
-x2[20] VDDA VBIAS VBIAS VSSA IREF_CORE[1] ISOURCE
-x2[19] VDDA VBIAS VBIAS VSSA IREF_CORE[1] ISOURCE
-x2[18] VDDA VBIAS VBIAS VSSA IREF_CORE[1] ISOURCE
-x2[17] VDDA VBIAS VBIAS VSSA IREF_CORE[1] ISOURCE
-x2[16] VDDA VBIAS VBIAS VSSA IREF_CORE[1] ISOURCE
-x2[15] VDDA VBIAS VBIAS VSSA IREF_CORE[1] ISOURCE
-x2[14] VDDA VBIAS VBIAS VSSA IREF_CORE[1] ISOURCE
-x2[13] VDDA VBIAS VBIAS VSSA IREF_CORE[1] ISOURCE
-x2[12] VDDA VBIAS VBIAS VSSA IREF_CORE[1] ISOURCE
-x2[11] VDDA VBIAS VBIAS VSSA IREF_CORE[1] ISOURCE
-x2[10] VDDA VBIAS VBIAS VSSA IREF_CORE[1] ISOURCE
-x2[9] VDDA VBIAS VBIAS VSSA IREF_CORE[1] ISOURCE
-x2[8] VDDA VBIAS VBIAS VSSA IREF_CORE[1] ISOURCE
-x2[7] VDDA VBIAS VBIAS VSSA IREF_CORE[1] ISOURCE
-x2[6] VDDA VBIAS VBIAS VSSA IREF_CORE[1] ISOURCE
-x2[5] VDDA VBIAS VBIAS VSSA IREF_CORE[1] ISOURCE
-x2[4] VDDA VBIAS VBIAS VSSA IREF_CORE[1] ISOURCE
-x2[3] VDDA VBIAS VBIAS VSSA IREF_CORE[1] ISOURCE
-x2[2] VDDA VBIAS VBIAS VSSA IREF_CORE[1] ISOURCE
-x2[1] VDDA VBIAS VBIAS VSSA IREF_CORE[1] ISOURCE
-x3[20] VDDA VBIAS VBIAS VSSA IREF_CORE[2] ISOURCE
-x3[19] VDDA VBIAS VBIAS VSSA IREF_CORE[2] ISOURCE
-x3[18] VDDA VBIAS VBIAS VSSA IREF_CORE[2] ISOURCE
-x3[17] VDDA VBIAS VBIAS VSSA IREF_CORE[2] ISOURCE
-x3[16] VDDA VBIAS VBIAS VSSA IREF_CORE[2] ISOURCE
-x3[15] VDDA VBIAS VBIAS VSSA IREF_CORE[2] ISOURCE
-x3[14] VDDA VBIAS VBIAS VSSA IREF_CORE[2] ISOURCE
-x3[13] VDDA VBIAS VBIAS VSSA IREF_CORE[2] ISOURCE
-x3[12] VDDA VBIAS VBIAS VSSA IREF_CORE[2] ISOURCE
-x3[11] VDDA VBIAS VBIAS VSSA IREF_CORE[2] ISOURCE
-x3[10] VDDA VBIAS VBIAS VSSA IREF_CORE[2] ISOURCE
-x3[9] VDDA VBIAS VBIAS VSSA IREF_CORE[2] ISOURCE
-x3[8] VDDA VBIAS VBIAS VSSA IREF_CORE[2] ISOURCE
-x3[7] VDDA VBIAS VBIAS VSSA IREF_CORE[2] ISOURCE
-x3[6] VDDA VBIAS VBIAS VSSA IREF_CORE[2] ISOURCE
-x3[5] VDDA VBIAS VBIAS VSSA IREF_CORE[2] ISOURCE
-x3[4] VDDA VBIAS VBIAS VSSA IREF_CORE[2] ISOURCE
-x3[3] VDDA VBIAS VBIAS VSSA IREF_CORE[2] ISOURCE
-x3[2] VDDA VBIAS VBIAS VSSA IREF_CORE[2] ISOURCE
-x3[1] VDDA VBIAS VBIAS VSSA IREF_CORE[2] ISOURCE
-x4[20] VDDA VBIAS VBIAS VSSA IREF_CORE[3] ISOURCE
-x4[19] VDDA VBIAS VBIAS VSSA IREF_CORE[3] ISOURCE
-x4[18] VDDA VBIAS VBIAS VSSA IREF_CORE[3] ISOURCE
-x4[17] VDDA VBIAS VBIAS VSSA IREF_CORE[3] ISOURCE
-x4[16] VDDA VBIAS VBIAS VSSA IREF_CORE[3] ISOURCE
-x4[15] VDDA VBIAS VBIAS VSSA IREF_CORE[3] ISOURCE
-x4[14] VDDA VBIAS VBIAS VSSA IREF_CORE[3] ISOURCE
-x4[13] VDDA VBIAS VBIAS VSSA IREF_CORE[3] ISOURCE
-x4[12] VDDA VBIAS VBIAS VSSA IREF_CORE[3] ISOURCE
-x4[11] VDDA VBIAS VBIAS VSSA IREF_CORE[3] ISOURCE
-x4[10] VDDA VBIAS VBIAS VSSA IREF_CORE[3] ISOURCE
-x4[9] VDDA VBIAS VBIAS VSSA IREF_CORE[3] ISOURCE
-x4[8] VDDA VBIAS VBIAS VSSA IREF_CORE[3] ISOURCE
-x4[7] VDDA VBIAS VBIAS VSSA IREF_CORE[3] ISOURCE
-x4[6] VDDA VBIAS VBIAS VSSA IREF_CORE[3] ISOURCE
-x4[5] VDDA VBIAS VBIAS VSSA IREF_CORE[3] ISOURCE
-x4[4] VDDA VBIAS VBIAS VSSA IREF_CORE[3] ISOURCE
-x4[3] VDDA VBIAS VBIAS VSSA IREF_CORE[3] ISOURCE
-x4[2] VDDA VBIAS VBIAS VSSA IREF_CORE[3] ISOURCE
-x4[1] VDDA VBIAS VBIAS VSSA IREF_CORE[3] ISOURCE
-x5[20] VDDA VBIAS VBIAS VSSA IREF_CORE[4] ISOURCE
-x5[19] VDDA VBIAS VBIAS VSSA IREF_CORE[4] ISOURCE
-x5[18] VDDA VBIAS VBIAS VSSA IREF_CORE[4] ISOURCE
-x5[17] VDDA VBIAS VBIAS VSSA IREF_CORE[4] ISOURCE
-x5[16] VDDA VBIAS VBIAS VSSA IREF_CORE[4] ISOURCE
-x5[15] VDDA VBIAS VBIAS VSSA IREF_CORE[4] ISOURCE
-x5[14] VDDA VBIAS VBIAS VSSA IREF_CORE[4] ISOURCE
-x5[13] VDDA VBIAS VBIAS VSSA IREF_CORE[4] ISOURCE
-x5[12] VDDA VBIAS VBIAS VSSA IREF_CORE[4] ISOURCE
-x5[11] VDDA VBIAS VBIAS VSSA IREF_CORE[4] ISOURCE
-x5[10] VDDA VBIAS VBIAS VSSA IREF_CORE[4] ISOURCE
-x5[9] VDDA VBIAS VBIAS VSSA IREF_CORE[4] ISOURCE
-x5[8] VDDA VBIAS VBIAS VSSA IREF_CORE[4] ISOURCE
-x5[7] VDDA VBIAS VBIAS VSSA IREF_CORE[4] ISOURCE
-x5[6] VDDA VBIAS VBIAS VSSA IREF_CORE[4] ISOURCE
-x5[5] VDDA VBIAS VBIAS VSSA IREF_CORE[4] ISOURCE
-x5[4] VDDA VBIAS VBIAS VSSA IREF_CORE[4] ISOURCE
-x5[3] VDDA VBIAS VBIAS VSSA IREF_CORE[4] ISOURCE
-x5[2] VDDA VBIAS VBIAS VSSA IREF_CORE[4] ISOURCE
-x5[1] VDDA VBIAS VBIAS VSSA IREF_CORE[4] ISOURCE
-x6[20] VDDA VBIAS VBIAS VSSA IREF_CORE[5] ISOURCE
-x6[19] VDDA VBIAS VBIAS VSSA IREF_CORE[5] ISOURCE
-x6[18] VDDA VBIAS VBIAS VSSA IREF_CORE[5] ISOURCE
-x6[17] VDDA VBIAS VBIAS VSSA IREF_CORE[5] ISOURCE
-x6[16] VDDA VBIAS VBIAS VSSA IREF_CORE[5] ISOURCE
-x6[15] VDDA VBIAS VBIAS VSSA IREF_CORE[5] ISOURCE
-x6[14] VDDA VBIAS VBIAS VSSA IREF_CORE[5] ISOURCE
-x6[13] VDDA VBIAS VBIAS VSSA IREF_CORE[5] ISOURCE
-x6[12] VDDA VBIAS VBIAS VSSA IREF_CORE[5] ISOURCE
-x6[11] VDDA VBIAS VBIAS VSSA IREF_CORE[5] ISOURCE
-x6[10] VDDA VBIAS VBIAS VSSA IREF_CORE[5] ISOURCE
-x6[9] VDDA VBIAS VBIAS VSSA IREF_CORE[5] ISOURCE
-x6[8] VDDA VBIAS VBIAS VSSA IREF_CORE[5] ISOURCE
-x6[7] VDDA VBIAS VBIAS VSSA IREF_CORE[5] ISOURCE
-x6[6] VDDA VBIAS VBIAS VSSA IREF_CORE[5] ISOURCE
-x6[5] VDDA VBIAS VBIAS VSSA IREF_CORE[5] ISOURCE
-x6[4] VDDA VBIAS VBIAS VSSA IREF_CORE[5] ISOURCE
-x6[3] VDDA VBIAS VBIAS VSSA IREF_CORE[5] ISOURCE
-x6[2] VDDA VBIAS VBIAS VSSA IREF_CORE[5] ISOURCE
-x6[1] VDDA VBIAS VBIAS VSSA IREF_CORE[5] ISOURCE
-x7[20] VDDA VBIAS VBIAS VSSA IREF_CORE[6] ISOURCE
-x7[19] VDDA VBIAS VBIAS VSSA IREF_CORE[6] ISOURCE
-x7[18] VDDA VBIAS VBIAS VSSA IREF_CORE[6] ISOURCE
-x7[17] VDDA VBIAS VBIAS VSSA IREF_CORE[6] ISOURCE
-x7[16] VDDA VBIAS VBIAS VSSA IREF_CORE[6] ISOURCE
-x7[15] VDDA VBIAS VBIAS VSSA IREF_CORE[6] ISOURCE
-x7[14] VDDA VBIAS VBIAS VSSA IREF_CORE[6] ISOURCE
-x7[13] VDDA VBIAS VBIAS VSSA IREF_CORE[6] ISOURCE
-x7[12] VDDA VBIAS VBIAS VSSA IREF_CORE[6] ISOURCE
-x7[11] VDDA VBIAS VBIAS VSSA IREF_CORE[6] ISOURCE
-x7[10] VDDA VBIAS VBIAS VSSA IREF_CORE[6] ISOURCE
-x7[9] VDDA VBIAS VBIAS VSSA IREF_CORE[6] ISOURCE
-x7[8] VDDA VBIAS VBIAS VSSA IREF_CORE[6] ISOURCE
-x7[7] VDDA VBIAS VBIAS VSSA IREF_CORE[6] ISOURCE
-x7[6] VDDA VBIAS VBIAS VSSA IREF_CORE[6] ISOURCE
-x7[5] VDDA VBIAS VBIAS VSSA IREF_CORE[6] ISOURCE
-x7[4] VDDA VBIAS VBIAS VSSA IREF_CORE[6] ISOURCE
-x7[3] VDDA VBIAS VBIAS VSSA IREF_CORE[6] ISOURCE
-x7[2] VDDA VBIAS VBIAS VSSA IREF_CORE[6] ISOURCE
-x7[1] VDDA VBIAS VBIAS VSSA IREF_CORE[6] ISOURCE
-x8[20] VDDA VBIAS VBIAS VSSA IREF_CORE[7] ISOURCE
-x8[19] VDDA VBIAS VBIAS VSSA IREF_CORE[7] ISOURCE
-x8[18] VDDA VBIAS VBIAS VSSA IREF_CORE[7] ISOURCE
-x8[17] VDDA VBIAS VBIAS VSSA IREF_CORE[7] ISOURCE
-x8[16] VDDA VBIAS VBIAS VSSA IREF_CORE[7] ISOURCE
-x8[15] VDDA VBIAS VBIAS VSSA IREF_CORE[7] ISOURCE
-x8[14] VDDA VBIAS VBIAS VSSA IREF_CORE[7] ISOURCE
-x8[13] VDDA VBIAS VBIAS VSSA IREF_CORE[7] ISOURCE
-x8[12] VDDA VBIAS VBIAS VSSA IREF_CORE[7] ISOURCE
-x8[11] VDDA VBIAS VBIAS VSSA IREF_CORE[7] ISOURCE
-x8[10] VDDA VBIAS VBIAS VSSA IREF_CORE[7] ISOURCE
-x8[9] VDDA VBIAS VBIAS VSSA IREF_CORE[7] ISOURCE
-x8[8] VDDA VBIAS VBIAS VSSA IREF_CORE[7] ISOURCE
-x8[7] VDDA VBIAS VBIAS VSSA IREF_CORE[7] ISOURCE
-x8[6] VDDA VBIAS VBIAS VSSA IREF_CORE[7] ISOURCE
-x8[5] VDDA VBIAS VBIAS VSSA IREF_CORE[7] ISOURCE
-x8[4] VDDA VBIAS VBIAS VSSA IREF_CORE[7] ISOURCE
-x8[3] VDDA VBIAS VBIAS VSSA IREF_CORE[7] ISOURCE
-x8[2] VDDA VBIAS VBIAS VSSA IREF_CORE[7] ISOURCE
-x8[1] VDDA VBIAS VBIAS VSSA IREF_CORE[7] ISOURCE
-x9[20] VDDA VBIAS VBIAS VSSA IREF_CORE[8] ISOURCE
-x9[19] VDDA VBIAS VBIAS VSSA IREF_CORE[8] ISOURCE
-x9[18] VDDA VBIAS VBIAS VSSA IREF_CORE[8] ISOURCE
-x9[17] VDDA VBIAS VBIAS VSSA IREF_CORE[8] ISOURCE
-x9[16] VDDA VBIAS VBIAS VSSA IREF_CORE[8] ISOURCE
-x9[15] VDDA VBIAS VBIAS VSSA IREF_CORE[8] ISOURCE
-x9[14] VDDA VBIAS VBIAS VSSA IREF_CORE[8] ISOURCE
-x9[13] VDDA VBIAS VBIAS VSSA IREF_CORE[8] ISOURCE
-x9[12] VDDA VBIAS VBIAS VSSA IREF_CORE[8] ISOURCE
-x9[11] VDDA VBIAS VBIAS VSSA IREF_CORE[8] ISOURCE
-x9[10] VDDA VBIAS VBIAS VSSA IREF_CORE[8] ISOURCE
-x9[9] VDDA VBIAS VBIAS VSSA IREF_CORE[8] ISOURCE
-x9[8] VDDA VBIAS VBIAS VSSA IREF_CORE[8] ISOURCE
-x9[7] VDDA VBIAS VBIAS VSSA IREF_CORE[8] ISOURCE
-x9[6] VDDA VBIAS VBIAS VSSA IREF_CORE[8] ISOURCE
-x9[5] VDDA VBIAS VBIAS VSSA IREF_CORE[8] ISOURCE
-x9[4] VDDA VBIAS VBIAS VSSA IREF_CORE[8] ISOURCE
-x9[3] VDDA VBIAS VBIAS VSSA IREF_CORE[8] ISOURCE
-x9[2] VDDA VBIAS VBIAS VSSA IREF_CORE[8] ISOURCE
-x9[1] VDDA VBIAS VBIAS VSSA IREF_CORE[8] ISOURCE
-*  C1 -  cap_mfringe  IS MISSING !!!!
+MM2 vdda vdda vdda vdda sg13_hv_pmos w=10u l=2u ng=1
 .ends
 
 
@@ -681,14 +368,162 @@ MM2 out in vssa vssa sg13_hv_nmos w=1u l=0.5u ng=1
 .ends
 
 
-* expanding   symbol:  ISINK.sym # of pins=4
+* expanding   symbol:  DecadeDivider_2.sym # of pins=5
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/DecadeDivider_2.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/DecadeDivider_2.sch
+.subckt DecadeDivider_2 VDDA IREF IREF_CORE[0] IOUT VSSA
+*.PININFO VSSA:B VDDA:B IREF:B IREF_CORE[0]:B IOUT:B
+x1[2] VDDA IREF VDDA IREF VSSA IREF_CORE[0] ISOURCE
+x1[1] VDDA IREF VDDA IREF VSSA IREF_CORE[0] ISOURCE
+x10[2] VDDA IREF VDDA IREF VSSA Vbn ISOURCE
+x10[1] VDDA IREF VDDA IREF VSSA Vbn ISOURCE
+x11[20] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[19] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[18] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[17] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[16] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[15] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[14] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[13] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[12] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[11] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[10] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[9] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[8] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[7] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[6] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[5] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[4] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[3] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[2] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[1] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x3[15] IOUT VSSA Vbn Vbn VSSA ISINK_MB
+x3[14] IOUT VSSA Vbn Vbn VSSA ISINK_MB
+x3[13] IOUT VSSA Vbn Vbn VSSA ISINK_MB
+x3[12] IOUT VSSA Vbn Vbn VSSA ISINK_MB
+x3[11] IOUT VSSA Vbn Vbn VSSA ISINK_MB
+x3[10] IOUT VSSA Vbn Vbn VSSA ISINK_MB
+x3[9] IOUT VSSA Vbn Vbn VSSA ISINK_MB
+x3[8] IOUT VSSA Vbn Vbn VSSA ISINK_MB
+x3[7] IOUT VSSA Vbn Vbn VSSA ISINK_MB
+x3[6] IOUT VSSA Vbn Vbn VSSA ISINK_MB
+x3[5] IOUT VSSA Vbn Vbn VSSA ISINK_MB
+x3[4] IOUT VSSA Vbn Vbn VSSA ISINK_MB
+x3[3] IOUT VSSA Vbn Vbn VSSA ISINK_MB
+x3[2] IOUT VSSA Vbn Vbn VSSA ISINK_MB
+x3[1] IOUT VSSA Vbn Vbn VSSA ISINK_MB
+x2[15] Vbn VSSA Vbn Vbn VSSA ISINK_MB
+x2[14] Vbn VSSA Vbn Vbn VSSA ISINK_MB
+x2[13] Vbn VSSA Vbn Vbn VSSA ISINK_MB
+x2[12] Vbn VSSA Vbn Vbn VSSA ISINK_MB
+x2[11] Vbn VSSA Vbn Vbn VSSA ISINK_MB
+x2[10] Vbn VSSA Vbn Vbn VSSA ISINK_MB
+x2[9] Vbn VSSA Vbn Vbn VSSA ISINK_MB
+x2[8] Vbn VSSA Vbn Vbn VSSA ISINK_MB
+x2[7] Vbn VSSA Vbn Vbn VSSA ISINK_MB
+x2[6] Vbn VSSA Vbn Vbn VSSA ISINK_MB
+x2[5] Vbn VSSA Vbn Vbn VSSA ISINK_MB
+x2[4] Vbn VSSA Vbn Vbn VSSA ISINK_MB
+x2[3] Vbn VSSA Vbn Vbn VSSA ISINK_MB
+x2[2] Vbn VSSA Vbn Vbn VSSA ISINK_MB
+x2[1] Vbn VSSA Vbn Vbn VSSA ISINK_MB
+x1 VDDA IREF Cap3
+.ends
+
+
+* expanding   symbol:  DecadeDividerAux.sym # of pins=4
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/DecadeDividerAux.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/DecadeDividerAux.sch
+.subckt DecadeDividerAux VDDA VBIAS IREF_CORE[0] VSSA
+*.PININFO VSSA:B VDDA:B VBIAS:B IREF_CORE[0]:B
+x1[20] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[19] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[18] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[17] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[16] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[15] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[14] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[13] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[12] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[11] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[10] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[9] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[8] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[7] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[6] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[5] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[4] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[3] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[2] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[1] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+MM1 VDDA VDDA VDDA VDDA sg13_hv_pmos w=0.3u l=5u ng=1 m=2
+.ends
+
+
+* expanding   symbol:  OTA_bc.sym # of pins=7
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/OTA_bc.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/OTA_bc.sch
+.subckt OTA_bc VDDA VBP C_p1 INN VOP INP VSSA
+*.PININFO VBP:I INP:I INN:I VSSA:B VDDA:B VOP:O C_p1:I
+MM13 n1 n1 VSSA VSSA sg13_hv_nmos w=2u l=0.5u ng=2 m=2
+MM1 n2 n2 VSSA VSSA sg13_hv_nmos w=2u l=0.5u ng=2 m=2
+MM12 n1 INN vtail VDDA sg13_hv_pmos w=16u l=0.5u ng=2 m=4
+MM3 n2 INP vtail VDDA sg13_hv_pmos w=16u l=0.5u ng=2 m=4
+MM4 vtail VBP VDDA VDDA sg13_hv_pmos w=12u l=500n ng=2 m=8
+MM5 vpmirr vpmirr VDDA VDDA sg13_hv_pmos w=2u l=500n ng=2 m=4
+MM6 vout1stage vpmirr VDDA VDDA sg13_hv_pmos w=2u l=500n ng=2 m=4
+MM7 vout1stage n1 VSSA VSSA sg13_hv_nmos w=1.75u l=0.5u ng=2 m=4
+MM8 VOP vout1stage VSSA VSSA sg13_hv_nmos w=4u l=0.5u ng=4 m=4
+MM9 VOP VBP VDDA VDDA sg13_hv_pmos w=4u l=0.5u ng=2
+MM10 vpmirr n2 VSSA VSSA sg13_hv_nmos w=2u l=0.5u ng=2 m=4
+RR1 vout1stage C_p1 49.84k $SUB=VSSA $[rhigh] w=0.5e-6 l=16.75e-6 b=0
+.ends
+
+
+* expanding   symbol:  Cap1.sym # of pins=2
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/Cap1.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/Cap1.sch
+.subckt Cap1 Cp1 Cp2
+*.PININFO Cp2:B Cp1:B
+CC1 Cp1 Cp2 cap_mfringe w=407.0u l=35.0u mmin=1 mmax=4
+.ends
+
+
+* expanding   symbol:  cap4.sym # of pins=2
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/cap4.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/cap4.sch
+.subckt cap4 Cp1 Cp2
+*.PININFO Cp2:B Cp1:B
+CC11 Cp1 Cp2 cap_mfringe w=60.0u l=30.0u mmin=1 mmax=4
+.ends
+
+
+* expanding   symbol:  Cap5.sym # of pins=2
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/Cap5.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/Cap5.sch
+.subckt Cap5 Cp1 Cp2
+*.PININFO Cp2:B Cp1:B
+CC3 Cp2 Cp1 cap_mfringe w=28.0u l=10.0u mmin=1 mmax=4
+.ends
+
+
+* expanding   symbol:  ISINK.sym # of pins=5
 ** sym_path: /foss/designs/ihp_INI_project/INI_Block/ISINK.sym
 ** sch_path: /foss/designs/ihp_INI_project/INI_Block/ISINK.sch
-.subckt ISINK bias_VN vssa en_VS io_UN
-*.PININFO en_VS:I vssa:B bias_VN:I io_UN:B
-MM1 io_UN en_VS net2 vssa sg13_hv_nmos w=2.5u l=0.5u ng=1
-MM2 net2 bias_VN net1 vssa sg13_hv_nmos w=1u l=4u ng=1
-MM3 net1 bias_VN vssa vssa sg13_hv_nmos w=1u l=4u ng=1
+.subckt ISINK bias_VN vssa en_VS io_UN bulk
+*.PININFO en_VS:I vssa:B bias_VN:I io_UN:B bulk:B
+MM1 io_UN en_VS net2 bulk sg13_hv_nmos w=2.5u l=0.5u ng=1
+MM2 net2 bias_VN net1 bulk sg13_hv_nmos w=1u l=4u ng=1
+MM3 net1 bias_VN vssa bulk sg13_hv_nmos w=1u l=4u ng=1
+.ends
+
+
+* expanding   symbol:  cfringe140x6.sym # of pins=2
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/cfringe140x6.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/cfringe140x6.sch
+.subckt cfringe140x6 C2 C1
+*.PININFO C1:B C2:B
+CC1 C1 C2 cap_mfringe w=140.0u l=6.37u mmin=1 mmax=4
 .ends
 
 
@@ -713,10 +548,10 @@ xinv[0] vdda en_VSB[0] en_VS[0] vssa inv_BG
 x1 MASTER_CoreDiodeT_bias_VN[7] MASTER_CoreDiodeT_bias_VN[6] MASTER_CoreDiodeT_bias_VN[5] MASTER_CoreDiodeT_bias_VN[4]
 + MASTER_CoreDiodeT_bias_VN[3] MASTER_CoreDiodeT_bias_VN[2] MASTER_CoreDiodeT_bias_VN[1] MASTER_CoreDiodeT_bias_VN[0] vssa en_VS[10] en_VS[9] en_VS[8]
 + en_VSB[10] en_VSB[9] en_VSB[8] MASTER_biasout_VN SelMUX
-xisink0[2] MASTER_biasout_VN vssa BIASGEN_en_VS net1 ISINK
-xisink0[1] MASTER_biasout_VN vssa BIASGEN_en_VS net1 ISINK
-MM1 net1 net1 vdda vdda sg13_hv_pmos w=2u l=1u ng=2 m=2
-MM2 bias_test net1 vdda vdda sg13_hv_pmos w=2u l=1u ng=2 m=2
+xisink0[2] MASTER_biasout_VN vssa BIASGEN_en_VS net1 vssa ISINK
+xisink0[1] MASTER_biasout_VN vssa BIASGEN_en_VS net1 vssa ISINK
+MM1 net1 net1 vdda vdda sg13_hv_pmos w=2u l=1u ng=1 m=2
+MM2 bias_test net1 vdda vdda sg13_hv_pmos w=2u l=1u ng=1 m=2
 x4 en_VS[0] net7 net2 en_VSB[0] bias_test vssa vdda bias_VP SplitterCell
 MM_enb vdda vdda net3 vssa sg13_hv_nmos w=1u l=1u ng=1
 MM_s9 net2 bias_test net8 vssa sg13_hv_nmos w=2u l=10u ng=1
@@ -734,24 +569,22 @@ MM8 net4 bias_VP vdda vdda sg13_hv_pmos w=4u l=1u ng=1 m=2
 MM7 net5 bias_VP vdda vdda sg13_hv_pmos w=4u l=1u ng=1 m=2
 MM9 bias_VP MASTER_CoreDiodeT_bias_VN[2] net4 vdda sg13_hv_pmos w=4u l=0.5u ng=1 m=2
 MM10 bias_VN MASTER_CoreDiodeT_bias_VN[2] net5 vdda sg13_hv_pmos w=4u l=0.5u ng=1 m=2
-xisink2[2] bias_VN vssa BIASGEN_en_VS bias_VN ISINK
-xisink2[1] bias_VN vssa BIASGEN_en_VS bias_VN ISINK
+xisink2[2] bias_VN vssa BIASGEN_en_VS bias_VN vssa ISINK
+xisink2[1] bias_VN vssa BIASGEN_en_VS bias_VN vssa ISINK
 MM_b4 bias_test bias_test net6 vssa sg13_hv_nmos w=2u l=6u ng=1
-xisink1[8] MASTER_biasout_VN vssa BIASGEN_en_VS V_drain_ISINK ISINK
-xisink1[7] MASTER_biasout_VN vssa BIASGEN_en_VS V_drain_ISINK ISINK
-xisink1[6] MASTER_biasout_VN vssa BIASGEN_en_VS V_drain_ISINK ISINK
-xisink1[5] MASTER_biasout_VN vssa BIASGEN_en_VS V_drain_ISINK ISINK
-xisink1[4] MASTER_biasout_VN vssa BIASGEN_en_VS V_drain_ISINK ISINK
-xisink1[3] MASTER_biasout_VN vssa BIASGEN_en_VS V_drain_ISINK ISINK
-xisink1[2] MASTER_biasout_VN vssa BIASGEN_en_VS V_drain_ISINK ISINK
-xisink1[1] MASTER_biasout_VN vssa BIASGEN_en_VS V_drain_ISINK ISINK
+xisink1[8] MASTER_biasout_VN vssa BIASGEN_en_VS V_drain_ISINK vssa ISINK
+xisink1[7] MASTER_biasout_VN vssa BIASGEN_en_VS V_drain_ISINK vssa ISINK
+xisink1[6] MASTER_biasout_VN vssa BIASGEN_en_VS V_drain_ISINK vssa ISINK
+xisink1[5] MASTER_biasout_VN vssa BIASGEN_en_VS V_drain_ISINK vssa ISINK
+xisink1[4] MASTER_biasout_VN vssa BIASGEN_en_VS V_drain_ISINK vssa ISINK
+xisink1[3] MASTER_biasout_VN vssa BIASGEN_en_VS V_drain_ISINK vssa ISINK
+xisink1[2] MASTER_biasout_VN vssa BIASGEN_en_VS V_drain_ISINK vssa ISINK
+xisink1[1] MASTER_biasout_VN vssa BIASGEN_en_VS V_drain_ISINK vssa ISINK
 MM_b3 net6 net6 vssa vssa sg13_hv_nmos w=2u l=6u ng=1
-*  C2 -  cap_mfringe  IS MISSING !!!!
-*  C5 -  cap_mfringe  IS MISSING !!!!
-*  C6 -  cap_mfringe  IS MISSING !!!!
-*  C3 -  cap_mfringe  IS MISSING !!!!
-*  C1 -  cap_mfringe  IS MISSING !!!!
-*  C4 -  cap_mfringe  IS MISSING !!!!
+MM3 vdda vdda bias_VP vdda sg13_hv_pmos w=4u l=0.45u ng=1 m=2
+MM4 vdda vdda bias_VN vdda sg13_hv_pmos w=4u l=0.45u ng=1 m=2
+x2 bias_VN vssa cfringe33x55
+x3 bias_VP vdda cfringe34x70
 .ends
 
 
@@ -776,10 +609,10 @@ xinv[0] vdda en_VSB[0] en_VS[0] vssa inv_BG
 x1 MASTER_CoreDiodeT_bias_VN[7] MASTER_CoreDiodeT_bias_VN[6] MASTER_CoreDiodeT_bias_VN[5] MASTER_CoreDiodeT_bias_VN[4]
 + MASTER_CoreDiodeT_bias_VN[3] MASTER_CoreDiodeT_bias_VN[2] MASTER_CoreDiodeT_bias_VN[1] MASTER_CoreDiodeT_bias_VN[0] vssa en_VS[10] en_VS[9] en_VS[8]
 + en_VSB[10] en_VSB[9] en_VSB[8] MASTER_biasout_VN SelMUX
-xisink0[2] MASTER_biasout_VN vssa BIASGEN_en_VS net1 ISINK
-xisink0[1] MASTER_biasout_VN vssa BIASGEN_en_VS net1 ISINK
-MM1 net1 net1 vdda vdda sg13_hv_pmos w=2u l=1u ng=2 m=2
-MM2 bias_test net1 vdda vdda sg13_hv_pmos w=2u l=1u ng=2 m=2
+xisink0[2] MASTER_biasout_VN vssa BIASGEN_en_VS net1 vssa ISINK
+xisink0[1] MASTER_biasout_VN vssa BIASGEN_en_VS net1 vssa ISINK
+MM1 net1 net1 vdda vdda sg13_hv_pmos w=2u l=1u ng=1 m=2
+MM2 bias_test net1 vdda vdda sg13_hv_pmos w=2u l=1u ng=1 m=2
 x4 en_VS[0] net8 net2 en_VSB[0] bias_test vssa vdda bias_VP SplitterCell
 MM_enb vdda vdda net3 vssa sg13_hv_nmos w=1u l=1u ng=1
 MM_s9 net2 bias_test net9 vssa sg13_hv_nmos w=2u l=10u ng=1
@@ -797,34 +630,52 @@ MM8 net4 bias_VP vdda vdda sg13_hv_pmos w=4u l=1u ng=1 m=2
 MM7 net5 bias_VP vdda vdda sg13_hv_pmos w=4u l=1u ng=1 m=2
 MM9 bias_VP MASTER_CoreDiodeT_bias_VN[2] net4 vdda sg13_hv_pmos w=4u l=0.5u ng=1 m=2
 MM10 bias_VN MASTER_CoreDiodeT_bias_VN[2] net5 vdda sg13_hv_pmos w=4u l=0.5u ng=1 m=2
-xisink2[2] net6_1 vssa BIASGEN_en_VS net6_1 ISINK
-xisink2[1] net6_0 vssa BIASGEN_en_VS net6_0 ISINK
+xisink2[2] net6 vssa BIASGEN_en_VS net6 vssa ISINK
+xisink2[1] net6 vssa BIASGEN_en_VS net6 vssa ISINK
 MM_b4 bias_test bias_test net7 vssa sg13_hv_nmos w=2u l=6u ng=1
-xisink1[8] MASTER_biasout_VN vssa BIASGEN_en_VS V_drain_ISINK ISINK
-xisink1[7] MASTER_biasout_VN vssa BIASGEN_en_VS V_drain_ISINK ISINK
-xisink1[6] MASTER_biasout_VN vssa BIASGEN_en_VS V_drain_ISINK ISINK
-xisink1[5] MASTER_biasout_VN vssa BIASGEN_en_VS V_drain_ISINK ISINK
-xisink1[4] MASTER_biasout_VN vssa BIASGEN_en_VS V_drain_ISINK ISINK
-xisink1[3] MASTER_biasout_VN vssa BIASGEN_en_VS V_drain_ISINK ISINK
-xisink1[2] MASTER_biasout_VN vssa BIASGEN_en_VS V_drain_ISINK ISINK
-xisink1[1] MASTER_biasout_VN vssa BIASGEN_en_VS V_drain_ISINK ISINK
+xisink1[8] MASTER_biasout_VN vssa BIASGEN_en_VS V_drain_ISINK vssa ISINK
+xisink1[7] MASTER_biasout_VN vssa BIASGEN_en_VS V_drain_ISINK vssa ISINK
+xisink1[6] MASTER_biasout_VN vssa BIASGEN_en_VS V_drain_ISINK vssa ISINK
+xisink1[5] MASTER_biasout_VN vssa BIASGEN_en_VS V_drain_ISINK vssa ISINK
+xisink1[4] MASTER_biasout_VN vssa BIASGEN_en_VS V_drain_ISINK vssa ISINK
+xisink1[3] MASTER_biasout_VN vssa BIASGEN_en_VS V_drain_ISINK vssa ISINK
+xisink1[2] MASTER_biasout_VN vssa BIASGEN_en_VS V_drain_ISINK vssa ISINK
+xisink1[1] MASTER_biasout_VN vssa BIASGEN_en_VS V_drain_ISINK vssa ISINK
 MM_b3 net7 net7 vssa vssa sg13_hv_nmos w=2u l=6u ng=1
-*  C2 -  cap_mfringe  IS MISSING !!!!
-*  C5 -  cap_mfringe  IS MISSING !!!!
-*  C6 -  cap_mfringe  IS MISSING !!!!
-*  C1 -  cap_mfringe  IS MISSING !!!!
-*  C4 -  cap_mfringe  IS MISSING !!!!
-*  C3 -  cap_mfringe  IS MISSING !!!!
+x3 bias_VP vdda cfringe34x70
+x2 net6 vssa cfringe33x55
+MM3 vdda vdda bias_VP vdda sg13_hv_pmos w=4u l=0.45u ng=1 m=2
+MM4 vdda vdda bias_VN vdda sg13_hv_pmos w=4u l=0.45u ng=1 m=2
 .ends
 
 
-* expanding   symbol:  ISOURCE.sym # of pins=5
+* expanding   symbol:  ISOURCE.sym # of pins=6
 ** sym_path: /foss/designs/ihp_INI_project/INI_Block/ISOURCE.sym
 ** sch_path: /foss/designs/ihp_INI_project/INI_Block/ISOURCE.sch
-.subckt ISOURCE VDDA MBIAS ENB VSSA IO
-*.PININFO VDDA:B MBIAS:I ENB:I IO:B VSSA:B
-MM2 net1 MBIAS VDDA VDDA sg13_hv_pmos w=1u l=5u ng=1
-MM1 IO ENB net1 VDDA sg13_hv_pmos w=3.3u l=0.5u ng=1
+.subckt ISOURCE VDDA MBIAS bulk ENB VSSA IO
+*.PININFO VDDA:B MBIAS:I ENB:I IO:B VSSA:B bulk:B
+MM2 net1 MBIAS VDDA bulk sg13_hv_pmos w=1u l=5u ng=1
+MM1 IO ENB net1 bulk sg13_hv_pmos w=3.3u l=0.5u ng=2
+.ends
+
+
+* expanding   symbol:  ISINK_MB.sym # of pins=5
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/ISINK_MB.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/ISINK_MB.sch
+.subckt ISINK_MB IO bulk EN MBIAS VSSA
+*.PININFO MBIAS:I EN:I IO:B VSSA:B bulk:B
+MM1 IO EN net2 bulk sg13_hv_nmos w=2.5u l=0.5u ng=1
+MM2 net2 MBIAS net1 bulk sg13_hv_nmos w=1u l=2u ng=1
+MM3 net1 MBIAS VSSA bulk sg13_hv_nmos w=1u l=2u ng=1
+.ends
+
+
+* expanding   symbol:  Cap3.sym # of pins=2
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/Cap3.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/Cap3.sch
+.subckt Cap3 Cp1 Cp2
+*.PININFO Cp2:B Cp1:B
+CC4 Cp1 Cp2 cap_mfringe w=14.0u l=88.0u mmin=1 mmax=4
 .ends
 
 
@@ -870,5 +721,27 @@ MM_s9 A_UN bias_VN net9 vssa sg13_hv_nmos w=2u l=10u ng=1
 MM_s10 net9 bias_VN net10 vssa sg13_hv_nmos w=2u l=10u ng=1
 MM_s11 net10 bias_VN net11 vssa sg13_hv_nmos w=2u l=10u ng=1
 MM_s12 net11 bias_VN B_UN vssa sg13_hv_nmos w=2u l=10u ng=1
+.ends
+
+
+* expanding   symbol:  cfringe33x55.sym # of pins=2
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/cfringe33x55.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/cfringe33x55.sch
+.subckt cfringe33x55 C2 C1
+*.PININFO C2:B C1:B
+CC2 C2 C1 cap_mfringe w=4.44u l=5u mmin=1 mmax=4
+CC5 C1 C2 cap_mfringe w=8.96u l=19.18u mmin=1 mmax=4
+CC6 C1 C2 cap_mfringe w=19.73u l=31u mmin=1 mmax=4
+.ends
+
+
+* expanding   symbol:  cfringe34x70.sym # of pins=2
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/cfringe34x70.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/cfringe34x70.sch
+.subckt cfringe34x70 C2 C1
+*.PININFO C1:B C2:B
+CC3 C1 C2 cap_mfringe w=9.3750u l=22.5u mmin=1 mmax=4
+CC1 C2 C1 cap_mfringe w=9.3750u l=11.26u mmin=1 mmax=4
+CC4 C2 C1 cap_mfringe w=15u l=36.5u mmin=1 mmax=4
 .ends
 
