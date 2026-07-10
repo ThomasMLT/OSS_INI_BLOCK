@@ -348,8 +348,6 @@ C {ipin.sym} 70 -1480 1 0 {name=p125 sig_type=std_logic lab=BIASGEN_EXT_REF_en_V
 }
 C {opin.sym} 1850 -1180 0 0 {name=p42 sig_type=std_logic lab=C2F_REQ
 }
-C {ipin.sym} -3010 -240 0 0 {name=p126 sig_type=std_logic lab=MEM_bufferbias
-}
 C {opin.sym} 1850 -1090 0 0 {name=p127 sig_type=std_logic lab=C2F_COMP
 }
 C {noconn.sym} 1850 -1130 0 0 {name=l4}
@@ -379,3 +377,6 @@ C {lab_pin.sym} 70 1440 1 0 {name=p138 sig_type=std_logic lab=VDD
 C {lab_pin.sym} 50 1600 3 0 {name=p143 sig_type=std_logic lab=MEM_bufferbias
 }
 C {opin.sym} -250 1520 0 1 {name=p144 lab=NN3_MEM_PROB}
+C {noconn.sym} 1700 -1590 0 1 {name=l15}
+C {noconn.sym} 1700 -1500 0 1 {name=l16}
+C {noconn.sym} 1700 -1550 0 1 {name=l17}

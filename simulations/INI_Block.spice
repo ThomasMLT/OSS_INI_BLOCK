@@ -49,62 +49,67 @@ x1 BIASGEN_en_VS[10] BIASGEN_en_VS[9] BIASGEN_en_VS[8] BIASGEN_en_VS[7] BIASGEN_
 + reg_out2[0] reg_out4[10] reg_out4[9] reg_out4[8] reg_out4[7] reg_out4[6] reg_out4[5] reg_out4[4] reg_out4[3] reg_out4[2] reg_out4[1]
 + reg_out4[0] BG_PROB NN3_MEM_PROB NN3_REQ NN3_ACK NN2_MEM_PROB NN2_REQ NN2_ACK VDD NN1_MEM_PROB V2I_INP NN1_REQ V2I_INN BG_100kRES NN1_ACK VSS
 + BG_BIAS BG_100mV C2F_REQ C2F_ACK C2F_COMP MEM_bufferbias
-*.PININFO VSS:I VDD:I NN1_REQ:O NN1_ACK:I NN1_MEM_PROB:O V2I_INN:I V2I_INP:I reg_out9[10:0]:I BG_PROB:O reg_out8[10:0]:I
-*+ reg_out7[10:0]:I reg_out6[10:0]:I reg_out5[10:0]:I reg_out4[10:0]:I reg_out3[10:0]:I reg_out2[10:0]:I reg_out1[10:0]:I BG_100mV:I BG_BIAS:I
-*+ BG_100kRES:I NN2_REQ:O NN2_ACK:I NN2_MEM_PROB:O NN3_REQ:O NN3_ACK:I NN3_MEM_PROB:O BIASGEN_en_VS[10:0]:I BIASGEN_BYP_en_VS[10:0]:I
-*+ BIASGEN_EXT_REF_en_VS[10:0]:I C2F_REQ:O MEM_bufferbias:I C2F_COMP:O C2F_ACK:I
-x15 VDD NNDPI_gain_VNI NNDPI_lk_VNI NN1_MEM_PROB NN1_REQ NNADAP_gain_VPI NNADAPDPI_gain_VNI NN1_ADAP_cap_VTO NN1_ACK
-+ NNADAPDPI_lk_VNI NNREF_lk_VNI VSS NN1_REF_cap_VTO NNPULEXT_pwbias_VPI net1 neuron_LVS
-x16 VDD V2I_imax_VPI V2I_INN V2I_INP net1 VSS V2I
+*.PININFO VSS:I VDD:I NN1_REQ:O NN1_ACK:I V2I_INN:I V2I_INP:I reg_out9[10:0]:I BG_PROB:O reg_out8[10:0]:I reg_out7[10:0]:I
+*+ reg_out6[10:0]:I reg_out5[10:0]:I reg_out4[10:0]:I reg_out3[10:0]:I reg_out2[10:0]:I reg_out1[10:0]:I BG_100mV:I BG_BIAS:I BG_100kRES:I NN2_REQ:O
+*+ NN2_ACK:I NN3_REQ:O NN3_ACK:I BIASGEN_en_VS[10:0]:I BIASGEN_BYP_en_VS[10:0]:I BIASGEN_EXT_REF_en_VS[10:0]:I C2F_REQ:O C2F_COMP:O C2F_ACK:I
+*+ MEM_bufferbias:I NN1_MEM_PROB:O NN2_MEM_PROB:O NN3_MEM_PROB:O
+x15 VDD NNDPI_gain_VNI NNDPI_lk_VNI net1 NN1_REQ NNADAP_gain_VPI NNADAPDPI_gain_VNI NN1_ADAP_cap_VTO NN1_ACK NNADAPDPI_lk_VNI
++ NNREF_lk_VNI VSS NN1_REF_cap_VTO NNPULEXT_pwbias_VPI net2 neuron_LVS
+x16 VDD V2I_imax_VPI V2I_INN V2I_INP net2 VSS V2I
 * noconn C2F_REQ
-* noconn MEM_bufferbias
 * noconn C2F_COMP
 x17 reg_out9[10] reg_out9[9] reg_out9[8] reg_out9[7] reg_out9[6] reg_out9[5] reg_out9[4] reg_out9[3] reg_out9[2] reg_out9[1]
-+ reg_out9[0] VSS VDD net4 BG_PROB ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0] BIASGEN_en_VS[0]
++ reg_out9[0] VSS VDD net7 BG_PROB ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0] BIASGEN_en_VS[0]
 + CoreFineDAC_CurrentOutput_N
-* noconn #net4
+* noconn #net7
 x1 ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0] VSS BIASGEN_en_VS[0] CoreDiodeT
 x2 reg_out8[10] reg_out8[9] reg_out8[8] reg_out8[7] reg_out8[6] reg_out8[5] reg_out8[4] reg_out8[3] reg_out8[2] reg_out8[1]
-+ reg_out8[0] VSS VDD NNPULEXT_pwbias_VPI net5 ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0]
-+ BIASGEN_en_VS[0] CoreFineDAC_N
-* noconn #net5
-x10 reg_out7[10] reg_out7[9] reg_out7[8] reg_out7[7] reg_out7[6] reg_out7[5] reg_out7[4] reg_out7[3] reg_out7[2] reg_out7[1]
-+ reg_out7[0] VSS VDD net6 NNADAPDPI_lk_VNI ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0]
-+ BIASGEN_en_VS[0] CoreFineDAC_N
-* noconn #net6
-x9 reg_out6[10] reg_out6[9] reg_out6[8] reg_out6[7] reg_out6[6] reg_out6[5] reg_out6[4] reg_out6[3] reg_out6[2] reg_out6[1]
-+ reg_out6[0] VSS VDD net7 NNADAPDPI_gain_VNI ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0]
-+ BIASGEN_en_VS[0] CoreFineDAC_N
-* noconn #net7
-x8 reg_out5[10] reg_out5[9] reg_out5[8] reg_out5[7] reg_out5[6] reg_out5[5] reg_out5[4] reg_out5[3] reg_out5[2] reg_out5[1]
-+ reg_out5[0] VSS VDD NNADAP_gain_VPI net8 ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0]
++ reg_out8[0] VSS VDD NNPULEXT_pwbias_VPI net8 ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0]
 + BIASGEN_en_VS[0] CoreFineDAC_N
 * noconn #net8
-x7 reg_out4[10] reg_out4[9] reg_out4[8] reg_out4[7] reg_out4[6] reg_out4[5] reg_out4[4] reg_out4[3] reg_out4[2] reg_out4[1]
-+ reg_out4[0] VSS VDD net9 NNREF_lk_VNI ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0]
+x10 reg_out7[10] reg_out7[9] reg_out7[8] reg_out7[7] reg_out7[6] reg_out7[5] reg_out7[4] reg_out7[3] reg_out7[2] reg_out7[1]
++ reg_out7[0] VSS VDD net9 NNADAPDPI_lk_VNI ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0]
 + BIASGEN_en_VS[0] CoreFineDAC_N
 * noconn #net9
-x4 reg_out3[10] reg_out3[9] reg_out3[8] reg_out3[7] reg_out3[6] reg_out3[5] reg_out3[4] reg_out3[3] reg_out3[2] reg_out3[1]
-+ reg_out3[0] VSS VDD net10 NNDPI_lk_VNI ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0]
+x9 reg_out6[10] reg_out6[9] reg_out6[8] reg_out6[7] reg_out6[6] reg_out6[5] reg_out6[4] reg_out6[3] reg_out6[2] reg_out6[1]
++ reg_out6[0] VSS VDD net10 NNADAPDPI_gain_VNI ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0]
 + BIASGEN_en_VS[0] CoreFineDAC_N
 * noconn #net10
-x6 reg_out2[10] reg_out2[9] reg_out2[8] reg_out2[7] reg_out2[6] reg_out2[5] reg_out2[4] reg_out2[3] reg_out2[2] reg_out2[1]
-+ reg_out2[0] VSS VDD net11 NNDPI_gain_VNI ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0]
+x8 reg_out5[10] reg_out5[9] reg_out5[8] reg_out5[7] reg_out5[6] reg_out5[5] reg_out5[4] reg_out5[3] reg_out5[2] reg_out5[1]
++ reg_out5[0] VSS VDD NNADAP_gain_VPI net11 ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0]
 + BIASGEN_en_VS[0] CoreFineDAC_N
 * noconn #net11
-x12 reg_out1[10] reg_out1[9] reg_out1[8] reg_out1[7] reg_out1[6] reg_out1[5] reg_out1[4] reg_out1[3] reg_out1[2] reg_out1[1]
-+ reg_out1[0] VSS VDD V2I_imax_VPI net12 ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0]
+x7 reg_out4[10] reg_out4[9] reg_out4[8] reg_out4[7] reg_out4[6] reg_out4[5] reg_out4[4] reg_out4[3] reg_out4[2] reg_out4[1]
++ reg_out4[0] VSS VDD net12 NNREF_lk_VNI ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0]
 + BIASGEN_en_VS[0] CoreFineDAC_N
 * noconn #net12
-x14 VDD V2I_imax_VPI V2I_INN V2I_INP net3 VSS V2I
-x3 VDD V2I_imax_VPI V2I_INN V2I_INP net2 VSS V2I
+x4 reg_out3[10] reg_out3[9] reg_out3[8] reg_out3[7] reg_out3[6] reg_out3[5] reg_out3[4] reg_out3[3] reg_out3[2] reg_out3[1]
++ reg_out3[0] VSS VDD net13 NNDPI_lk_VNI ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0]
++ BIASGEN_en_VS[0] CoreFineDAC_N
+* noconn #net13
+x6 reg_out2[10] reg_out2[9] reg_out2[8] reg_out2[7] reg_out2[6] reg_out2[5] reg_out2[4] reg_out2[3] reg_out2[2] reg_out2[1]
++ reg_out2[0] VSS VDD net14 NNDPI_gain_VNI ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0]
++ BIASGEN_en_VS[0] CoreFineDAC_N
+* noconn #net14
+x12 reg_out1[10] reg_out1[9] reg_out1[8] reg_out1[7] reg_out1[6] reg_out1[5] reg_out1[4] reg_out1[3] reg_out1[2] reg_out1[1]
++ reg_out1[0] VSS VDD V2I_imax_VPI net15 ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0]
++ BIASGEN_en_VS[0] CoreFineDAC_N
+* noconn #net15
+x14 VDD V2I_imax_VPI V2I_INN V2I_INP net5 VSS V2I
+x3 VDD V2I_imax_VPI V2I_INN V2I_INP net4 VSS V2I
 x5 BG_BIAS BIASGEN_BYP_en_VS[0] BG_100mV BIASGEN_EXT_REF_en_VS[0] VDD ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3]
 + ref_VUN[2] ref_VUN[1] ref_VUN[0] BG_100kRES VSS MasterBias
-x11 VDD NNDPI_gain_VNI NNDPI_lk_VNI NN2_MEM_PROB NN2_REQ NNADAP_gain_VPI NNADAPDPI_gain_VNI NN2_ADAP_cap_VTO NN2_ACK
-+ NNADAPDPI_lk_VNI NNREF_lk_VNI VSS NN2_REF_cap_VTO NNPULEXT_pwbias_VPI net3 neuron_LVS
-x13 VDD NNDPI_gain_VNI NNDPI_lk_VNI NN3_MEM_PROB NN3_REQ NNADAP_gain_VPI NNADAPDPI_gain_VNI NN3_ADAP_cap_VTO NN3_ACK
-+ NNADAPDPI_lk_VNI NNREF_lk_VNI VSS NN3_REF_cap_VTO NNPULEXT_pwbias_VPI net2 neuron_LVS
+x11 VDD NNDPI_gain_VNI NNDPI_lk_VNI net6 NN2_REQ NNADAP_gain_VPI NNADAPDPI_gain_VNI NN2_ADAP_cap_VTO NN2_ACK NNADAPDPI_lk_VNI
++ NNREF_lk_VNI VSS NN2_REF_cap_VTO NNPULEXT_pwbias_VPI net5 neuron_LVS
+x13 VDD NNDPI_gain_VNI NNDPI_lk_VNI net3 NN3_REQ NNADAP_gain_VPI NNADAPDPI_gain_VNI NN3_ADAP_cap_VTO NN3_ACK NNADAPDPI_lk_VNI
++ NNREF_lk_VNI VSS NN3_REF_cap_VTO NNPULEXT_pwbias_VPI net4 neuron_LVS
 * noconn C2F_ACK
+x18 VDD NN1_MEM_PROB net1 NN1_MEM_PROB MEM_bufferbias VSS a_buffP
+x19 VDD NN2_MEM_PROB net6 NN2_MEM_PROB MEM_bufferbias VSS a_buffP
+x20 VDD NN3_MEM_PROB net3 NN3_MEM_PROB MEM_bufferbias VSS a_buffP
+* noconn BIASGEN_en_VS[10:1]
+* noconn BIASGEN_EXT_REF_en_VS[10:1]
+* noconn BIASGEN_BYP_en_VS[10:1]
 .ends
 
 
@@ -374,6 +379,29 @@ RR3 VSENSE VSSA 91.97k $SUB=VSSA $[rhigh] w=0.5e-6 l=31e-6 b=0
 x11 VSSA VDDA Cap1
 x12 net9 VDDA cap4
 x13 net10 VBIAS Cap5
+.ends
+
+
+* expanding   symbol:  a_buffP.sym # of pins=6
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/a_buffP.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/a_buffP.sch
+.subckt a_buffP vdd vout vinp vinn vbias vss
+*.PININFO vinp:I vinn:I vbias:I vdd:B vss:B vout:O
+MM3 gate_n_l gate_n_l vss vss sg13_lv_nmos w=2u l=1u ng=2 m=2
+MM1 gate_n_l vinn tail vdd sg13_lv_pmos w=4u l=200n ng=4 m=8
+MM2 gate_n_r vinp tail vdd sg13_lv_pmos w=4u l=200n ng=4 m=8
+MM5 tail net1 vdd vdd sg13_lv_pmos w=2u l=2u ng=2 m=2
+MM4 gate_n_r gate_n_r vss vss sg13_lv_nmos w=2u l=1u ng=2 m=2
+MM9 gate_p gate_p vdd vdd sg13_lv_pmos w=2u l=1u ng=2 m=2
+MM10 vout gate_p vdd vdd sg13_lv_pmos w=2u l=1u ng=2 m=2
+MM7 gate_p gate_n_l vss vss sg13_lv_nmos w=2u l=1u ng=2 m=2
+MM8 vout gate_n_r vss vss sg13_lv_nmos w=2u l=1u ng=2 m=2
+MM6 net1 net1 vdd vdd sg13_lv_pmos w=2u l=2u ng=2 m=2
+MM11 net1 vbias vss vss sg13_lv_nmos w=2u l=1u ng=2 m=4
+MM12 vdd vdd vdd vdd sg13_lv_pmos w=1u l=1.54u ng=1 m=4
+MM13 vdd vdd vdd vdd sg13_lv_pmos w=4u l=0.13u ng=4 m=8
+MM14 vss vss vss vss sg13_lv_nmos w=1u l=1u ng=1 m=21
+MM16 vdd vdd vdd vdd sg13_lv_pmos w=1u l=0.78u ng=1 m=2
 .ends
 
 
