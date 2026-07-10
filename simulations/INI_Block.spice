@@ -376,7 +376,7 @@ x7 VDDA net7 IREF_100fA net1 VSSA DecadeDivider_2
 x8 VDDA net9 IREF_1uA VSSA DecadeDividerAux
 x9 VDDA VBP_TIA net10 net8 VBIAS VREF_100mV VSSA OTA_bc
 x11 VSSA VDDA Cap1
-x12 net9 VDDA cap4
+x12 net9 VDDA Cap4
 x13 net10 VBIAS Cap5
 x14 VSSA VSENSE VSSA reshigh_92k
 .ends
@@ -748,10 +748,10 @@ CC1 Cp1 Cp2 cap_mfringe w=407.0u l=35.0u mmin=1 mmax=4
 .ends
 
 
-* expanding   symbol:  cap4.sym # of pins=2
-** sym_path: /foss/designs/ihp_INI_project/INI_Block/cap4.sym
-** sch_path: /foss/designs/ihp_INI_project/INI_Block/cap4.sch
-.subckt cap4 Cp1 Cp2
+* expanding   symbol:  Cap4.sym # of pins=2
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/Cap4.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/Cap4.sch
+.subckt Cap4 Cp1 Cp2
 *.PININFO Cp2:B Cp1:B
 CC11 Cp1 Cp2 cap_mfringe w=60.0u l=30.0u mmin=1 mmax=4
 .ends
