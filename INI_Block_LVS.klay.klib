@@ -34,6 +34,10 @@
             "lib_path": "neuron_lvs.klay.gds"
         },
         {
+            "lib_name": "a_buffP",
+            "lib_path": "a_buffP.klay.gds"
+        },
+        {
             "include_path": "CoreFineDAC.klay.klib"
         },
         {

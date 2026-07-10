@@ -6,18 +6,20 @@
 + BIASGEN_EXT_REF_en_VS[6] BIASGEN_EXT_REF_en_VS[5] BIASGEN_EXT_REF_en_VS[4] BIASGEN_EXT_REF_en_VS[3] BIASGEN_EXT_REF_en_VS[2] BIASGEN_EXT_REF_en_VS[1]
 + C2F_en_VSBI[10] C2F_en_VSBI[9] C2F_en_VSBI[8] C2F_en_VSBI[7] C2F_en_VSBI[6] C2F_en_VSBI[5] C2F_en_VSBI[4] C2F_en_VSBI[3] C2F_en_VSBI[2]
 + C2F_en_VSBI[1] reg_out9[10] reg_out9[9] reg_out9[8] reg_out9[7] reg_out9[6] reg_out9[5] reg_out9[4] reg_out9[3] reg_out9[2] reg_out9[1]
-+ reg_out9[0] BG_PROB BIASGEN_en_VS ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0] reg_out8[10]
-+ reg_out8[9] reg_out8[8] reg_out8[7] reg_out8[6] reg_out8[5] reg_out8[4] reg_out8[3] reg_out8[2] reg_out8[1] reg_out8[0] reg_out7[10]
-+ reg_out7[9] reg_out7[8] reg_out7[7] reg_out7[6] reg_out7[5] reg_out7[4] reg_out7[3] reg_out7[2] reg_out7[1] reg_out7[0] reg_out6[10]
-+ reg_out6[9] reg_out6[8] reg_out6[7] reg_out6[6] reg_out6[5] reg_out6[4] reg_out6[3] reg_out6[2] reg_out6[1] reg_out6[0] reg_out5[10]
-+ reg_out5[9] reg_out5[8] reg_out5[7] reg_out5[6] reg_out5[5] reg_out5[4] reg_out5[3] reg_out5[2] reg_out5[1] reg_out5[0] reg_out4[10]
-+ reg_out4[9] reg_out4[8] reg_out4[7] reg_out4[6] reg_out4[5] reg_out4[4] reg_out4[3] reg_out4[2] reg_out4[1] reg_out4[0] reg_out3[10]
-+ reg_out3[9] reg_out3[8] reg_out3[7] reg_out3[6] reg_out3[5] reg_out3[4] reg_out3[3] reg_out3[2] reg_out3[1] reg_out3[0] reg_out2[10]
-+ reg_out2[9] reg_out2[8] reg_out2[7] reg_out2[6] reg_out2[5] reg_out2[4] reg_out2[3] reg_out2[2] reg_out2[1] reg_out2[0] reg_out1[10]
-+ reg_out1[9] reg_out1[8] reg_out1[7] reg_out1[6] reg_out1[5] reg_out1[4] reg_out1[3] reg_out1[2] reg_out1[1] reg_out1[0] V2I_UO2 V2I_UO3
++ reg_out9[0] BG_PROB BIASGEN_en_VS reg_out8[10] reg_out8[9] reg_out8[8] reg_out8[7] reg_out8[6] reg_out8[5] reg_out8[4] reg_out8[3]
++ reg_out8[2] reg_out8[1] reg_out8[0] reg_out7[10] reg_out7[9] reg_out7[8] reg_out7[7] reg_out7[6] reg_out7[5] reg_out7[4] reg_out7[3]
++ reg_out7[2] reg_out7[1] reg_out7[0] reg_out6[10] reg_out6[9] reg_out6[8] reg_out6[7] reg_out6[6] reg_out6[5] reg_out6[4] reg_out6[3]
++ reg_out6[2] reg_out6[1] reg_out6[0] reg_out5[10] reg_out5[9] reg_out5[8] reg_out5[7] reg_out5[6] reg_out5[5] reg_out5[4] reg_out5[3]
++ reg_out5[2] reg_out5[1] reg_out5[0] reg_out4[10] reg_out4[9] reg_out4[8] reg_out4[7] reg_out4[6] reg_out4[5] reg_out4[4] reg_out4[3]
++ reg_out4[2] reg_out4[1] reg_out4[0] reg_out3[10] reg_out3[9] reg_out3[8] reg_out3[7] reg_out3[6] reg_out3[5] reg_out3[4] reg_out3[3]
++ reg_out3[2] reg_out3[1] reg_out3[0] reg_out2[10] reg_out2[9] reg_out2[8] reg_out2[7] reg_out2[6] reg_out2[5] reg_out2[4] reg_out2[3]
++ reg_out2[2] reg_out2[1] reg_out2[0] reg_out1[10] reg_out1[9] reg_out1[8] reg_out1[7] reg_out1[6] reg_out1[5] reg_out1[4] reg_out1[3]
++ reg_out1[2] reg_out1[1] reg_out1[0] BIASGEN_BYP_en_VS[0] BIASGEN_EXT_REF_en_VS[0] BG_100mV BG_BIAS BG_100kRES NN2_REQ NN2_ACK NN2_MEM_PROB
++ NN3_REQ NN3_ACK NN3_MEM_PROB
 *.PININFO VSS:I VDD:I NN1_REQ:O NN1_ACK:I NN1_MEM_PROB:O V2I_INN:I V2I_INP:I BIASGEN_en_VS[10:1]:I BIASGEN_BYP_en_VS[10:1]:I
-*+ BIASGEN_EXT_REF_en_VS[10:1]:I C2F_en_VSBI[10:1]:I reg_out9[10:0]:I BG_PROB:O BIASGEN_en_VS:I ref_VUN[7:0]:I reg_out8[10:0]:I reg_out7[10:0]:I reg_out6[10:0]:I
-*+ reg_out5[10:0]:I reg_out4[10:0]:I reg_out3[10:0]:I reg_out2[10:0]:I reg_out1[10:0]:I V2I_UO2:O V2I_UO3:O
+*+ BIASGEN_EXT_REF_en_VS[10:1]:I C2F_en_VSBI[10:1]:I reg_out9[10:0]:I BG_PROB:O BIASGEN_en_VS:I reg_out8[10:0]:I reg_out7[10:0]:I reg_out6[10:0]:I
+*+ reg_out5[10:0]:I reg_out4[10:0]:I reg_out3[10:0]:I reg_out2[10:0]:I reg_out1[10:0]:I BIASGEN_BYP_en_VS[0]:I BIASGEN_EXT_REF_en_VS[0]:I BG_100mV:I
+*+ BG_BIAS:I BG_100kRES:I NN2_REQ:O NN2_ACK:I NN2_MEM_PROB:O NN3_REQ:O NN3_ACK:I NN3_MEM_PROB:O
 x15 VDD NNDPI_gain_VNI NNDPI_lk_VNI NN1_MEM_PROB NN1_REQ NNADAP_gain_VPI NNADAPDPI_gain_VNI NN1_ADAP_cap_VTO NN1_ACK
 + NNADAPDPI_lk_VNI NNREF_lk_VNI VSS NN1_REF_cap_VTO NNPULEXT_pwbias_VPI net1 neuron_LVS
 x16 VDD V2I_imax_VPI V2I_INN V2I_INP net1 VSS V2I
@@ -26,44 +28,50 @@ x16 VDD V2I_imax_VPI V2I_INN V2I_INP net1 VSS V2I
 * noconn BIASGEN_EXT_REF_en_VS[10:1]
 * noconn C2F_en_VSBI[10:1]
 x17 reg_out9[10] reg_out9[9] reg_out9[8] reg_out9[7] reg_out9[6] reg_out9[5] reg_out9[4] reg_out9[3] reg_out9[2] reg_out9[1]
-+ reg_out9[0] VSS VDD net2 BG_PROB ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0] BIASGEN_en_VS
++ reg_out9[0] VSS VDD net4 BG_PROB ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0] BIASGEN_en_VS
 + CoreFineDAC_CurrentOutput_N
-* noconn #net2
+* noconn #net4
 x1 ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0] VSS BIASGEN_en_VS CoreDiodeT
 x2 reg_out8[10] reg_out8[9] reg_out8[8] reg_out8[7] reg_out8[6] reg_out8[5] reg_out8[4] reg_out8[3] reg_out8[2] reg_out8[1]
-+ reg_out8[0] VSS VDD NNPULEXT_pwbias_VPI net3 ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0]
-+ BIASGEN_en_VS CoreFineDAC_N
-* noconn #net3
-x10 reg_out7[10] reg_out7[9] reg_out7[8] reg_out7[7] reg_out7[6] reg_out7[5] reg_out7[4] reg_out7[3] reg_out7[2] reg_out7[1]
-+ reg_out7[0] VSS VDD net4 NNADAPDPI_lk_VNI ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0]
-+ BIASGEN_en_VS CoreFineDAC_N
-* noconn #net4
-x9 reg_out6[10] reg_out6[9] reg_out6[8] reg_out6[7] reg_out6[6] reg_out6[5] reg_out6[4] reg_out6[3] reg_out6[2] reg_out6[1]
-+ reg_out6[0] VSS VDD net5 NNADAPDPI_gain_VNI ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0]
++ reg_out8[0] VSS VDD NNPULEXT_pwbias_VPI net5 ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0]
 + BIASGEN_en_VS CoreFineDAC_N
 * noconn #net5
-x8 reg_out5[10] reg_out5[9] reg_out5[8] reg_out5[7] reg_out5[6] reg_out5[5] reg_out5[4] reg_out5[3] reg_out5[2] reg_out5[1]
-+ reg_out5[0] VSS VDD NNADAP_gain_VPI net6 ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0]
+x10 reg_out7[10] reg_out7[9] reg_out7[8] reg_out7[7] reg_out7[6] reg_out7[5] reg_out7[4] reg_out7[3] reg_out7[2] reg_out7[1]
++ reg_out7[0] VSS VDD net6 NNADAPDPI_lk_VNI ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0]
 + BIASGEN_en_VS CoreFineDAC_N
 * noconn #net6
-x7 reg_out4[10] reg_out4[9] reg_out4[8] reg_out4[7] reg_out4[6] reg_out4[5] reg_out4[4] reg_out4[3] reg_out4[2] reg_out4[1]
-+ reg_out4[0] VSS VDD net7 NNREF_lk_VNI ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0] BIASGEN_en_VS
-+ CoreFineDAC_N
+x9 reg_out6[10] reg_out6[9] reg_out6[8] reg_out6[7] reg_out6[6] reg_out6[5] reg_out6[4] reg_out6[3] reg_out6[2] reg_out6[1]
++ reg_out6[0] VSS VDD net7 NNADAPDPI_gain_VNI ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0]
++ BIASGEN_en_VS CoreFineDAC_N
 * noconn #net7
-x4 reg_out3[10] reg_out3[9] reg_out3[8] reg_out3[7] reg_out3[6] reg_out3[5] reg_out3[4] reg_out3[3] reg_out3[2] reg_out3[1]
-+ reg_out3[0] VSS VDD net8 NNDPI_lk_VNI ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0] BIASGEN_en_VS
-+ CoreFineDAC_N
+x8 reg_out5[10] reg_out5[9] reg_out5[8] reg_out5[7] reg_out5[6] reg_out5[5] reg_out5[4] reg_out5[3] reg_out5[2] reg_out5[1]
++ reg_out5[0] VSS VDD NNADAP_gain_VPI net8 ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0]
++ BIASGEN_en_VS CoreFineDAC_N
 * noconn #net8
-x6 reg_out2[10] reg_out2[9] reg_out2[8] reg_out2[7] reg_out2[6] reg_out2[5] reg_out2[4] reg_out2[3] reg_out2[2] reg_out2[1]
-+ reg_out2[0] VSS VDD net9 NNDPI_gain_VNI ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0] BIASGEN_en_VS
+x7 reg_out4[10] reg_out4[9] reg_out4[8] reg_out4[7] reg_out4[6] reg_out4[5] reg_out4[4] reg_out4[3] reg_out4[2] reg_out4[1]
++ reg_out4[0] VSS VDD net9 NNREF_lk_VNI ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0] BIASGEN_en_VS
 + CoreFineDAC_N
 * noconn #net9
-x12 reg_out1[10] reg_out1[9] reg_out1[8] reg_out1[7] reg_out1[6] reg_out1[5] reg_out1[4] reg_out1[3] reg_out1[2] reg_out1[1]
-+ reg_out1[0] VSS VDD V2I_imax_VPI net10 ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0] BIASGEN_en_VS
+x4 reg_out3[10] reg_out3[9] reg_out3[8] reg_out3[7] reg_out3[6] reg_out3[5] reg_out3[4] reg_out3[3] reg_out3[2] reg_out3[1]
++ reg_out3[0] VSS VDD net10 NNDPI_lk_VNI ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0] BIASGEN_en_VS
 + CoreFineDAC_N
 * noconn #net10
-x14 VDD V2I_imax_VPI V2I_INN V2I_INP V2I_UO2 VSS V2I
-x3 VDD V2I_imax_VPI V2I_INN V2I_INP V2I_UO3 VSS V2I
+x6 reg_out2[10] reg_out2[9] reg_out2[8] reg_out2[7] reg_out2[6] reg_out2[5] reg_out2[4] reg_out2[3] reg_out2[2] reg_out2[1]
++ reg_out2[0] VSS VDD net11 NNDPI_gain_VNI ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0]
++ BIASGEN_en_VS CoreFineDAC_N
+* noconn #net11
+x12 reg_out1[10] reg_out1[9] reg_out1[8] reg_out1[7] reg_out1[6] reg_out1[5] reg_out1[4] reg_out1[3] reg_out1[2] reg_out1[1]
++ reg_out1[0] VSS VDD V2I_imax_VPI net12 ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3] ref_VUN[2] ref_VUN[1] ref_VUN[0] BIASGEN_en_VS
++ CoreFineDAC_N
+* noconn #net12
+x14 VDD V2I_imax_VPI V2I_INN V2I_INP net3 VSS V2I
+x3 VDD V2I_imax_VPI V2I_INN V2I_INP net2 VSS V2I
+x5 BG_BIAS BIASGEN_BYP_en_VS[0] BG_100mV BIASGEN_EXT_REF_en_VS[0] VDD ref_VUN[7] ref_VUN[6] ref_VUN[5] ref_VUN[4] ref_VUN[3]
++ ref_VUN[2] ref_VUN[1] ref_VUN[0] BG_100kRES VSS MasterBias
+x11 VDD NNDPI_gain_VNI NNDPI_lk_VNI NN2_MEM_PROB NN2_REQ NNADAP_gain_VPI NNADAPDPI_gain_VNI NN2_ADAP_cap_VTO NN2_ACK
++ NNADAPDPI_lk_VNI NNREF_lk_VNI VSS NN2_REF_cap_VTO NNPULEXT_pwbias_VPI net3 neuron_LVS
+x13 VDD NNDPI_gain_VNI NNDPI_lk_VNI NN3_MEM_PROB NN3_REQ NNADAP_gain_VPI NNADAPDPI_gain_VNI NN3_ADAP_cap_VTO NN3_ACK
++ NNADAPDPI_lk_VNI NNREF_lk_VNI VSS NN3_REF_cap_VTO NNPULEXT_pwbias_VPI net2 neuron_LVS
 .ends
 
 * expanding   symbol:  neuron_LVS.sym # of pins=15
@@ -307,6 +315,34 @@ x3 bias_VP vdda cfringe34x70
 .ends
 
 
+* expanding   symbol:  MasterBias.sym # of pins=15
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/MasterBias.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/MasterBias.sch
+.subckt MasterBias VBP_TIA BYP_EN VREF_100mV EXT_REF_EN VDDA IREF_1uA IREF_100nA IREF_10nA IREF_1nA IREF_100pA IREF_10pA IREF_1pA
++ IREF_100fA VREG_pad VSSA
+*.PININFO IREF_100nA:B IREF_10nA:B IREF_1nA:B IREF_100pA:B IREF_10pA:B IREF_1pA:B IREF_100fA:B VSSA:B IREF_1uA:B VREF_100mV:I
+*+ VBP_TIA:I VDDA:B BYP_EN:I EXT_REF_EN:I VREG_pad:B
+MMnbias VREG_pad EXT_REF_EN net8 VSSA sg13_hv_nmos w=25u l=500n ng=20
+x10 VDDA EXT_REF_ENB EXT_REF_EN VSSA inv_BG
+MMnbias1 VSENSE EXT_REF_ENB net8 VSSA sg13_hv_nmos w=25u l=500n ng=20
+MMnbias2 net8 VBIAS net9 VSSA sg13_hv_nmos w=25u l=500n ng=20
+MMnbias3 net8 BYP_EN net9 VSSA sg13_hv_nmos w=25u l=500n ng=20
+x1 VDDA net9 IREF_100nA net2 VSSA DecadeDivider_2
+x2 VDDA net3 IREF_1nA net4 VSSA DecadeDivider_2
+x3 VDDA net2 IREF_10nA net3 VSSA DecadeDivider_2
+x4 VDDA net4 IREF_100pA net5 VSSA DecadeDivider_2
+x5 VDDA net5 IREF_10pA net6 VSSA DecadeDivider_2
+x6 VDDA net6 IREF_1pA net7 VSSA DecadeDivider_2
+x7 VDDA net7 IREF_100fA net1 VSSA DecadeDivider_2
+x8 VDDA net9 IREF_1uA VSSA DecadeDividerAux
+x9 VDDA VBP_TIA net10 net8 VBIAS VREF_100mV VSSA OTA_bc
+RR3 VSENSE VSSA 91.97k $SUB=vssa $[rhigh] w=0.5e-6 l=31e-6 b=0
+x11 VSSA VDDA Cap1
+x12 net9 VDDA cap4
+x13 net10 VBIAS Cap5
+.ends
+
+
 * expanding   symbol:  FB_system.sym # of pins=4
 ** sym_path: /foss/designs/ihp_INI_project/INI_Block/FB_system.sym
 ** sch_path: /foss/designs/ihp_INI_project/INI_Block/FB_system.sch
@@ -526,5 +562,174 @@ CC6 C1 C2 cap_mfringe w=19.73u l=31u mmin=1 mmax=4
 .subckt cfringe140x6 C2 C1
 *.PININFO C1:B C2:B
 CC1 C1 C2 cap_mfringe w=140.0u l=6.37u mmin=1 mmax=4
+.ends
+
+
+* expanding   symbol:  DecadeDivider_2.sym # of pins=5
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/DecadeDivider_2.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/DecadeDivider_2.sch
+.subckt DecadeDivider_2 VDDA IREF IREF_CORE[0] IOUT VSSA
+*.PININFO VSSA:B VDDA:B IREF:B IREF_CORE[0]:B IOUT:B
+x1[2] VDDA IREF VDDA IREF VSSA IREF_CORE[0] ISOURCE
+x1[1] VDDA IREF VDDA IREF VSSA IREF_CORE[0] ISOURCE
+x10[2] VDDA IREF VDDA IREF VSSA Vbn ISOURCE
+x10[1] VDDA IREF VDDA IREF VSSA Vbn ISOURCE
+x11[20] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[19] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[18] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[17] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[16] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[15] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[14] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[13] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[12] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[11] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[10] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[9] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[8] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[7] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[6] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[5] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[4] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[3] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[2] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x11[1] VDDA IREF VDDA IREF VSSA IREF ISOURCE
+x3[15] IOUT VSSA Vbn Vbn VSSA ISINK_MB
+x3[14] IOUT VSSA Vbn Vbn VSSA ISINK_MB
+x3[13] IOUT VSSA Vbn Vbn VSSA ISINK_MB
+x3[12] IOUT VSSA Vbn Vbn VSSA ISINK_MB
+x3[11] IOUT VSSA Vbn Vbn VSSA ISINK_MB
+x3[10] IOUT VSSA Vbn Vbn VSSA ISINK_MB
+x3[9] IOUT VSSA Vbn Vbn VSSA ISINK_MB
+x3[8] IOUT VSSA Vbn Vbn VSSA ISINK_MB
+x3[7] IOUT VSSA Vbn Vbn VSSA ISINK_MB
+x3[6] IOUT VSSA Vbn Vbn VSSA ISINK_MB
+x3[5] IOUT VSSA Vbn Vbn VSSA ISINK_MB
+x3[4] IOUT VSSA Vbn Vbn VSSA ISINK_MB
+x3[3] IOUT VSSA Vbn Vbn VSSA ISINK_MB
+x3[2] IOUT VSSA Vbn Vbn VSSA ISINK_MB
+x3[1] IOUT VSSA Vbn Vbn VSSA ISINK_MB
+x2[15] Vbn VSSA Vbn Vbn VSSA ISINK_MB
+x2[14] Vbn VSSA Vbn Vbn VSSA ISINK_MB
+x2[13] Vbn VSSA Vbn Vbn VSSA ISINK_MB
+x2[12] Vbn VSSA Vbn Vbn VSSA ISINK_MB
+x2[11] Vbn VSSA Vbn Vbn VSSA ISINK_MB
+x2[10] Vbn VSSA Vbn Vbn VSSA ISINK_MB
+x2[9] Vbn VSSA Vbn Vbn VSSA ISINK_MB
+x2[8] Vbn VSSA Vbn Vbn VSSA ISINK_MB
+x2[7] Vbn VSSA Vbn Vbn VSSA ISINK_MB
+x2[6] Vbn VSSA Vbn Vbn VSSA ISINK_MB
+x2[5] Vbn VSSA Vbn Vbn VSSA ISINK_MB
+x2[4] Vbn VSSA Vbn Vbn VSSA ISINK_MB
+x2[3] Vbn VSSA Vbn Vbn VSSA ISINK_MB
+x2[2] Vbn VSSA Vbn Vbn VSSA ISINK_MB
+x2[1] Vbn VSSA Vbn Vbn VSSA ISINK_MB
+x1 VDDA IREF Cap3
+.ends
+
+
+* expanding   symbol:  DecadeDividerAux.sym # of pins=4
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/DecadeDividerAux.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/DecadeDividerAux.sch
+.subckt DecadeDividerAux VDDA VBIAS IREF_CORE[0] VSSA
+*.PININFO VSSA:B VDDA:B VBIAS:B IREF_CORE[0]:B
+x1[20] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[19] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[18] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[17] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[16] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[15] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[14] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[13] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[12] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[11] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[10] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[9] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[8] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[7] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[6] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[5] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[4] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[3] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[2] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+x1[1] VDDA VBIAS VDDA VBIAS VSSA IREF_CORE[0] ISOURCE
+MM1 VDDA VDDA VDDA VDDA sg13_hv_pmos w=0.3u l=5u ng=1 m=2
+.ends
+
+
+* expanding   symbol:  OTA_bc.sym # of pins=7
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/OTA_bc.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/OTA_bc.sch
+.subckt OTA_bc VDDA VBP C_p1 INN VOP INP VSSA
+*.PININFO VBP:I INP:I INN:I VSSA:B VDDA:B VOP:O C_p1:I
+MM13 n1 n1 VSSA VSSA sg13_hv_nmos w=2u l=0.5u ng=2 m=2
+MM1 n2 n2 VSSA VSSA sg13_hv_nmos w=2u l=0.5u ng=2 m=2
+MM12 n1 INN vtail VDDA sg13_hv_pmos w=16u l=0.5u ng=2 m=4
+MM3 n2 INP vtail VDDA sg13_hv_pmos w=16u l=0.5u ng=2 m=4
+MM4 vtail VBP VDDA VDDA sg13_hv_pmos w=12u l=500n ng=2 m=8
+MM5 vpmirr vpmirr VDDA VDDA sg13_hv_pmos w=2u l=500n ng=2 m=4
+MM6 vout1stage vpmirr VDDA VDDA sg13_hv_pmos w=2u l=500n ng=2 m=4
+MM7 vout1stage n1 VSSA VSSA sg13_hv_nmos w=1.75u l=0.5u ng=2 m=4
+MM8 VOP vout1stage VSSA VSSA sg13_hv_nmos w=4u l=0.5u ng=4 m=4
+MM9 VOP VBP VDDA VDDA sg13_hv_pmos w=4u l=0.5u ng=2
+MM10 vpmirr n2 VSSA VSSA sg13_hv_nmos w=2u l=0.5u ng=2 m=4
+RR1 vout1stage C_p1 49.84k $SUB=VSSA $[rhigh] w=0.5e-6 l=16.75e-6 b=0
+.ends
+
+
+* expanding   symbol:  Cap1.sym # of pins=2
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/Cap1.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/Cap1.sch
+.subckt Cap1 Cp1 Cp2
+*.PININFO Cp2:B Cp1:B
+CC1 Cp1 Cp2 cap_mfringe w=407.0u l=35.0u mmin=1 mmax=4
+.ends
+
+
+* expanding   symbol:  cap4.sym # of pins=2
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/cap4.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/cap4.sch
+.subckt cap4 Cp1 Cp2
+*.PININFO Cp2:B Cp1:B
+CC11 Cp1 Cp2 cap_mfringe w=60.0u l=30.0u mmin=1 mmax=4
+.ends
+
+
+* expanding   symbol:  Cap5.sym # of pins=2
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/Cap5.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/Cap5.sch
+.subckt Cap5 Cp1 Cp2
+*.PININFO Cp2:B Cp1:B
+CC3 Cp2 Cp1 cap_mfringe w=28.0u l=10.0u mmin=1 mmax=4
+.ends
+
+
+* expanding   symbol:  ISOURCE.sym # of pins=6
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/ISOURCE.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/ISOURCE.sch
+.subckt ISOURCE VDDA MBIAS bulk ENB VSSA IO
+*.PININFO VDDA:B MBIAS:I ENB:I IO:B VSSA:B bulk:B
+MM2 net1 MBIAS VDDA bulk sg13_hv_pmos w=1u l=5u ng=1
+MM1 IO ENB net1 bulk sg13_hv_pmos w=3.3u l=0.5u ng=1
+.ends
+
+
+* expanding   symbol:  ISINK_MB.sym # of pins=5
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/ISINK_MB.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/ISINK_MB.sch
+.subckt ISINK_MB IO bulk EN MBIAS VSSA
+*.PININFO MBIAS:I EN:I IO:B VSSA:B bulk:B
+MM1 IO EN net2 bulk sg13_hv_nmos w=2.5u l=0.5u ng=1
+MM2 net2 MBIAS net1 bulk sg13_hv_nmos w=1u l=2u ng=1
+MM3 net1 MBIAS VSSA bulk sg13_hv_nmos w=1u l=2u ng=1
+.ends
+
+
+* expanding   symbol:  Cap3.sym # of pins=2
+** sym_path: /foss/designs/ihp_INI_project/INI_Block/Cap3.sym
+** sch_path: /foss/designs/ihp_INI_project/INI_Block/Cap3.sch
+.subckt Cap3 Cp1 Cp2
+*.PININFO Cp2:B Cp1:B
+CC4 Cp1 Cp2 cap_mfringe w=14.0u l=88.0u mmin=1 mmax=4
 .ends
 
