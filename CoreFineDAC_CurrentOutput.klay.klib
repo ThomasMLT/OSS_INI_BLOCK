@@ -16,6 +16,14 @@
         {
             "lib_name": "inv_BG",
             "lib_path": "inv_BG.gds"
+        },
+        {
+            "lib_name": "cfringe33x55",
+            "lib_path": "cfringe33x55.gds"
+        },
+        {
+            "lib_name": "cfringe34x70",
+            "lib_path": "cfringe34x70.gds"
         }
     ]
 }

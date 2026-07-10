@@ -7,7 +7,6 @@ F {}
 E {}
 N -720 10 -470 10 {lab=VDDA}
 N -470 180 -470 230 {lab=#net1}
-N -400 150 -400 260 {lab=VDDA}
 N -470 150 -400 150 {lab=VDDA}
 N -470 260 -400 260 {lab=VDDA}
 N -560 150 -510 150 {lab=MBIAS}
@@ -22,7 +21,7 @@ w=1u
 ng=1
 m=1
 model=sg13_hv_pmos
-spiceprefix=X
+spiceprefix=X[2:1]
 }
 C {iopin.sym} -720 10 0 1 {name=p7 lab=VDDA}
 C {sg13g2_pr/sg13_hv_pmos.sym} -490 260 0 0 {name=M1
@@ -31,10 +30,11 @@ w=3.3u
 ng=1
 m=1
 model=sg13_hv_pmos
-spiceprefix=X
+spiceprefix=X[2:1]
 }
 C {ipin.sym} -560 150 0 0 {name=p1 lab=MBIAS}
 C {ipin.sym} -560 260 0 0 {name=p2 lab=ENB}
 C {iopin.sym} -310 340 0 0 {name=p3 lab=IO}
-C {lab_pin.sym} -400 210 0 0 {name=p4 sig_type=std_logic lab=VDDA}
 C {iopin.sym} -700 330 0 1 {name=p5 lab=VSSA}
+C {iopin.sym} -400 150 0 0 {name=p8 lab=bulk}
+C {lab_pin.sym} -410 260 0 1 {name=p6 sig_type=std_logic lab=bulk}

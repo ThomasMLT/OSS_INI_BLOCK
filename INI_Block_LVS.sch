@@ -60,23 +60,12 @@ N -2780 -1480 -2780 -1300 {lab=reg_out1[10:0] bus=true}
 N -2820 -1480 -2820 -1300 {lab=BIASGEN_en_VS}
 N -2740 -1480 -2740 -1300 {lab=ref_VUN[7:0] bus=true}
 N -850 190 -850 460 {lab=V2I_INP}
-N -240 190 -200 190 {lab=NNPULEXT_pwbias_VPI}
-N -240 210 -200 210 {lab=NNADAP_gain_VPI}
-N -240 230 -200 230 {lab=NNADAPDPI_gain_VNI}
-N -240 250 -200 250 {lab=NNADAPDPI_lk_VNI}
-N -240 270 -200 270 {lab=NNREF_lk_VNI}
-N -240 170 -200 170 {lab=NNDPI_lk_VNI}
-N -240 150 -200 150 {lab=NNDPI_gain_VNI}
-N 100 210 130 210 {lab=NN2_ADAP_cap_VTO}
-N 100 230 130 230 {lab=NN_2REF_cap_VTO}
-N -580 130 -200 130 {lab=#net2}
-N -580 130 -580 220 {lab=#net2}
-N 100 190 330 190 {lab=NN2_REQ}
-N -440 290 -200 290 {lab=NN2_ACK}
-N 100 170 330 170 {lab=NN2_MEM_PROB}
 N -850 190 -770 190 {lab=V2I_INP}
 N -810 250 -770 250 {lab=V2I_INN}
 N -850 -90 -850 190 {lab=V2I_INP}
+N -850 -90 -770 -90 {lab=V2I_INP}
+N -810 -30 -770 -30 {lab=V2I_INN}
+N -810 -30 -810 250 {lab=V2I_INN}
 C {neuron_LVS.sym} -50 490 0 0 {name=x15}
 C {lab_pin.sym} -240 440 0 0 {name=p100 sig_type=std_logic lab=NNDPI_lk_VNI}
 C {lab_pin.sym} -240 480 0 0 {name=p101 sig_type=std_logic lab=NNADAP_gain_VPI}
@@ -114,7 +103,7 @@ C {noconn.sym} 1700 -1500 0 1 {name=l3}
 C {ipin.sym} 1620 -1460 0 0 {name=p42 sig_type=std_logic lab=C2F_en_VSBI[10:1]
 }
 C {noconn.sym} 1700 -1460 0 1 {name=l4}
-C {CoreFineDAC_N.sym} -260 -1150 1 0 {name=x17}
+C {CoreFineDAC_CurrentOutput_N.sym} -260 -1150 1 0 {name=x17}
 C {ipin.sym} -320 -1480 1 0 {name=p137 lab=reg_out9[10:0]
 }
 C {lab_pin.sym} -360 -1480 1 0 {name=p139 lab=BIASGEN_en_VS
@@ -125,8 +114,8 @@ C {lab_pin.sym} -200 -1150 1 1 {name=p141 lab=VDD
 }
 C {lab_pin.sym} -280 -1480 1 0 {name=p142 lab=ref_VUN[7:0]
 }
-C {opin.sym} -270 -1000 1 0 {name=p158 lab=C2F_Vb}
-C {noconn.sym} -340 -1000 0 0 {name=l13}
+C {opin.sym} -340 -1000 1 0 {name=p158 lab=BG_PROB}
+C {noconn.sym} -270 -1000 0 0 {name=l13}
 C {CoreDiodeT.sym} 1760 -550 0 0 {name=x1}
 C {ipin.sym} 1670 -590 0 0 {name=p2 lab=BIASGEN_en_VS
 }
@@ -238,26 +227,19 @@ C {lab_pin.sym} -2740 -1480 1 0 {name=p81 lab=ref_VUN[7:0]
 }
 C {lab_pin.sym} -2730 -1000 3 0 {name=p83 sig_type=std_logic lab=V2I_imax_VPI}
 C {noconn.sym} -2800 -1000 0 0 {name=l11}
-C {neuron_LVS.sym} -50 220 0 0 {name=x13}
-C {lab_pin.sym} -240 170 0 0 {name=p85 sig_type=std_logic lab=NNDPI_lk_VNI}
-C {lab_pin.sym} -240 210 0 0 {name=p86 sig_type=std_logic lab=NNADAP_gain_VPI}
-C {lab_pin.sym} -240 230 0 0 {name=p87 sig_type=std_logic lab=NNADAPDPI_gain_VNI}
-C {lab_pin.sym} -240 250 0 0 {name=p88 sig_type=std_logic lab=NNADAPDPI_lk_VNI}
-C {lab_pin.sym} -240 190 0 0 {name=p89 sig_type=std_logic lab=NNPULEXT_pwbias_VPI}
-C {lab_pin.sym} -240 150 0 0 {name=p90 sig_type=std_logic lab=NNDPI_gain_VNI}
-C {lab_pin.sym} 130 210 2 0 {name=p91 sig_type=std_logic lab=NN2_ADAP_cap_VTO}
-C {lab_pin.sym} 130 230 2 0 {name=p93 sig_type=std_logic lab=NN_2REF_cap_VTO}
-C {lab_pin.sym} -240 270 0 0 {name=p94 sig_type=std_logic lab=NNREF_lk_VNI}
 C {V2I.sym} -710 360 0 0 {name=x14}
 C {lab_wire.sym} -690 290 2 0 {name=p95 sig_type=std_logic lab=VSS
 }
 C {lab_wire.sym} -690 150 0 1 {name=p96 sig_type=std_logic lab=VDD
 }
-C {lab_wire.sym} 100 270 2 0 {name=p97 sig_type=std_logic lab=VSS
-}
-C {lab_wire.sym} 100 150 0 1 {name=p98 sig_type=std_logic lab=VDD
-}
 C {lab_pin.sym} -710 150 1 0 {name=p99 sig_type=std_logic lab=V2I_imax_VPI}
-C {opin.sym} 330 190 0 0 {name=p116 lab=NN2_REQ}
-C {ipin.sym} -440 290 0 0 {name=p119 lab=NN2_ACK}
-C {opin.sym} 330 170 0 0 {name=p92 lab=NN2_MEM_PROB}
+C {V2I.sym} -710 80 0 0 {name=x3}
+C {lab_wire.sym} -690 10 2 0 {name=p32 sig_type=std_logic lab=VSS
+}
+C {lab_wire.sym} -690 -130 0 1 {name=p39 sig_type=std_logic lab=VDD
+}
+C {lab_pin.sym} -710 -130 1 0 {name=p51 sig_type=std_logic lab=V2I_imax_VPI}
+C {opin.sym} -580 220 0 0 {name=p52 sig_type=std_logic lab=V2I_UO2
+}
+C {opin.sym} -580 -60 0 0 {name=p53 sig_type=std_logic lab=V2I_UO3
+}

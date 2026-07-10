@@ -2,12 +2,16 @@
     "technology": "",
     "statements": [
         {
-            "lib_name": "ISOURCE1",
-            "lib_path": "ISOURCE1.gds"
+            "lib_name": "ISOURCE",
+            "lib_path": "ISOURCE.gds"
         },
         {
             "lib_name": "ISINK",
-            "lib_path": "ISINK.gds"
+            "lib_path": "ISINK_MB.gds"
+        },
+        {
+            "lib_name": "Cap3",
+            "lib_path": "Cap3.gds"
         }
     ]
 }

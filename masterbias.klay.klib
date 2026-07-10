@@ -10,12 +10,24 @@
             "lib_path": "DecadeDividerAux.klay.gds"
         },
         {
-            "lib_name": "EXT_REF_ENB",
-            "lib_path": "EXT_REF_ENB.gds"
+            "lib_name": "inv_BG",
+            "lib_path": "inv_BG.gds"
         },
         {
             "lib_name": "OTA_b",
             "lib_path": "OTA_b.gds"
+        },
+        {
+            "lib_name": "cap4",
+            "lib_path": "cap4.gds"
+        },
+        {
+            "lib_name": "Cap5",
+            "lib_path": "Cap5.gds"
+        },
+        {
+            "lib_name": "Cap1",
+            "lib_path": "Cap1.gds"
         },
         {
             "include_path": "DecadeDivider_2.klay.klib"
