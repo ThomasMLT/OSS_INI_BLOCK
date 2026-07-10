@@ -420,4 +420,4 @@ C {lab_wire.sym} -60 -1590 2 1 {name=p12 sig_type=std_logic lab=vdda
 C {lab_pin.sym} -10 -1620 0 0 {name=p_en_cbb7 lab=bias_VN}
 C {lab_pin.sym} -10 -1730 0 0 {name=p_en_cbb8 lab=bias_VP}
 C {cfringe33x55.sym} 3300 310 0 0 {name=x2}
-C {cfringe34x70.sym} 3320 -600 0 1 {name=x3}
+C {cfringe34x70.sym} 3320 -610 2 1 {name=x3}

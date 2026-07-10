@@ -40,6 +40,11 @@ N -1110 -90 -1070 -90 {lab=vdda}
 N -1070 -110 -1070 -90 {lab=vdda}
 N -1070 -30 -1070 10 {lab=net_DM1_SM21}
 N -1110 -90 -1110 -60 {lab=vdda}
+N -1250 -60 -1220 -60 {lab=vdda}
+N -1290 -90 -1250 -90 {lab=vdda}
+N -1250 -110 -1250 -90 {lab=vdda}
+N -1250 -30 -1250 10 {lab=net_DM1_SM21}
+N -1290 -90 -1290 -60 {lab=vdda}
 C {sg13g2_pr/sg13_hv_pmos.sym} -810 320 0 0 {name=M21
 l=4u
 w=4u
@@ -81,12 +86,23 @@ C {DPI_gain.sym} -580 470 0 0 {name=Xdpi2}
 C {lab_pin.sym} -740 320 0 1 {name=p1 sig_type=std_logic lab=vdda}
 C {sg13g2_pr/sg13_hv_pmos.sym} -1090 -60 0 0 {name=Mdum5
 l=2.75u
-w=8.6u
+w=2u
 ng=1
-m=1
+m=4
 model=sg13_hv_pmos
 spiceprefix=X
 }
 C {lab_wire.sym} -1070 -110 0 1 {name=p31 sig_type=std_logic lab=vdda}
 C {lab_wire.sym} -1040 -60 0 1 {name=p32 sig_type=std_logic lab=vdda}
 C {lab_wire.sym} -1070 10 0 0 {name=p33 sig_type=std_logic lab=net_DM1_SM21}
+C {sg13g2_pr/sg13_hv_pmos.sym} -1270 -60 0 0 {name=Mdum1
+l=2.75u
+w=0.3u
+ng=1
+m=2
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {lab_wire.sym} -1250 -110 0 1 {name=p11 sig_type=std_logic lab=vdda}
+C {lab_wire.sym} -1220 -60 0 1 {name=p15 sig_type=std_logic lab=vdda}
+C {lab_wire.sym} -1250 10 0 0 {name=p16 sig_type=std_logic lab=net_DM1_SM21}
