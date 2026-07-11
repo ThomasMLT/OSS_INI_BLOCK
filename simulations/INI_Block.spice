@@ -37,7 +37,7 @@ xiniblockanalog BIASGEN_en_VS[10] BIASGEN_en_VS[9] BIASGEN_en_VS[8] BIASGEN_en_V
 + en_VS_3[6] en_VS_3[5] en_VS_3[4] en_VS_3[3] en_VS_3[2] en_VS_3[1] en_VS_3[0] en_VS_8[10] en_VS_8[9] en_VS_8[8] en_VS_8[7] en_VS_8[6]
 + en_VS_8[5] en_VS_8[4] en_VS_8[3] en_VS_8[2] en_VS_8[1] en_VS_8[0] en_VS_2[10] en_VS_2[9] en_VS_2[8] en_VS_2[7] en_VS_2[6] en_VS_2[5]
 + en_VS_2[4] en_VS_2[3] en_VS_2[2] en_VS_2[1] en_VS_2[0] en_VS_4[10] en_VS_4[9] en_VS_4[8] en_VS_4[7] en_VS_4[6] en_VS_4[5] en_VS_4[4]
-+ en_VS_4[3] en_VS_4[2] en_VS_4[1] en_VS_4[0] BG_PROB NN2_MEM_PROB NN3_REQ NN3_ACK NN3_MEM_PROB NN2_REQ NN2_ACK VDD NN1_MEM_PROB V2I_INP
++ en_VS_4[3] en_VS_4[2] en_VS_4[1] en_VS_4[0] BG_PROB NN3_MEM_PROB NN3_REQ NN3_ACK NN2_MEM_PROB NN2_REQ NN2_ACK VDD NN1_MEM_PROB V2I_INP
 + NN1_REQ V2I_INN BG_100kRES NN1_ACK VSS BG_BIAS BG_100mV C2F_REQ C2F_ACK C2F_COMP MEM_bufferbias INI_Block_analog
 * noconn en_VS_16[10:0]
 * noconn en_VS_15[10:0]
