@@ -38,14 +38,14 @@ C {iopin.sym} 280 -1250 3 1 {name=p166 lab=VSS
 }
 C {iopin.sym} 280 -1690 3 0 {name=p167 lab=VDD
 }
-C {noconn.sym} -240 -1250 0 0 {name=l5}
+C {noconn.sym} -560 -1030 0 0 {name=l5}
 C {lab_wire.sym} -210 -1250 3 0 {name=p23 sig_type=std_logic lab=BIASGEN_en_VS[10:0]
 }
 C {lab_wire.sym} -180 -1250 3 0 {name=p30 sig_type=std_logic lab=BIASGEN_BYP_en_VS[10:0]
 }
 C {lab_wire.sym} -150 -1250 3 0 {name=p31 sig_type=std_logic lab=BIASGEN_EXT_REF_en_VS[10:0]
 }
-C {noconn.sym} -270 -1250 0 0 {name=l6}
+C {noconn.sym} -560 -1050 0 0 {name=l6}
 C {INI_Block_analog.sym} -220 -390 0 0 {name=xiniblockanalog}
 C {lab_wire.sym} -370 -690 3 1 {name=p2 sig_type=std_logic lab=en_VS_1[10:0]
 }
@@ -98,5 +98,21 @@ C {lab_pin.sym} 50 -130 3 0 {name=p15 lab=VSS
 }
 C {lab_pin.sym} 30 -130 3 0 {name=p16 lab=VDD
 }
-C {noconn.sym} -90 -1250 0 0 {name=l1}
-C {noconn.sym} -120 -1250 0 0 {name=l2}
+C {noconn.sym} -560 -990 0 0 {name=l1}
+C {noconn.sym} -560 -1010 0 0 {name=l2}
+C {lab_wire.sym} -270 -1250 3 0 {name=p17 sig_type=std_logic lab=en_VS_10[10:0]
+}
+C {lab_wire.sym} -240 -1250 3 0 {name=p18 sig_type=std_logic lab=en_VS_11[10:0]
+}
+C {lab_wire.sym} -120 -1250 3 0 {name=p19 sig_type=std_logic lab=en_VS_15[10:0]
+}
+C {lab_wire.sym} -90 -1250 3 0 {name=p20 sig_type=std_logic lab=en_VS_16[10:0]
+}
+C {lab_wire.sym} -560 -1050 0 1 {name=p21 sig_type=std_logic lab=en_VS_10[10:0]
+}
+C {lab_wire.sym} -560 -1030 0 1 {name=p22 sig_type=std_logic lab=en_VS_11[10:0]
+}
+C {lab_wire.sym} -560 -1010 0 1 {name=p24 sig_type=std_logic lab=en_VS_15[10:0]
+}
+C {lab_wire.sym} -560 -990 0 1 {name=p25 sig_type=std_logic lab=en_VS_16[10:0]
+}

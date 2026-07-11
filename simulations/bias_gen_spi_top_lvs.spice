@@ -3,7 +3,7 @@ $ v2021.3_35.19    Wed Sep 1 15:25:12 PDT 2021
 .INCLUDE "./spice.inc" 
 *.BUSDELIMITER [ 
 
-.SUBCKT bias_gen_spi_top_lvs cs_n miso mosi \reg_out10[0] \reg_out10[10] 
+.SUBCKT bias_gen_spi_top cs_n miso mosi \reg_out10[0] \reg_out10[10] 
 + \reg_out10[1] \reg_out10[2] \reg_out10[3] \reg_out10[4] \reg_out10[5] 
 + \reg_out10[6] \reg_out10[7] \reg_out10[8] \reg_out10[9] \reg_out11[0] 
 + \reg_out11[10] \reg_out11[1] \reg_out11[2] \reg_out11[3] \reg_out11[4] 

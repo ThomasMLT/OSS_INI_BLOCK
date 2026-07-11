@@ -4,26 +4,26 @@
 *.PININFO SPI_CS_N:I SPI_MISO:O SPI_SCK:I SPI_MOSI:I SPI_RST_N:I VSS:B VDD:B MEM_bufferbias:I C2F_REQ:O C2F_COMP:O C2F_ACK:I
 *+ NN1_REQ:O NN2_REQ:O NN3_REQ:O NN1_ACK:I NN2_ACK:I NN3_ACK:I V2I_INN:I V2I_INP:I NN1_MEM_PROB:O NN2_MEM_PROB:O NN3_MEM_PROB:O BG_100mV:I
 *+ BG_BIAS:I BG_100kRES:I BG_PROB:O
-xspi cs_n miso mosi reg_out10[0] reg_out10[10] reg_out10[1] reg_out10[2] reg_out10[3] reg_out10[4] reg_out10[5] reg_out10[6]
-+ reg_out10[7] reg_out10[8] reg_out10[9] reg_out11[0] reg_out11[10] reg_out11[1] reg_out11[2] reg_out11[3] reg_out11[4] reg_out11[5]
-+ reg_out11[6] reg_out11[7] reg_out11[8] reg_out11[9] reg_out12[0] reg_out12[10] reg_out12[1] reg_out12[2] reg_out12[3] reg_out12[4]
-+ reg_out12[5] reg_out12[6] reg_out12[7] reg_out12[8] reg_out12[9] reg_out13[0] reg_out13[10] reg_out13[1] reg_out13[2] reg_out13[3]
-+ reg_out13[4] reg_out13[5] reg_out13[6] reg_out13[7] reg_out13[8] reg_out13[9] reg_out14[0] reg_out14[10] reg_out14[1] reg_out14[2]
-+ reg_out14[3] reg_out14[4] reg_out14[5] reg_out14[6] reg_out14[7] reg_out14[8] reg_out14[9] reg_out15[0] reg_out15[10] reg_out15[1]
-+ reg_out15[2] reg_out15[3] reg_out15[4] reg_out15[5] reg_out15[6] reg_out15[7] reg_out15[8] reg_out15[9] reg_out16[0] reg_out16[10]
-+ reg_out16[1] reg_out16[2] reg_out16[3] reg_out16[4] reg_out16[5] reg_out16[6] reg_out16[7] reg_out16[8] reg_out16[9] reg_out1[0] reg_out1[10]
-+ reg_out1[1] reg_out1[2] reg_out1[3] reg_out1[4] reg_out1[5] reg_out1[6] reg_out1[7] reg_out1[8] reg_out1[9] reg_out2[0] reg_out2[10]
-+ reg_out2[1] reg_out2[2] reg_out2[3] reg_out2[4] reg_out2[5] reg_out2[6] reg_out2[7] reg_out2[8] reg_out2[9] reg_out3[0] reg_out3[10]
-+ reg_out3[1] reg_out3[2] reg_out3[3] reg_out3[4] reg_out3[5] reg_out3[6] reg_out3[7] reg_out3[8] reg_out3[9] reg_out4[0] reg_out4[10]
-+ reg_out4[1] reg_out4[2] reg_out4[3] reg_out4[4] reg_out4[5] reg_out4[6] reg_out4[7] reg_out4[8] reg_out4[9] reg_out5[0] reg_out5[10]
-+ reg_out5[1] reg_out5[2] reg_out5[3] reg_out5[4] reg_out5[5] reg_out5[6] reg_out5[7] reg_out5[8] reg_out5[9] reg_out6[0] reg_out6[10]
-+ reg_out6[1] reg_out6[2] reg_out6[3] reg_out6[4] reg_out6[5] reg_out6[6] reg_out6[7] reg_out6[8] reg_out6[9] reg_out7[0] reg_out7[10]
-+ reg_out7[1] reg_out7[2] reg_out7[3] reg_out7[4] reg_out7[5] reg_out7[6] reg_out7[7] reg_out7[8] reg_out7[9] reg_out8[0] reg_out8[10]
-+ reg_out8[1] reg_out8[2] reg_out8[3] reg_out8[4] reg_out8[5] reg_out8[6] reg_out8[7] reg_out8[8] reg_out8[9] reg_out9[0] reg_out9[10]
-+ reg_out9[1] reg_out9[2] reg_out9[3] reg_out9[4] reg_out9[5] reg_out9[6] reg_out9[7] reg_out9[8] reg_out9[9] rst_n sck VDD VSS
-+ bias_gen_spi_top
-* noconn #net1
-* noconn #net4
+xspi SPI_CS_N SPI_MISO SPI_MOSI en_VS_10[0] en_VS_10[10] en_VS_10[1] en_VS_10[2] en_VS_10[3] en_VS_10[4] en_VS_10[5] en_VS_10[6]
++ en_VS_10[7] en_VS_10[8] en_VS_10[9] en_VS_11[0] en_VS_11[10] en_VS_11[1] en_VS_11[2] en_VS_11[3] en_VS_11[4] en_VS_11[5] en_VS_11[6]
++ en_VS_11[7] en_VS_11[8] en_VS_11[9] BIASGEN_en_VS[0] BIASGEN_en_VS[10] BIASGEN_en_VS[1] BIASGEN_en_VS[2] BIASGEN_en_VS[3] BIASGEN_en_VS[4]
++ BIASGEN_en_VS[5] BIASGEN_en_VS[6] BIASGEN_en_VS[7] BIASGEN_en_VS[8] BIASGEN_en_VS[9] BIASGEN_BYP_en_VS[0] BIASGEN_BYP_en_VS[10]
++ BIASGEN_BYP_en_VS[1] BIASGEN_BYP_en_VS[2] BIASGEN_BYP_en_VS[3] BIASGEN_BYP_en_VS[4] BIASGEN_BYP_en_VS[5] BIASGEN_BYP_en_VS[6] BIASGEN_BYP_en_VS[7]
++ BIASGEN_BYP_en_VS[8] BIASGEN_BYP_en_VS[9] BIASGEN_EXT_REF_en_VS[0] BIASGEN_EXT_REF_en_VS[10] BIASGEN_EXT_REF_en_VS[1] BIASGEN_EXT_REF_en_VS[2]
++ BIASGEN_EXT_REF_en_VS[3] BIASGEN_EXT_REF_en_VS[4] BIASGEN_EXT_REF_en_VS[5] BIASGEN_EXT_REF_en_VS[6] BIASGEN_EXT_REF_en_VS[7] BIASGEN_EXT_REF_en_VS[8]
++ BIASGEN_EXT_REF_en_VS[9] en_VS_15[0] en_VS_15[10] en_VS_15[1] en_VS_15[2] en_VS_15[3] en_VS_15[4] en_VS_15[5] en_VS_15[6] en_VS_15[7] en_VS_15[8]
++ en_VS_15[9] en_VS_16[0] en_VS_16[10] en_VS_16[1] en_VS_16[2] en_VS_16[3] en_VS_16[4] en_VS_16[5] en_VS_16[6] en_VS_16[7] en_VS_16[8]
++ en_VS_16[9] en_VS_1[0] en_VS_1[10] en_VS_1[1] en_VS_1[2] en_VS_1[3] en_VS_1[4] en_VS_1[5] en_VS_1[6] en_VS_1[7] en_VS_1[8] en_VS_1[9]
++ en_VS_2[0] en_VS_2[10] en_VS_2[1] en_VS_2[2] en_VS_2[3] en_VS_2[4] en_VS_2[5] en_VS_2[6] en_VS_2[7] en_VS_2[8] en_VS_2[9] en_VS_3[0]
++ en_VS_3[10] en_VS_3[1] en_VS_3[2] en_VS_3[3] en_VS_3[4] en_VS_3[5] en_VS_3[6] en_VS_3[7] en_VS_3[8] en_VS_3[9] en_VS_4[0] en_VS_4[10]
++ en_VS_4[1] en_VS_4[2] en_VS_4[3] en_VS_4[4] en_VS_4[5] en_VS_4[6] en_VS_4[7] en_VS_4[8] en_VS_4[9] en_VS_5[0] en_VS_5[10] en_VS_5[1]
++ en_VS_5[2] en_VS_5[3] en_VS_5[4] en_VS_5[5] en_VS_5[6] en_VS_5[7] en_VS_5[8] en_VS_5[9] en_VS_6[0] en_VS_6[10] en_VS_6[1] en_VS_6[2]
++ en_VS_6[3] en_VS_6[4] en_VS_6[5] en_VS_6[6] en_VS_6[7] en_VS_6[8] en_VS_6[9] en_VS_7[0] en_VS_7[10] en_VS_7[1] en_VS_7[2] en_VS_7[3]
++ en_VS_7[4] en_VS_7[5] en_VS_7[6] en_VS_7[7] en_VS_7[8] en_VS_7[9] en_VS_8[0] en_VS_8[10] en_VS_8[1] en_VS_8[2] en_VS_8[3] en_VS_8[4]
++ en_VS_8[5] en_VS_8[6] en_VS_8[7] en_VS_8[8] en_VS_8[9] en_VS_9[0] en_VS_9[10] en_VS_9[1] en_VS_9[2] en_VS_9[3] en_VS_9[4] en_VS_9[5]
++ en_VS_9[6] en_VS_9[7] en_VS_9[8] en_VS_9[9] SPI_RST_N SPI_SCK VDD VSS bias_gen_spi_top
+* noconn en_VS_11[10:0]
+* noconn en_VS_10[10:0]
 xiniblockanalog BIASGEN_en_VS[10] BIASGEN_en_VS[9] BIASGEN_en_VS[8] BIASGEN_en_VS[7] BIASGEN_en_VS[6] BIASGEN_en_VS[5]
 + BIASGEN_en_VS[4] BIASGEN_en_VS[3] BIASGEN_en_VS[2] BIASGEN_en_VS[1] BIASGEN_en_VS[0] BIASGEN_BYP_en_VS[10] BIASGEN_BYP_en_VS[9]
 + BIASGEN_BYP_en_VS[8] BIASGEN_BYP_en_VS[7] BIASGEN_BYP_en_VS[6] BIASGEN_BYP_en_VS[5] BIASGEN_BYP_en_VS[4] BIASGEN_BYP_en_VS[3] BIASGEN_BYP_en_VS[2]
@@ -39,8 +39,8 @@ xiniblockanalog BIASGEN_en_VS[10] BIASGEN_en_VS[9] BIASGEN_en_VS[8] BIASGEN_en_V
 + en_VS_2[4] en_VS_2[3] en_VS_2[2] en_VS_2[1] en_VS_2[0] en_VS_4[10] en_VS_4[9] en_VS_4[8] en_VS_4[7] en_VS_4[6] en_VS_4[5] en_VS_4[4]
 + en_VS_4[3] en_VS_4[2] en_VS_4[1] en_VS_4[0] BG_PROB NN2_MEM_PROB NN3_REQ NN3_ACK NN3_MEM_PROB NN2_REQ NN2_ACK VDD NN1_MEM_PROB V2I_INP
 + NN1_REQ V2I_INN BG_100kRES NN1_ACK VSS BG_BIAS BG_100mV C2F_REQ C2F_ACK C2F_COMP MEM_bufferbias INI_Block_analog
-* noconn #net3
-* noconn #net2
+* noconn en_VS_16[10:0]
+* noconn en_VS_15[10:0]
 .ends
 
 * expanding   symbol:  bias_gen_spi_top.sym # of pins=23
