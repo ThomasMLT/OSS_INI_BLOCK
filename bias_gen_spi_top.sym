@@ -38,7 +38,7 @@ format="@name @@cs_n @@miso mosi @@\\reg_out10[0] @@\\reg_out10[10]
 + @@rst_n @@sck @@VDD @@VSS @symname"
 spectre_format="@name ( @pinlist ) @symname"
 symname = bias_gen_spi_top
-template="name=x1"
+template="name=xspi"
 spice_sym_def=".include ./bias_gen_spi_top_lvs.spice"
 }
 V {}

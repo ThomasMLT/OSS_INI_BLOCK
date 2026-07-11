@@ -46,7 +46,7 @@ C {lab_wire.sym} -180 -1250 3 0 {name=p30 sig_type=std_logic lab=BIASGEN_BYP_en_
 C {lab_wire.sym} -150 -1250 3 0 {name=p31 sig_type=std_logic lab=BIASGEN_EXT_REF_en_VS[10:0]
 }
 C {noconn.sym} -270 -1250 0 0 {name=l6}
-C {INI_Block_analog.sym} -220 -390 0 0 {name=x1}
+C {INI_Block_analog.sym} -220 -390 0 0 {name=xiniblockanalog}
 C {lab_wire.sym} -370 -690 3 1 {name=p2 sig_type=std_logic lab=en_VS_1[10:0]
 }
 C {lab_wire.sym} -350 -690 3 1 {name=p3 sig_type=std_logic lab=en_VS_2[10:0]
