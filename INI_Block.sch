@@ -10,7 +10,7 @@ N 890 -1490 1000 -1490 {lab=SPI_MISO}
 N 890 -1470 1000 -1470 {lab=SPI_SCK}
 N 890 -1450 1000 -1450 {lab=SPI_MOSI}
 N 890 -1430 1000 -1430 {lab=SPI_RST_N}
-C {bias_gen_spi_top.sym} -310 -1470 0 0 {}
+C {bias_gen_spi_top_lvs.sym} -310 -1470 0 0 {}
 C {lab_wire.sym} -540 -1250 3 0 {name=p147 sig_type=std_logic lab=en_VS_1[10:0]
 }
 C {lab_wire.sym} -510 -1250 3 0 {name=p148 sig_type=std_logic lab=en_VS_2[10:0]
