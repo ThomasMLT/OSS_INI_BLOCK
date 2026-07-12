@@ -92,7 +92,7 @@ C {opin.sym} -360 -130 1 0 {name=p90 lab=NN2_MEM_PROB}
 C {opin.sym} -340 -130 1 0 {name=p124 lab=NN3_MEM_PROB}
 C {ipin.sym} -270 -130 3 0 {name=p66 sig_type=std_logic lab=BG_100mV}
 C {ipin.sym} -250 -130 3 0 {name=p67 sig_type=std_logic lab=BG_BIAS}
-C {ipin.sym} -230 -130 3 0 {name=p68 sig_type=std_logic lab=BG_100kRES}
+C {iopin.sym} -230 -130 1 0 {name=p68 sig_type=std_logic lab=BG_100kRES}
 C {opin.sym} -190 -130 1 0 {name=p11 lab=BG_PROB}
 C {lab_pin.sym} 50 -130 3 0 {name=p15 lab=VSS
 }
